@@ -185,24 +185,86 @@ include './layout/header.php';
                 </nav>
                 <!-- End of Topbar -->
 
+
+                
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Content Row -->
-                    <div class="row">
 
-                    </div>
+<!-- Data Pengunjung -->
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Data Arsip</h6>
+        </div>
+
+        <!-- card body -->
+        <div class="card-body">
+
+            <!-- buat kolom -->
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>No. Urut</th>
+                            <th>Nama Pemilik IMB</th>
+                            <th>Uraian Masalah</th>
+                            <th>Jalan</th>
+                            <th>Kelurahan</th>
+                            <th>Kecamatan</th>
+                            <th>No. Rak</th>
+                            <th>No. Box</th>
+                            <th>Kode Klas</th>
+                            <th>No. Urut</th>
+                            <th>NIPA</th>
+                            <th>Tahun</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+
+                    <!-- deklarasikan dan panggil koneksi database -->
+                    <tbody>
+                        <?php
+                        $tgl = date('Y-m-d');
+                        $query = "SELECT * FROM tb_dataarsip where tanggal like '%$tgl%' order by id_dataarsip desc";
+                        $tampil = $koneksi->query($query);
+                        $no = 1;
+                        while ($data = mysqli_fetch_array($tampil)) {
+                        ?>
+                            <tr>
+                                <td><?= $no++ ?></td>
+                                <td><?= $data['nama'] ?></td>
+                                <td><?= $data['masalah'] ?></td>
+                                <td><?= $data['jalan'] ?></td>
+                                <td><?= $data['kelurahan'] ?></td>
+                                <td><?= $data['kecamatan'] ?></td>
+                                <td><?= $data['no_rak'] ?></td>
+                                <td><?= $data['no_box'] ?></td>
+                                <td><?= $data['kode_klas'] ?></td>
+                                <td><?= $data['no_urut'] ?></td>
+                                <td><?= $data['nipa'] ?></td>
+                                <td><?= $data['tahun'] ?></td>
+                                <td><?= $data['keterangan'] ?></td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- akhir container -->
 
                     <!-- Content Row -->
 
                     <div class="row">
 
                         <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
+                        <div class="col-xl-10 col-lg-11">
                             <div class="card shadow mb-4">
                         
-
             <!-- Footer -->
+<div class="container">
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -210,6 +272,7 @@ include './layout/header.php';
                     </div>
                 </div>
             </footer>
+            </div>
             <!-- End of Footer -->
 
         </div>
