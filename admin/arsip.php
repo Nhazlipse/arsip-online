@@ -122,6 +122,7 @@ include './layout/header.php';
                             </div>
                         </div>
                     </form>
+                    
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -191,6 +192,10 @@ include './layout/header.php';
 
         <!-- card body -->
         <div class="card-body">
+            
+<!-- Tombol Tambah Data -->
+<div class="tambahdata">
+    <a href="tambah_data.php" class="btn btn-primary">Tambah Data</a><br><br>
 
             <!-- buat kolom -->
             <div class="table-responsive">
@@ -284,7 +289,7 @@ include './layout/header.php';
                 <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="logout.php">Logout</a>
+                    <a class="btn btn-danger" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>

@@ -221,7 +221,7 @@ include './layout/header.php';
                     </div>
 
                     <!-- Area Chart -->
-    <div class="card shadow mb-4">
+                    <div class="card shadow mb-4">
                         
                         <!-- Footer -->
                         <footer class="sticky-footer bg-white">
