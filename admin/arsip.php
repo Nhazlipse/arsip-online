@@ -19,7 +19,7 @@ include './layout/header.php';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Arsip Online ikan Paus - Kediri</title>
+    <title>Arsip Online ikan Paus Goreng - Kediri</title>
 
 </head>
 
