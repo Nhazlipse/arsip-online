@@ -19,7 +19,7 @@ include './layout/header.php';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Arsip Online ikan - Kediri</title>
+    <title>Singa sss sss Bakar Goreng Godog</title>
 
 </head>
 
