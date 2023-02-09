@@ -255,20 +255,14 @@ include './layout/header.php';
 
     <!-- akhir container -->
 
-                    <!-- Content Row -->
-
-                    <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-10 col-lg-11">
-                            <div class="card shadow mb-4">
+    <!-- Area Chart -->
+    <div class="card shadow mb-4">
                         
             <!-- Footer -->
-<div class="container">
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; UNISKA - KEDIRI</span>
+                        <span>Copyright &copy; UNISKA - KEDIRI 2023</span>
                     </div>
                 </div>
             </footer>
