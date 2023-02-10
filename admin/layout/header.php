@@ -19,10 +19,3 @@
 
 
 <body>
-<?php
-        require_once '..\database\koneksi.php';
-
-        use database\koneksi;
-
-        $koneksi = new koneksi();
-        ?>

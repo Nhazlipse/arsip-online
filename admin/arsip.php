@@ -1,5 +1,6 @@
 <?php
 require_once '../database/koneksi.php';
+include 'proses_tambah_data.php';
 
 use database\koneksi;
 
@@ -195,7 +196,8 @@ include './layout/header.php';
             
 <!-- Tombol Tambah Data -->
 <div class="tambahdata">
-    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#tambahDataArsipModal">Tambah Data</a><br><br>
+<a href="tambah_data.php" class="btn btn-primary">Tambah Data</a><br><br>
+    <a href="tambah_data.php" class="btn btn-primary" data-toggle="modal" data-target="#tambahDataArsipModal">Tambah Data</a><br><br>
 
     <!-- Tambah Data Arsip Modal-->
     <div class="container">
@@ -209,15 +211,16 @@ include './layout/header.php';
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
+
                 <div class="modal-body">
-                    <form action="" method="post">
+                    <form action="proses_tambah_data.php" method="post">
                         <div class="form-group">
                             <label for="namaPemilikIMB">Nama Pemilik IMB</label>
-                            <input type="text" class="form-control" id="namaPemilikIMB" name="namaPemilikIMB" required>
+                            <input type="text" class="form-control" id="nama" name="nama" required>
                         </div>
                         <div class="form-group">
                             <label for="uraianMasalah">Uraian Masalah</label>
-                            <input type="text" class="form-control" id="uraianMasalah" name="uraianMasalah" required>
+                            <input type="text" class="form-control" id="masalah" name="masalah" required>
                         </div>
                         <div class="form-group">
                             <label for="jalan">Jalan</label>
@@ -232,32 +235,32 @@ include './layout/header.php';
                             <input type="text" class="form-control" id="kecamatan" name="kecamatan" required>
                         </div>
                         <div class="form-group">
-                            <label for="noRak">No. Rak</label>
-                            <input type="text" class="form-control" id="noRak" name="noRak" required>
+                            <label for="no_rak">No. Rak</label>
+                            <input type="text" class="form-control" id="no_rak" name="no_rak" required>
                         </div>
                         <div class="form-group">
-                            <label for="noBox">No. Box</label>
-                            <input type="text" class="form-control" id="noBox" name="noBox" required>
+                            <label for="no_box">No. Box</label>
+                            <input type="text" class="form-control" id="no_box" name="no_box" required>
                         </div>
                         <div class="form-group">
-                            <label for="kelurahan">No. Klas</label>
-                            <input type="text" class="form-control" id="kelurahan" name="kelurahan" required>
+                            <label for="no_klas">No. Klas</label>
+                            <input type="text" class="form-control" id="no_klas" name="no_klas" required>
                         </div>
                         <div class="form-group">
-                            <label for="kelurahan">No. Urut</label>
-                            <input type="text" class="form-control" id="kelurahan" name="kelurahan" required>
+                            <label for="no_urut">No. Urut</label>
+                            <input type="text" class="form-control" id="no_urut" name="no_urut" required>
                         </div>
                         <div class="form-group">
-                            <label for="kelurahan">NIPA</label>
-                            <input type="text" class="form-control" id="kelurahan" name="kelurahan" required>
+                            <label for="nipa">NIPA</label>
+                            <input type="text" class="form-control" id="nipa" name="nipa" required>
                         </div>
                         <div class="form-group">
-                            <label for="kelurahan">Tahun</label>
-                            <input type="text" class="form-control" id="kelurahan" name="kelurahan" required>
+                            <label for="tahun">Tahun</label>
+                            <input type="text" class="form-control" id="tahun" name="tahun" required>
                         </div>
                         <div class="form-group">
-                            <label for="kelurahan">Keterangan</label>
-                            <input type="text" class="form-control" id="kelurahan" name="kelurahan" required>
+                            <label for="keterangan">Keterangan</label>
+                            <input type="text" class="form-control" id="keterangan" name="keterangan" required>
                         </div>
                         <div class="modal-footer">
 <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
@@ -267,6 +270,7 @@ include './layout/header.php';
 </div>
 </div>
 </div>
+
             <!-- buat kolom -->
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="120%" cellspacing="0">
