@@ -11279,3 +11279,9 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+
+.tulisan-login{
+  font-style: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  align-content: center;
+}

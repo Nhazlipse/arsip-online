@@ -14,7 +14,7 @@ include './layout/header.php';
 
 </head>
 
-<body id="page-top">
+<body id="page-top" style="background-image: url('./assets/img/background.png'); background-repeat: no-repeat; background-position: center; background-size: cover ; width =">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -23,12 +23,12 @@ include './layout/header.php';
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
+            <!-- <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Arsip Online</div>
-            </a>
+            </a> -->
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
