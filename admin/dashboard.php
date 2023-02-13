@@ -211,7 +211,7 @@ include './layout/header.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="container shadow mb-4">
+                        <div class="container shadow">
                         <div class="fixed-footer">
                         <div class="container my-auto">Copyright &copy; UNISKA - KEDIRI 2023</div>
                     </div>
