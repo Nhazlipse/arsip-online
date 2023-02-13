@@ -253,13 +253,13 @@ include './layout/header.php';
                             <input type="text" class="form-control" id="keterangan" name="keterangan" required>
                         </div>
                         <div class="modal-footer">
-<button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-<button class="btn btn-primary" type="submit" form="form-tambah-data-arsip">Simpan</button>
-</div>
-</div>
-</div>
-</div>
-</div>
+                           <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                          <button class="btn btn-primary" type="submit" form="form-tambah-data-arsip">Simpan</button>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
 
             <!-- buat kolom -->
             <div class="table-responsive">
@@ -323,23 +323,24 @@ include './layout/header.php';
     <!-- akhir container -->
 
     <!-- Area Chart -->
-    <div class="card shadow mb-4">
+    <!-- <div class="card shadow mb-4"> -->
                         
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+
+            <!-- <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; UNISKA - KEDIRI 2023</span>
                     </div>
                 </div>
             </footer>
-            </div>
+            </div> -->
             <!-- End of Footer -->
 
-        </div>
+        <!-- </div> -->
         <!-- End of Content Wrapper -->
 
-    </div>
+    <!-- </div> -->
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->

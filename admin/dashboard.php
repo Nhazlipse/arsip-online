@@ -220,11 +220,9 @@ include './layout/header.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="container shadow">
+                        <div class="container">
                         <div class="fixed-footer">
-                        <hr class="sidebar-divider" style="border-color: gray;">
                         <div class="container my-auto">Copyright &copy; UNISKA - KEDIRI 2023</div>
-                        <hr class="sidebar-divider" style="border-color: gray;">
                     </div>
                     </div>
 
