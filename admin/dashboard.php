@@ -175,23 +175,36 @@ include './layout/header.php';
 
                     <!-- Content Row -->
                     <div class="row">
+                        
+                        <!-- query to count total data -->
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <?php
+                        $query = "SELECT COUNT(*) as total_data FROM tb_dataarsip";
+                        $koneksi = new koneksi();
+                        $result = $koneksi->query($query);
+                        $row = mysqli_fetch_assoc($result);
+                        $total_data = $row['total_data'];
+                        ?>
+
+
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total Data Arsip</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">10000231</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Total Data Arsip
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    <?php echo $total_data; ?>
+                                </div>
+                                </div>
+                                <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
                                 </div>
                             </div>
+                            </div>
+                        </div>
                         </div>
 
                         <!-- Earnings (Monthly) Card Example -->
@@ -217,18 +230,14 @@ include './layout/header.php';
                     <!-- Area Chart -->
                     <div class="card shadow mb-4">
                         
-                        <!-- Footer -->
-                        <!-- <footer class="sticky-footer bg-white">
-                            <div class="container my-auto">
-                                <div class="copyright text-center my-auto">
-                                    <span>Copyright &copy; UNISKA - KEDIRI 2023</span>
-                                </div>
-                            </div>
-                        </footer>
-                        </div> -->
-                        <div class="fixed-footer">
-                        <div class="container">Copyright &copy; 2022 Teknotes.id & EtgarKurniawan.com</div>
-                        </div>
+                         <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; UNISKA - KEDIRI 2023</span>
+                    </div>
+                </div>
+            </footer>
                         <!-- End of Footer -->
             
                     </div>
