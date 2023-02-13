@@ -41,3 +41,28 @@ a.btn {
     }
   }
   
+  .fixed-footer {
+    width: 100%;
+    position: relative;
+    background: white;
+    margin: 8px 10px 10px 0;
+    padding: 10px 0;
+    color: grey;
+    text-align: center;
+  }
+  .fixed-footer {
+    bottom: 0;
+  }
+  
+/*responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
