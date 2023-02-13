@@ -177,6 +177,15 @@ include './layout/header.php';
                     <div class="row">
 
                         <!-- Earnings (Monthly) Card Example -->
+
+                        <?php
+                        $query = "SELECT COUNT(*) as total_data FROM tb_dataarsip";
+                        $koneksi = new koneksi();
+                        $result = $koneksi->query($query);
+                        $row = mysqli_fetch_assoc($result);
+                        $total_data = $row['total_data'];
+                        ?>
+
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2"style="width:100%; position:relative;top:0%;left: 97%;">
                                 <div class="card-body">
@@ -184,7 +193,7 @@ include './layout/header.php';
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-center"style="font-size:16px;">
                                                 Total Data Arsip</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-900 text-center">10000231</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-900 text-center"><?php echo $total_data; ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-500"></i>
