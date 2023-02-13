@@ -28,5 +28,5 @@ if ($koneksi) {
     header("location:arsip.php");
 } else {
     // Notification Using Script
-    echo "<script>alert('Data Gagal Diupdate');window.location='#';</script>";
+    echo "<script>alert('Data Gagal Diupdate');window.location='arsip.php';</script>";
 }
