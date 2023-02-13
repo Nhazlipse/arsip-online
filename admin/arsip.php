@@ -32,9 +32,6 @@ include './layout/header.php';
             </div>
             </a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
             <!-- Nav Item - Dashboard -->
             <br><br><br><br><br><br>
             <li class="nav-item active">
