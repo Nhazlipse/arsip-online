@@ -42,8 +42,10 @@ a.btn {
   }
   
   .fixed-footer {
-    width: 100%;
-    position: relative;
+    width: 50%;
+    position: absolute;
+    left: 33%;
+    top: 90%;
     background: white;
     margin: 8px 10px 10px 0;
     padding: 10px 0;

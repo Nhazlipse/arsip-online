@@ -211,11 +211,13 @@ include './layout/header.php';
                                 </div>
                             </div>
                         </div>
-
+                        <div class="container shadow mb-4">
+                        <div class="fixed-footer">
+                        <div class="container my-auto">Copyright &copy; UNISKA - KEDIRI 2023</div>
                     </div>
-
+                    </div>
                     <!-- Area Chart -->
-                    <div class="card shadow mb-4">
+                    <!-- <div class="card shadow mb-4"style="width:100%; position:relative; top:200%;left:0%;"> -->
                         
                         <!-- Footer -->
                         <!-- <footer class="sticky-footer bg-white">
@@ -226,12 +228,10 @@ include './layout/header.php';
                             </div>
                         </footer>
                         </div> -->
-                        <div class="fixed-footer">
-                        <div class="container my-auto">Copyright &copy; UNISKA - KEDIRI 2023</div>
-                        </div>
+                        
                         <!-- End of Footer -->
             
-                    </div>
+                    <!-- </div> -->
                     <!-- End of Content Wrapper -->
 
     </div>
