@@ -222,26 +222,11 @@ include './layout/header.php';
                         </div>
                         <div class="container shadow">
                         <div class="fixed-footer">
+                        <hr class="sidebar-divider" style="border-color: gray;">
                         <div class="container my-auto">Copyright &copy; UNISKA - KEDIRI 2023</div>
+                        <hr class="sidebar-divider" style="border-color: gray;">
                     </div>
                     </div>
-                    <!-- Area Chart -->
-                    <!-- <div class="card shadow mb-4"style="width:100%; position:relative; top:200%;left:0%;"> -->
-                        
-                        <!-- Footer -->
-                        <!-- <footer class="sticky-footer bg-white">
-                            <div class="container my-auto">
-                                <div class="copyright text-center my-auto">
-                                    <span>Copyright &copy; UNISKA - KEDIRI 2023</span>
-                                </div>
-                            </div>
-                        </footer>
-                        </div> -->
-                        
-                        <!-- End of Footer -->
-            
-                    <!-- </div> -->
-                    <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
