@@ -8,6 +8,7 @@ $koneksi = new koneksi();
 
 // Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
     // Get data from form
     $nama = $_POST['nama'];
     $masalah = $_POST['masalah'];

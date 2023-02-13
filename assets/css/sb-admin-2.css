@@ -2329,6 +2329,8 @@ textarea.form-control {
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;
+    padding: 6px 4px;
+      font-size: 12px;
   }
 }
 
