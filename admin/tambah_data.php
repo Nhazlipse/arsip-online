@@ -203,51 +203,51 @@ include './layout/header.php';
 
     <div class="form-group">
         <label for="judul">Nama Pemilik IMB:</label>
-        <input type="text" class="form-control" id="nama" name="nama">
+        <input type="text" class="form-control" id="nama" name="nama" required>
     </div>
     <div class="form-group">
         <label for="judul">Masalah:</label>
-        <input type="text" class="form-control" id="masalah" name="masalah">
+        <input type="text" class="form-control" id="masalah" name="masalah" required>
     </div>
     <div class="form-group">
         <label for="judul">Jalan:</label>
-        <input type="text" class="form-control" id="jalan" name="jalan">
+        <input type="text" class="form-control" id="jalan" name="jalan" required>
     </div>
     <div class="form-group">
         <label for="judul">Kelurahan:</label>
-        <input type="text" class="form-control" id="kelurahan" name="kelurahan">
+        <input type="text" class="form-control" id="kelurahan" name="kelurahan" required>
     </div>
     <div class="form-group">
         <label for="judul">Kecamatan:</label>
-        <input type="text" class="form-control" id="kecamatan" name="kecamatan">
+        <input type="text" class="form-control" id="kecamatan" name="kecamatan" required>
     </div>
     <div class="form-group">
         <label for="judul">No. Rak:</label>
-        <input type="text" class="form-control" id="no_rak" name="no_rak">
+        <input type="text" class="form-control" id="no_rak" name="no_rak" required>
     </div>
     <div class="form-group">
         <label for="judul">No. Box:</label>
-        <input type="text" class="form-control" id="no_box" name="no_box">
+        <input type="text" class="form-control" id="no_box" name="no_box" required>
     </div>
     <div class="form-group">
         <label for="judul">Kode Klas:</label>
-        <input type="text" class="form-control" id="kode_klas" name="kode_klas">
+        <input type="text" class="form-control" id="kode_klas" name="kode_klas" required>
     </div>
     <div class="form-group">
         <label for="judul">No. Urut:</label>
-        <input type="text" class="form-control" id="no_urut" name="no_urut">
+        <input type="text" class="form-control" id="no_urut" name="no_urut" required>
     </div>
     <div class="form-group">
         <label for="judul">NIPA:</label>
-        <input type="text" class="form-control" id="nipa" name="nipa">
+        <input type="text" class="form-control" id="nipa" name="nipa" required>
     </div>
     <div class="form-group">
         <label for="judul">Tahun:</label>
-        <input type="text" class="form-control" id="tahun" name="tahun">
+        <input type="text" class="form-control" id="tahun" name="tahun" required>
     </div>
     <div class="form-group">
         <label for="judul">Keterangan:</label>
-        <input type="text" class="form-control" id="keterangan" name="keterangan">
+        <input type="text" class="form-control" id="keterangan" name="keterangan" required>
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button><br><br>

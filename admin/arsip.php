@@ -314,6 +314,12 @@ include './layout/header.php';
                                 <td><?= $data['nipa'] ?></td>
                                 <td><?= $data['tahun'] ?></td>
                                 <td><?= $data['keterangan'] ?></td>
+                                <td>
+
+                            <!-- buat tombol edit hapus -->
+                            <a href="editformtamu.php?id=<?= $data['id'] ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+                            <a href="hapustamu.php?id=<?= $data['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i></a>
+                        </td>
                             </tr>
                         <?php } ?>
                     </tbody>
