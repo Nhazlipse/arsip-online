@@ -63,7 +63,7 @@ include './layout/header.php';
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pilih Menu:</h6>
                         <a class="collapse-item" href="arsip.php">Arsip</a>
-                        <a class="collapse-item" href="transaksi.php">Transaksi</a>
+                        <a class="collapse-item" href="pinjaman.php">Pinjaman</a>
                     </div>
                 </div>
             </li>
