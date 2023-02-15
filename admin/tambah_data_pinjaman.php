@@ -1,3 +1,6 @@
+<?php include './layout/header.php'; ?> 
+
+
 <?php
 require_once '../database/koneksi.php';
 include 'proses_tambah_data.php';
@@ -21,19 +24,20 @@ include './layout/header.php';
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"style="background-color:#2b2b2b;">
-
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
-            <div class="sidebar-brand-icon text-center">
-                <br><br><br><br><br><br>
-                <img src="../assets/img/arsip.png" width = "77%">   
-            </div>
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Arsip Online</div>
             </a>
 
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
             <!-- Nav Item - Dashboard -->
-            <br><br><br><br><br><br>
             <li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -59,7 +63,7 @@ include './layout/header.php';
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pilih Menu:</h6>
                         <a class="collapse-item" href="arsip.php">Arsip</a>
-                        <a class="collapse-item" href="transaksi.php">Transaksi</a>
+                        <a class="collapse-item" href="pinjaman.php">Pinjaman</a>
                     </div>
                 </div>
             </li>
@@ -93,9 +97,9 @@ include './layout/header.php';
 
 
         </ul>
-        <!-- ENDING DARI BAGIAN ADMIN TOOLS -->
+        <!-- End of Sidebar -->
 
-        <!-- DARI SINI ISI KONTEN NYA -->
+        <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
@@ -109,11 +113,20 @@ include './layout/header.php';
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Judul Menu -->
+                    <!-- Topbar Search -->
                     <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-0 my-2 my-md-0 mw-100 navbar-search">
-                        <img src="../assets/img/tulisan.png" width = "36%"> 
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
                     </form>
+                    
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -166,86 +179,82 @@ include './layout/header.php';
                     </ul>
 
                 </nav>
-                <!-- ENDING DARI ADMIN PANEL -->
+                <!-- End of Topbar -->
 
 
                 
-                <!-- AWAL DARI ISI KONTEN -->
+                <!-- Begin Page Content -->
                 <div class="container-fluid">
 
 
-            <!-- Data Pengunjung -->
-            <div class="container">
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Data Pinjaman</h6>
-                    </div>
-
-            <!-- card body -->
-            <div class="card-body">
-            
-            <!-- Tombol Tambah Data -->
-            <div class="tambahdata">
-            <a href="tambah_data.php" class="btn btn-primary">Tambah Data</a><br><br>
-
-            <!-- buat kolom -->
-            <div class="table-responsive">
-                <table class="table table-bordered font-weight-normal" style='monospace; font-size:90%' id="dataTable" width="160%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>No. Urut</th>
-                            <th>Nama Pemilik IMB</th>
-                            <th>Uraian Masalah</th>
-                            <th>Jalan</th>
-                            <th>Kelurahan</th>
-                            <th>Kecamatan</th>
-                            <th>No. Rak</th>
-                            <th>No. Box</th>
-                            <th>Kode Klas</th>
-                            <th>No. Urut</th>
-                            <th>NIPA</th>
-                            <th>Tahun</th>
-                            <th>Keterangan</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-
-                    <!-- deklarasikan dan panggil koneksi database -->
-                    <tbody>
-                        <?php
-                        $query = "SELECT * FROM tb_dataarsip order by id_dataarsip desc";
-                        $tampil = $koneksi->query($query);
-                        $no = 1;
-                        while ($data = mysqli_fetch_array($tampil)) {
-                        ?>
-                            <tr>
-                                <td><?= $no++ ?></td>
-                                <td><?= $data['nama'] ?></td>
-                                <td><?= $data['masalah'] ?></td>
-                                <td><?= $data['jalan'] ?></td>
-                                <td><?= $data['kelurahan'] ?></td>
-                                <td><?= $data['kecamatan'] ?></td>
-                                <td><?= $data['no_rak'] ?></td>
-                                <td><?= $data['no_box'] ?></td>
-                                <td><?= $data['kode_klas'] ?></td>
-                                <td><?= $data['no_urut'] ?></td>
-                                <td><?= $data['nipa'] ?></td>
-                                <td><?= $data['tahun'] ?></td>
-                                <td><?= $data['keterangan'] ?></td>
-                                <td>
-
-                            <!-- buat tombol edit hapus -->
-                            <a href="editdata.php?id_dataarsip=<?= $data['id_dataarsip'] ?>" class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-edit"></i>Edit</a><br>
-                            <a href="hapusdata.php?id_dataarsip=<?= $data['id_dataarsip'] ?>" class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-0" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i>Hapus</a>
-
-                        </td>
-                            </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
-            </div>
+<!-- Data Pengunjung -->
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Tambah Data Pinjaman</h6>
         </div>
+
+        <!-- card body -->
+        <div class="card-body">
+            
+<!-- Tambah Data Arsip Form -->
+<div class="container">
+<form action="proses_tambah_data_pinjaman.php" method="post">
+
+<div class="form-group">
+        <label for="judul">Nama Pemilik:</label>
+        <input type="text" class="form-control" id="nama_pemilik" name="nama_pemilik" required>
     </div>
+    <div class="form-group">
+        <label for="judul">Masalah:</label>
+        <input type="text" class="form-control" id="keterangan_pinjam" name="keterangan_pinjam" required>
+    </div>
+    <div class="form-group">
+        <label for="judul">Peminjam:</label>
+        <input type="text" class="form-control" id="peminjam" name="peminjam" required>
+    </div>
+    <div class="form-group">
+        <label for="judul">No. Identitas:</label>
+        <input type="text" class="form-control" id="no_identitas" name="no_identitas" required>
+    </div>
+    <div class="form-group">
+        <label for="judul">Tanggal Pinjam:</label>
+        <input type="text" class="form-control" id="tanggal" name="tanggal" required>
+    </div>
+    <div class="form-group">
+        <label for="judul">Jumlah:</label>
+        <input type="text" class="form-control" id="jumlah" name="jumlah" required>
+    </div>
+    <div class="form-group">
+        <label for="judul">Status:</label>
+        <input type="text" class="form-control" id="status" name="status" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button><br><br>
+</form>
+</div>
+
+    <!-- akhir container -->
+
+    <!-- Area Chart -->
+    <div class="card shadow mb-4">
+                        
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; UNISKA - KEDIRI 2023</span>
+                    </div>
+                </div>
+            </footer>
+            </div>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -273,6 +282,6 @@ include './layout/header.php';
     </div>
 
 </body>
-
 </html>
+
 <?php include './layout/footer.php';?>

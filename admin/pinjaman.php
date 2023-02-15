@@ -1,5 +1,6 @@
 <?php
 require_once '../database/koneksi.php';
+include 'proses_tambah_data.php';
 
 use database\koneksi;
 
@@ -11,28 +12,25 @@ include './layout/header.php';
 <head>
 
     <title>Arsip Online - Kediri</title>
-    <link rel="stylesheet" href="style.css" />
 
 </head>
 
-<body id="page-top" style="background-image: url('./assets/img/background.png'); background-repeat: no-repeat; background-position: center; background-size: cover ; width =">
+<body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <br>
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"style="background-color:#2b2b2b;">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color:#2b2b2b;">
+
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center">
-                <div class="sidebar-brand-icon text-center">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
+            <div class="sidebar-brand-icon text-center">
                 <br><br><br><br><br><br>
                 <img src="../assets/img/arsip.png" width = "77%">   
             </div>
-                
             </a>
-       
 
             <!-- Nav Item - Dashboard -->
             <br><br><br><br><br><br>
@@ -95,9 +93,9 @@ include './layout/header.php';
 
 
         </ul>
-        <!-- End of Sidebar -->
+        <!-- ENDING DARI BAGIAN ADMIN TOOLS -->
 
-        <!-- Content Wrapper -->
+        <!-- DARI SINI ISI KONTEN NYA -->
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
@@ -107,7 +105,7 @@ include './layout/header.php';
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3" >
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
@@ -168,66 +166,76 @@ include './layout/header.php';
                     </ul>
 
                 </nav>
-                <!-- End of Topbar -->
+                <!-- ENDING DARI ADMIN PANEL -->
 
-                <!-- Begin Page Content -->
+
+                
+                <!-- AWAL DARI ISI KONTEN -->
                 <div class="container-fluid">
 
-                    <!-- Content Row -->
-                    <div class="row">
 
-                        <!-- Earnings (Monthly) Card Example -->
+            <!-- Data Pengunjung -->
+            <div class="container">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Data Pinjaman</h6>
+                    </div>
 
+            <!-- card body -->
+            <div class="card-body">
+            
+            <!-- Tombol Tambah Data -->
+            <div class="tambahdata">
+            <a href="tambah_data_pinjaman.php" class="btn btn-primary">Tambah Data</a><br><br>
+
+            <!-- buat kolom -->
+            <div class="table-responsive">
+                <table class="table table-bordered font-weight-normal" style='monospace; font-size:90%' id="dataTable" width="160%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Pemilik</th>
+                            <th>Masalah</th>
+                            <th>Peminjam</th>
+                            <th>No. Identitas</th>
+                            <th>Tanggal Pinjam</th>
+                            <th>Jumlah</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <!-- deklarasikan dan panggil koneksi database -->
+                    <tbody>
                         <?php
-                        $query = "SELECT COUNT(*) as total_data FROM tb_dataarsip";
-                        $koneksi = new koneksi();
-                        $result = $koneksi->query($query);
-                        $row = mysqli_fetch_assoc($result);
-                        $total_data = $row['total_data'];
+                        $query = "SELECT * FROM tb_transaksi order by id_transaksi desc";
+                        $tampil = $koneksi->query($query);
+                        $no = 1;
+                        while ($data = mysqli_fetch_array($tampil)) {
                         ?>
+                            <tr>
+                                <td><?= $no++ ?></td>
+                                <td><?= $data['nama_pemilik'] ?></td>
+                                <td><?= $data['keterangan_pinjam'] ?></td>
+                                <td><?= $data['peminjam'] ?></td>
+                                <td><?= $data['no_identitas'] ?></td>
+                                <td><?= $data['tanggal_pinjam'] ?></td>
+                                <td><?= $data['jumlah'] ?></td>
+                                <td><?= $data['status'] ?></td>
+                                <td>
 
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2"style="width:100%; position:relative;top:20%;left: 97%;">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-center"style="font-size:16px;">
-                                                Total Data Arsip</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-900 text-center"><?php echo $total_data; ?></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-500"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            <!-- buat tombol edit hapus -->
+                            <a href="editdata.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-edit"></i>Edit</a><br>
+                            <a href="hapusdata.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-0" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i>Hapus</a>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2"style="width:100%; position:relative;top:20%;left: 100%;">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1 text-center"style="font-size:16px";>
-                                                Arsip Dipinjam </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-900 text-center";>3</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-stopwatch fa-2x text-gray-500"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container">
-                        <div class="fixed-footer">
-                        <div class="container my-auto">Copyright &copy; UNISKA - KEDIRI 2023</div>
-                    </div>
-                    </div>
-
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -248,7 +256,7 @@ include './layout/header.php';
                 <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="logout.php">Logout</a>
+                    <a class="btn btn-danger" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>
