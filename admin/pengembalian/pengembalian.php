@@ -34,7 +34,7 @@ include './layout/header.php';
             <!-- Nav Item - Dashboard -->
             <br><br><br><br><br><br>
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="../dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>

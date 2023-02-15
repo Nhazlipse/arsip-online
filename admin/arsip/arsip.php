@@ -25,7 +25,7 @@ include './layout/header.php';
 
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../pinjaman/dashboard.php">
             <div class="sidebar-brand-icon text-center">
                 <br><br><br><br><br><br>
                 <img src="../../assets/img/arsip.png" width = "77%">   
@@ -189,7 +189,6 @@ include './layout/header.php';
 <!-- Tombol Tambah Data -->
 <div class="tambahdata">
 <a href="tambah_data.php" class="btn btn-primary">Tambah Data</a><br><br>
-    <a href="tambah_data.php" class="btn btn-primary" data-toggle="modal" data-target="#tambahDataArsipModal">Tambah Data</a><br><br>
 
     <!-- Tambah Data Arsip Modal-->
     <div class="container">

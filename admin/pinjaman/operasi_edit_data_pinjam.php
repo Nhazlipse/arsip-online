@@ -1,7 +1,7 @@
 <!-- operasi untuk edit data form -->
 <?php
 
-require_once '../database/koneksi.php';
+require_once '../../database/koneksi.php';
 
 use database\koneksi;
 

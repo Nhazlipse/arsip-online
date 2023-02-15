@@ -20,22 +20,20 @@ include './layout/header.php';
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"style="background-color:#2b2b2b;">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Arsip Online</div>
+            <div class="sidebar-brand-icon text-center">
+                <br><br><br><br><br><br>
+                <img src="../../assets/img/arsip.png" width = "77%">   
+            </div>
             </a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
             <!-- Nav Item - Dashboard -->
+            <br><br><br><br><br><br>
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="../dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -58,9 +56,9 @@ include './layout/header.php';
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pilih Menu:</h6>
-                        <a class="collapse-item" href="../arsip.php">Arsip</a>
+                        <a class="collapse-item" href="../arsip/arsip.php">Arsip</a>
                         <a class="collapse-item" href="pinjaman.php">Pinjaman</a>
-                        <a class="collapse-item" href="pengembalian.php">Pengembalian</a>
+                        <a class="collapse-item" href="../pengembalian/pengembalian.php">Pengembalian</a>
                     </div>
                 </div>
             </li>
@@ -109,21 +107,12 @@ include './layout/header.php';
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
                     
+                    <!-- Judul Menu -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-0 my-2 my-md-0 mw-100 navbar-search">
+                        <img src="../../assets/img/tulisan.png" width = "36%"> 
+                    </form>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -161,7 +150,7 @@ include './layout/header.php';
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrasi</span>
                                 <img class="img-profile rounded-circle"
-                                    src="../assets/img/undraw_profile.svg">
+                                    src="../../assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -247,32 +236,13 @@ include './layout/header.php';
     </div>
                 
                 
-
-    <!-- Area Chart -->
-    <div class="card shadow mb-4">
-                        
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; UNISKA - KEDIRI 2023</span>
-                    </div>
-                </div>
-            </footer>
-            </div>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
+    
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">

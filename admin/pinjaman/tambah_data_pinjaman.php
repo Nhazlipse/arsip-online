@@ -30,15 +30,15 @@ include './layout/header.php';
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
             <div class="sidebar-brand-icon text-center">
                 <br><br><br><br><br><br>
-                <img src="../../assets/img/arsip.png" width = "77%"> 
-                </div>
+                <img src="../../assets/img/arsip.png" width = "77%">   
+            </div>
             </a>
 
 
             <!-- Nav Item - Dashboard -->
             <br><br><br><br><br><br>
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="../dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -113,20 +113,11 @@ include './layout/header.php';
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
+                    <!-- Judul Menu -->
                     <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-0 my-2 my-md-0 mw-100 navbar-search">
+                        <img src="../../assets/img/tulisan.png" width = "36%"> 
                     </form>
-                    
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -235,23 +226,6 @@ include './layout/header.php';
 </div>
 
     <!-- akhir container -->
-
-    <!-- Area Chart -->
-    <div class="card shadow mb-4">
-                        
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; UNISKA - KEDIRI 2023</span>
-                    </div>
-                </div>
-            </footer>
-            </div>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
