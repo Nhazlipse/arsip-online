@@ -231,10 +231,7 @@ include './layout/header.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="container">
-                        <div class="fixed-footer">
-                        <div class="container my-auto">Copyright &copy; UNISKA - KEDIRI 2029</div>
-                    </div>
+                       
                     </div>
 
     </div>
