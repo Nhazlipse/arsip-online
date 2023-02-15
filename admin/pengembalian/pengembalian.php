@@ -1,6 +1,5 @@
 <?php
-require_once '../database/koneksi.php';
-include 'proses_tambah_data.php';
+require_once '../../database/koneksi.php';
 
 use database\koneksi;
 
@@ -25,10 +24,10 @@ include './layout/header.php';
 
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
             <div class="sidebar-brand-icon text-center">
                 <br><br><br><br><br><br>
-                <img src="../assets/img/arsip.png" width = "77%">   
+                <img src="../../assets/img/arsip.png" width = "77%">   
             </div>
             </a>
 
@@ -58,8 +57,9 @@ include './layout/header.php';
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pilih Menu:</h6>
-                        <a class="collapse-item" href="arsip.php">Arsip</a>
-                        <a class="collapse-item" href="pinjaman.php">Pinjaman</a>
+                        <a class="collapse-item" href="../arsip/arsip.php">Arsip</a>
+                        <a class="collapse-item" href="../pinjaman/pinjaman.php">Pinjaman</a>
+                        <a class="collapse-item" href="pengembalian.php">Pengembalian</a>
                     </div>
                 </div>
             </li>
@@ -112,7 +112,7 @@ include './layout/header.php';
                     <!-- Judul Menu -->
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-0 my-2 my-md-0 mw-100 navbar-search">
-                        <img src="../assets/img/tulisan.png" width = "36%"> 
+                        <img src="../../assets/img/tulisan.png" width = "36%"> 
                     </form>
 
                     <!-- Topbar Navbar -->
@@ -151,7 +151,7 @@ include './layout/header.php';
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrasi</span>
                                 <img class="img-profile rounded-circle"
-                                    src="../assets/img/undraw_profile.svg">
+                                    src="../../assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -178,30 +178,25 @@ include './layout/header.php';
             <div class="container">
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Data Pinjaman</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Data Pengembalian</h6>
                     </div>
 
             <!-- card body -->
             <div class="card-body">
-            
-            <!-- Tombol Tambah Data -->
-            <div class="tambahdata">
-            <a href="tambah_data_pinjaman.php" class="btn btn-primary">Tambah Data</a><br><br>
 
             <!-- buat kolom -->
             <div class="table-responsive">
-                <table class="table table-bordered font-weight-normal" style='monospace; font-size:90%' id="dataTable" width="160%" cellspacing="0">
+                <table class="table table-bordered font-weight-normal" style='monospace; font-size:90%' id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>Tanggal Pengembalian</th>
                             <th>Pemilik</th>
                             <th>Masalah</th>
-                            <th>Peminjam</th>
                             <th>No. Identitas</th>
+                            <th>Peminjam</th>
                             <th>Tanggal Pinjam</th>
                             <th>Jumlah</th>
-                            <th>Status</th>
-                            <th>Action</th>
                         </tr>
                     </thead>
 
@@ -215,19 +210,12 @@ include './layout/header.php';
                         ?>
                             <tr>
                                 <td><?= $no++ ?></td>
-                                <td><?= $data['nama_pemilik'] ?></td>
-                                <td><?= $data['keterangan_pinjam'] ?></td>
-                                <td><?= $data['peminjam'] ?></td>
+                                <td><?= $data['tanggal_pengembalian'] ?></td>
+                                <td><?= $data['pemilik'] ?></td>
+                                <td><?= $data['masalah'] ?></td>
                                 <td><?= $data['no_identitas'] ?></td>
                                 <td><?= $data['tanggal_pinjam'] ?></td>
                                 <td><?= $data['jumlah'] ?></td>
-                                <td><?= $data['status'] ?></td>
-                                <td>
-
-                            <!-- buat tombol edit hapus -->
-                            <a href="editdata_pinjam.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-edit"></i>Edit</a><br>
-                            <a href="hapusdata_pinjam.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-0" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i>Hapus</a>
-
                                 </td>
                             </tr>
                         <?php } ?>

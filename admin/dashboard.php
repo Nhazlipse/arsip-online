@@ -70,9 +70,9 @@ include './layout/header.php';
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pilih Menu:</h6>
-                        <a class="collapse-item" href="arsip.php">Arsip</a>
-                        <a class="collapse-item" href="pinjaman.php">Pinjaman</a>
-                        <a class="collapse-item" href="pengembalian.php">Pengembalian</a>
+                        <a class="collapse-item" href="./arsip/arsip.php">Arsip</a>
+                        <a class="collapse-item" href="./pinjaman/pinjaman.php">Pinjaman</a>
+                        <a class="collapse-item" href="./pengembalian/pengembalian.php">Pengembalian</a>
                     </div>
                 </div>
             </li>

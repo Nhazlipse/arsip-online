@@ -1,5 +1,9 @@
+<?php include './layout/header.php'; ?> 
+
+
 <?php
-require_once '../database/koneksi.php';
+require_once '../../database/koneksi.php';
+include 'proses_tambah_data.php';
 
 use database\koneksi;
 
@@ -10,7 +14,7 @@ include './layout/header.php';
 
 <head>
 
-    <title>Edit Data Arsip</title>
+    <title>Arsip Online - Kediri</title>
 
 </head>
 
@@ -20,22 +24,20 @@ include './layout/header.php';
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"style="background-color:#2b2b2b;">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Arsip Online</div>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
+            <div class="sidebar-brand-icon text-center">
+                <br><br><br><br><br><br>
+                <img src="../../assets/img/arsip.png" width = "77%">   
+            </div>
             </a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
             <!-- Nav Item - Dashboard -->
+            <br><br><br><br><br><br>
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="../dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -59,7 +61,8 @@ include './layout/header.php';
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pilih Menu:</h6>
                         <a class="collapse-item" href="arsip.php">Arsip</a>
-                        <a class="collapse-item" href="transaksi.php">Transaksi</a>
+                        <a class="collapse-item" href="../pinjaman/pinjaman.php">Pinjaman</a>
+                        <a class="collapse-item" href="../pengembalian/pengembalian.php">Pengembalian</a>
                     </div>
                 </div>
             </li>
@@ -109,20 +112,11 @@ include './layout/header.php';
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
+                   <!-- Judul Menu -->
+                   <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-0 my-2 my-md-0 mw-100 navbar-search">
+                        <img src="../../assets/img/tulisan.png" width = "36%"> 
                     </form>
-                    
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -160,7 +154,7 @@ include './layout/header.php';
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrasi</span>
                                 <img class="img-profile rounded-circle"
-                                    src="../assets/img/undraw_profile.svg">
+                                    src="../../assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -305,6 +299,8 @@ include './layout/header.php';
             </div>
         </div>
     </div>
-    </body>
 
+</body>
 </html>
+
+<?php include './layout/footer.php';?>

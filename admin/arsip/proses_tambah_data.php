@@ -1,6 +1,6 @@
 <?php
 //panggil koneksi
-require_once '../database/koneksi.php';
+require_once '../.././database/koneksi.php';
 
 use database\koneksi;
 
