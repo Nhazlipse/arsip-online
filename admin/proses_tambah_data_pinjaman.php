@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $keterangan_pinjam = $_POST['keterangan_pinjam'];
     $peminjam = $_POST['peminjam'];
     $no_identitas = $_POST['no_identitas'];
-    $tgl = $_POST['tanggal'];
+    $tgl = $_POST['tanggal_pinjam'];
     $jumlah = $_POST['jumlah'];
 
 
@@ -24,12 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Prepare SQL query
-    $query = "INSERT INTO tb_transaksi (nama_pemilik, keterangan_pinjam, peminjam, no_identitas, tanggal, jumlah) 
+    $query = "INSERT INTO tb_transaksi (nama_pemilik, keterangan_pinjam, peminjam, no_identitas, tanggal_pinjam, jumlah) 
             VALUES ('$nama_pemilik', '$keterangan_pinjam', '$peminjam', '$no_identitas', '$tgl', '$jumlah')";
     $koneksi->query($query);
 
     // return a success message
     echo "<script>alert('Data berhasil disimpan.');document.location='?';</script>";
-    header("location: ./admin/pinjaman.php");
+    header("location: pinjaman.php");
 }
 ?>
