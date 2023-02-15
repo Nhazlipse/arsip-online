@@ -12,10 +12,20 @@ include './layout/header.php';
 
     <title>Arsip Online - Kediri</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+    .container-fluid {
+        background-image: url("../assets/img/bg_menu.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 587px;
+        width: 1220px;
 
+    }
+    </style>
 </head>
 
-<body id="page-top" style="background-image: url('./assets/img/background.png'); background-repeat: no-repeat; background-position: center; background-size: cover ; width =">
+<body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -104,7 +114,7 @@ include './layout/header.php';
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-6 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3" >
@@ -187,7 +197,7 @@ include './layout/header.php';
                         ?>
 
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2"style="width:100%; position:relative;top:20%;left: 97%;">
+                            <div class="card border-left-primary shadow h-100 py-2"style="width:100%; position:relative;top:150%;left: 97%;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -205,7 +215,7 @@ include './layout/header.php';
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2"style="width:100%; position:relative;top:20%;left: 100%;">
+                            <div class="card border-left-success shadow h-100 py-2"style="width:100%; position:relative;top:150%;left: 100%;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
