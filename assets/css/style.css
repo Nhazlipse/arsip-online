@@ -42,11 +42,11 @@ a.btn {
   }
   
   .fixed-footer {
-    width: 75%;
+    width: 100%;
     position: absolute;
     left: 20%;
     top: 95%;
-    background: whitesmoke;
+    background: white;
     margin: 0px 10px 10px;
     padding: 0px 2px;
     color: grey;

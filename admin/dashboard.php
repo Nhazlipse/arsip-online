@@ -14,12 +14,12 @@ include './layout/header.php';
     <link rel="stylesheet" href="style.css" />
     <style>
     .container-fluid {
-        background-image: url("../assets/img/bg_menu.png");
+        background-image: url("../assets/img/bg_arsip.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 587px;
-        width: 1220px;
+        width: 1280px;
 
     }
     </style>
@@ -197,7 +197,7 @@ include './layout/header.php';
                         ?>
 
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2"style="width:100%; position:relative;top:150%;left: 97%;">
+                            <div class="card border-left-primary shadow h-100 py-2"style="width:90%; position:relative;top:150%;left: 80%;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -215,7 +215,7 @@ include './layout/header.php';
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2"style="width:100%; position:relative;top:150%;left: 100%;">
+                            <div class="card border-left-success shadow h-100 py-2"style="width:90%; position:relative;top:150%;left: 111%;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -232,7 +232,7 @@ include './layout/header.php';
                         </div>
                         <div class="container">
                         <div class="fixed-footer">
-                        <div class="container my-auto">Copyright &copy; UNISKA - KEDIRI 2023</div>
+                        <div class="container my-auto">Copyright &copy; UNISKA - KEDIRI 2029</div>
                     </div>
                     </div>
 
