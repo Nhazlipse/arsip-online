@@ -69,3 +69,11 @@ a.btn {
     width: 100%;
   }
 }
+
+.judul{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: black;
+  font-style: bold;
+}
