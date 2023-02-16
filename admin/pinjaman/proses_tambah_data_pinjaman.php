@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $no_identitas = $_POST['no_identitas'];
     $tgl = $_POST['tanggal_pinjam'];
     $jumlah = $_POST['jumlah'];
+    $status = $_POST['status'];
 
 
     // Check if connection is successful
@@ -24,8 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Prepare SQL query
-    $query = "INSERT INTO tb_transaksi (nama_pemilik, keterangan_pinjam, peminjam, no_identitas, tanggal_pinjam, jumlah) 
-            VALUES ('$nama_pemilik', '$keterangan_pinjam', '$peminjam', '$no_identitas', '$tgl', '$jumlah')";
+    $query = "INSERT INTO tb_transaksi (nama_pemilik, keterangan_pinjam, peminjam, no_identitas, tanggal_pinjam, jumlah, status) 
+            VALUES ('$nama_pemilik', '$keterangan_pinjam', '$peminjam', '$no_identitas', '$tgl', '$jumlah', '$status')";
     $koneksi->query($query);
 
     // return a success message
