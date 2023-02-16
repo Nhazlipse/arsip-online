@@ -213,6 +213,7 @@ include './layout/header.php';
                         $tampil = $koneksi->query($query);
                         $no = 1;
                         while ($data = mysqli_fetch_array($tampil)) {
+                            $status = $data['status'];
                         ?>
                             <tr>
                                 <td><?= $no++ ?></td>
@@ -222,12 +223,16 @@ include './layout/header.php';
                                 <td><?= $data['no_identitas'] ?></td>
                                 <td><?= $data['tanggal_pinjam'] ?></td>
                                 <td><?= $data['jumlah'] ?></td>
-                                <td><?= $data['status'] ?></td>
+                                <td><?= $status ?></td>
                                 <td>
 
                             <!-- buat tombol edit hapus -->
+                            <?php if ($status == 'dipinjam') { ?>
+                            <a href="../pengembalian/operasi_pengembalian_data.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-success btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-undo"></i>Kembalikan</a>
+                        <?php } else { ?>
                             <a href="editdata_pinjam.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-edit"></i>Edit</a><br>
                             <a href="hapusdata_pinjam.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-0" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i>Hapus</a>
+                        <?php } ?>
 
                                 </td>
                             </tr>

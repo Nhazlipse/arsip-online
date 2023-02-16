@@ -227,9 +227,7 @@ include './layout/header.php';
                     <button type="submit" class="btn btn-primary" name="Update" value="Update Data">
                         Submit
                     </button>
-                    <button type="submit" action="pinjaman.php" class="btn btn-danger">
-                        Cancel
-                    </button>
+                    <a href="pinjaman.php" class="btn btn-danger">Cancel</a>
                 </form>
             </div>
         </div>
