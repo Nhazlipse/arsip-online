@@ -253,27 +253,6 @@ include './layout/header.php';
         </div>
     </div>
                 
-                
-
-    <!-- Area Chart -->
-    <div class="card shadow mb-4">
-                        
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; UNISKA - KEDIRI 2023</span>
-                    </div>
-                </div>
-            </footer>
-            </div>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">

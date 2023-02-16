@@ -240,28 +240,11 @@ include './layout/header.php';
         <input type="text" class="form-control" id="keterangan" name="keterangan" required>
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button><br><br>
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
 
     <!-- akhir container -->
-
-    <!-- Area Chart -->
-    <div class="card shadow mb-4">
-                        
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; UNISKA - KEDIRI 2023</span>
-                    </div>
-                </div>
-            </footer>
-            </div>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
