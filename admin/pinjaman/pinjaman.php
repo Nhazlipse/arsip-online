@@ -225,7 +225,12 @@ include './layout/header.php';
                                 <td><?= $data['tanggal_pinjam'] ?></td>
                                 <td><?= $data['tanggal_dikembalikan'] ?></td>
                                 <td><?= $data['jumlah'] ?></td>
-                                <td><?= $status ?></td>
+                                <td>
+                               <?php if ($status == 'dipinjam') { ?>
+                                    <button type="button" class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-1" disabled>Dipinjam</button>
+                                <?php } else { ?>
+                                    <button type="button" class="btn btn-success btn-sm d-sm-inline-block mb-3 mb-sm-1" disabled>Tersedia</button>
+                                <?php } ?>
                                 <td>
 
                             <!-- buat tombol edit hapus -->

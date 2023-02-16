@@ -206,7 +206,7 @@ include './layout/header.php';
     </div>
     <div class="form-group">
         <label for="judul">No. Identitas:</label>
-        <input type="text" class="form-control" id="no_identitas" name="no_identitas" required>
+        <input type="number" class="form-control" id="no_identitas" name="no_identitas" required>
     </div>
     <div class="form-group">
         <label for="judul">Tanggal Pinjam:</label>
@@ -217,9 +217,10 @@ include './layout/header.php';
         <input type="text" class="form-control" id="jumlah" name="jumlah" required>
     </div>
     <div class="form-group">
-        <label for="judul">Status:</label>
-        <input type="text" class="form-control" id="status" name="status" required>
-    </div>
+    <label for="judul">Status:</label>
+    <input type="text" class="form-control" id="status" name="status" value="dipinjam" readonly>
+</div>
+
 
     <button type="submit" class="btn btn-primary">Submit</button>
     <a href="pinjaman.php" class="btn btn-danger">Cancel</a>

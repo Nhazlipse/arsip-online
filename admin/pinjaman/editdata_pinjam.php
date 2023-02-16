@@ -220,9 +220,14 @@ include './layout/header.php';
                         <input type="number" class="form-control" name="jumlah" id="jumlah" required value="<?php echo $row['jumlah']; ?>">
                     </div>
                     <div class="form-group">
-                        <label for="status">Status</label>
-                        <input type="text" class="form-control" name="status" id="status" required value="<?php echo $row['status']; ?>">
+                    <label for="status">Status</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="status" id="dipinjam" value="dipinjam" <?php echo $row['status'] == 'dipinjam' ? 'checked' : ''; ?>>
+                        <label class="form-check-label" for="dipinjam">Dipinjam</label>
                     </div>
+                    </div>
+
+
 
                     <button type="submit" class="btn btn-primary" name="Update" value="Update Data">
                         Submit
