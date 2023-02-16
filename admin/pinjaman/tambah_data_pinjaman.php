@@ -210,7 +210,7 @@ include './layout/header.php';
     </div>
     <div class="form-group">
         <label for="judul">Tanggal Pinjam:</label>
-        <input type="text" class="form-control" id="tanggal_pinjam" name="tanggal_pinjam" required>
+        <input type="date" class="form-control" id="tanggal_pinjam" name="tanggal_pinjam" required>
     </div>
     <div class="form-group">
         <label for="judul">Jumlah:</label>
