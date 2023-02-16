@@ -1,4 +1,4 @@
-<?php include './layout/header.php'; ?> 
+<?php include './layout/header.php'; ?>
 
 
 <?php
@@ -24,14 +24,14 @@ include './layout/header.php';
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"style="background-color:#2b2b2b;">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color:#2b2b2b;">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
-            <div class="sidebar-brand-icon text-center">
-                <br><br><br><br><br><br>
-                <img src="../../assets/img/arsip.png" width = "77%">   
-            </div>
+                <div class="sidebar-brand-icon text-center">
+                    <br><br><br><br><br><br>
+                    <img src="../../assets/img/arsip.png" width="77%">
+                </div>
             </a>
 
 
@@ -63,7 +63,6 @@ include './layout/header.php';
                         <h6 class="collapse-header">Pilih Menu:</h6>
                         <a class="collapse-item" href="../arsip/arsip.php">Arsip</a>
                         <a class="collapse-item" href="pinjaman.php">Pinjaman</a>
-                        <a class="collapse-item" href="../pengembalian/pengembalian.php">Pengembalian</a>
                     </div>
                 </div>
             </li>
@@ -116,7 +115,7 @@ include './layout/header.php';
                     <!-- Judul Menu -->
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-0 my-2 my-md-0 mw-100 navbar-search">
-                        <img src="../../assets/img/tulisan.png" width = "36%"> 
+                        <img src="../../assets/img/tulisan.png" width="36%">
                     </form>
 
                     <!-- Topbar Navbar -->
@@ -154,8 +153,7 @@ include './layout/header.php';
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrasi</span>
-                                <img class="img-profile rounded-circle"
-                                    src="../../assets/img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="../../assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -173,91 +171,101 @@ include './layout/header.php';
                 <!-- End of Topbar -->
 
 
-                
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
 
-<!-- Data Pengunjung -->
-<div class="container">
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Tambah Data Pinjaman</h6>
-        </div>
+                    <!-- Data Pengunjung -->
+                    <div class="container">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Tambah Data Pinjaman</h6>
+                            </div>
 
-        <!-- card body -->
-        <div class="card-body">
-            
-<!-- Tambah Data Arsip Form -->
-<div class="container">
-<form action="proses_tambah_data_pinjaman.php" method="post">
+                            <!-- card body -->
+                            <div class="card-body">
 
-<div class="form-group">
-        <label for="judul">Nama Pemilik:</label>
-        <input type="text" class="form-control" id="nama_pemilik" name="nama_pemilik" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Masalah:</label>
-        <input type="text" class="form-control" id="keterangan_pinjam" name="keterangan_pinjam" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Peminjam:</label>
-        <input type="text" class="form-control" id="peminjam" name="peminjam" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">No. Identitas:</label>
-        <input type="number" class="form-control" id="no_identitas" name="no_identitas" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Tanggal Pinjam:</label>
-        <input type="date" class="form-control" id="tanggal_pinjam" name="tanggal_pinjam" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Jumlah:</label>
-        <input type="text" class="form-control" id="jumlah" name="jumlah" required>
-    </div>
-    <div class="form-group">
-    <label for="judul">Status:</label>
-    <input type="text" class="form-control" id="status" name="status" value="dipinjam" readonly>
-</div>
+                                <!-- Tambah Data Arsip Form -->
+                                <div class="container">
+                                    <form action="proses_tambah_data_pinjaman.php" method="post">
+
+                                        <div class="form-group">
+                                            <label for="judul">Nama Pemilik:</label>
+                                            <input type="text" class="form-control" id="nama_pemilik"
+                                                name="nama_pemilik" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">Masalah:</label>
+                                            <input type="text" class="form-control" id="keterangan_pinjam"
+                                                name="keterangan_pinjam" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">Peminjam:</label>
+                                            <input type="text" class="form-control" id="peminjam" name="peminjam"
+                                                required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">No. Identitas:</label>
+                                            <input type="number" class="form-control" id="no_identitas"
+                                                name="no_identitas" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">Tanggal Pinjam:</label>
+                                            <input type="date" class="form-control" id="tanggal_pinjam"
+                                                name="tanggal_pinjam" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">Jumlah:</label>
+                                            <input type="text" class="form-control" id="jumlah" name="jumlah" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">Status:</label>
+                                            <input type="text" class="form-control" id="status" name="status"
+                                                value="dipinjam" readonly>
+                                        </div>
 
 
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <a href="pinjaman.php" class="btn btn-danger">Cancel</a>
-</form>
-</div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <a href="pinjaman.php" class="btn btn-danger">Cancel</a>
+                                    </form>
+                                </div>
 
-    <!-- akhir container -->
+                                <!-- akhir container -->
 
-    </div>
-    <!-- End of Page Wrapper -->
+                            </div>
+                            <!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+                            <!-- Scroll to Top Button-->
+                            <a class="scroll-to-top rounded" href="#page-top">
+                                <i class="fas fa-angle-up"></i>
+                            </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Apakah Anda yakin ingin keluar?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="logout.php">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+                            <!-- Logout Modal-->
+                            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Apakah Anda yakin ingin
+                                                keluar?</h5>
+                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" type="button"
+                                                data-dismiss="modal">Cancel</button>
+                                            <a class="btn btn-danger" href="logout.php">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
 </body>
+
 </html>
 
 <?php include './layout/footer.php';?>

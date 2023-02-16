@@ -32,17 +32,17 @@ include './layout/header.php';
 
         <!-- Sidebar -->
         <br>
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"style="background-color:#2b2b2b;">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color:#2b2b2b;">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center">
                 <div class="sidebar-brand-icon text-center">
-                <br><br><br><br><br><br>
-                <img src="../assets/img/arsip.png" width = "77%">   
-            </div>
-                
+                    <br><br><br><br><br><br>
+                    <img src="../assets/img/arsip.png" width="77%">
+                </div>
+
             </a>
-       
+
 
             <!-- Nav Item - Dashboard -->
             <br><br><br><br><br><br>
@@ -72,7 +72,6 @@ include './layout/header.php';
                         <h6 class="collapse-header">Pilih Menu:</h6>
                         <a class="collapse-item" href="./arsip/arsip.php">Arsip</a>
                         <a class="collapse-item" href="./pinjaman/pinjaman.php">Pinjaman</a>
-                        <a class="collapse-item" href="./pengembalian/pengembalian.php">Pengembalian</a>
                     </div>
                 </div>
             </li>
@@ -118,14 +117,14 @@ include './layout/header.php';
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-6 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3" >
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
                     <!-- Judul Menu -->
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-0 my-2 my-md-0 mw-100 navbar-search">
-                        <img src="../assets/img/tulisan.png" width = "36%"> 
+                        <img src="../assets/img/tulisan.png" width="36%">
                     </form>
 
                     <!-- Topbar Navbar -->
@@ -163,8 +162,7 @@ include './layout/header.php';
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrasi</span>
-                                <img class="img-profile rounded-circle"
-                                    src="../assets/img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="../assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -198,13 +196,16 @@ include './layout/header.php';
                         ?>
 
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2"style="width:90%; position:relative;top:150%;left: 80%;">
+                            <div class="card border-left-primary shadow h-100 py-2"
+                                style="width:90%; position:relative;top:150%;left: 80%;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-center"style="font-size:16px;">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-center"
+                                                style="font-size:16px;">
                                                 Total Data Arsip</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-900 text-center"><?php echo $total_data; ?></div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-900 text-center">
+                                                <?php echo $total_data; ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-500"></i>
@@ -216,13 +217,15 @@ include './layout/header.php';
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2"style="width:90%; position:relative;top:150%;left: 111%;">
+                            <div class="card border-left-success shadow h-100 py-2"
+                                style="width:90%; position:relative;top:150%;left: 111%;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1 text-center"style="font-size:16px";>
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1 text-center"
+                                                style="font-size:16px" ;>
                                                 Arsip Dipinjam </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-900 text-center";>3</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-900 text-center" ;>3</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-stopwatch fa-2x text-gray-500"></i>
@@ -231,36 +234,36 @@ include './layout/header.php';
                                 </div>
                             </div>
                         </div>
-                       
+
                     </div>
 
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Apakah Anda yakin ingin keluar?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
                 </div>
-                <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="logout.php">Logout</a>
+                <!-- End of Page Wrapper -->
+
+                <!-- Scroll to Top Button-->
+                <a class="scroll-to-top rounded" href="#page-top">
+                    <i class="fas fa-angle-up"></i>
+                </a>
+
+                <!-- Logout Modal-->
+                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Apakah Anda yakin ingin keluar?</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.</div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                <a class="btn btn-primary" href="logout.php">Logout</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
 </body>
 

@@ -1,4 +1,4 @@
-<?php include './layout/header.php'; ?> 
+<?php include './layout/header.php'; ?>
 
 
 <?php
@@ -24,14 +24,14 @@ include './layout/header.php';
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"style="background-color:#2b2b2b;">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color:#2b2b2b;">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
-            <div class="sidebar-brand-icon text-center">
-                <br><br><br><br><br><br>
-                <img src="../../assets/img/arsip.png" width = "77%">   
-            </div>
+                <div class="sidebar-brand-icon text-center">
+                    <br><br><br><br><br><br>
+                    <img src="../../assets/img/arsip.png" width="77%">
+                </div>
             </a>
 
             <!-- Nav Item - Dashboard -->
@@ -62,7 +62,6 @@ include './layout/header.php';
                         <h6 class="collapse-header">Pilih Menu:</h6>
                         <a class="collapse-item" href="arsip.php">Arsip</a>
                         <a class="collapse-item" href="../pinjaman/pinjaman.php">Pinjaman</a>
-                        <a class="collapse-item" href="../pengembalian/pengembalian.php">Pengembalian</a>
                     </div>
                 </div>
             </li>
@@ -112,10 +111,10 @@ include './layout/header.php';
                         <i class="fa fa-bars"></i>
                     </button>
 
-                   <!-- Judul Menu -->
-                   <form
+                    <!-- Judul Menu -->
+                    <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-0 my-2 my-md-0 mw-100 navbar-search">
-                        <img src="../../assets/img/tulisan.png" width = "36%"> 
+                        <img src="../../assets/img/tulisan.png" width="36%">
                     </form>
 
                     <!-- Topbar Navbar -->
@@ -153,8 +152,7 @@ include './layout/header.php';
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrasi</span>
-                                <img class="img-profile rounded-circle"
-                                    src="../../assets/img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="../../assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -172,110 +170,120 @@ include './layout/header.php';
                 <!-- End of Topbar -->
 
 
-                
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
 
-<!-- Data Pengunjung -->
-<div class="container">
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Tambah Data Arsip</h6>
-        </div>
+                    <!-- Data Pengunjung -->
+                    <div class="container">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Tambah Data Arsip</h6>
+                            </div>
 
-        <!-- card body -->
-        <div class="card-body">
-            
-<!-- Tambah Data Arsip Form -->
-<div class="container">
-<form action="proses_tambah_data.php" method="post">
+                            <!-- card body -->
+                            <div class="card-body">
 
-    <div class="form-group">
-        <label for="judul">Nama Pemilik IMB:</label>
-        <input type="text" class="form-control" id="nama" name="nama" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Masalah:</label>
-        <input type="text" class="form-control" id="masalah" name="masalah" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Jalan:</label>
-        <input type="text" class="form-control" id="jalan" name="jalan" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Kelurahan:</label>
-        <input type="text" class="form-control" id="kelurahan" name="kelurahan" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Kecamatan:</label>
-        <input type="text" class="form-control" id="kecamatan" name="kecamatan" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">No. Rak:</label>
-        <input type="text" class="form-control" id="no_rak" name="no_rak" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">No. Box:</label>
-        <input type="text" class="form-control" id="no_box" name="no_box" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Kode Klas:</label>
-        <input type="text" class="form-control" id="kode_klas" name="kode_klas" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">No. Urut:</label>
-        <input type="text" class="form-control" id="no_urut" name="no_urut" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">NIPA:</label>
-        <input type="text" class="form-control" id="nipa" name="nipa" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Tahun:</label>
-        <input type="text" class="form-control" id="tahun" name="tahun" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Keterangan:</label>
-        <input type="text" class="form-control" id="keterangan" name="keterangan" required>
-    </div>
+                                <!-- Tambah Data Arsip Form -->
+                                <div class="container">
+                                    <form action="proses_tambah_data.php" method="post">
 
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <a href="arsip.php" class="btn btn-danger">Cancel</a>
-</form>
-</div>
+                                        <div class="form-group">
+                                            <label for="judul">Nama Pemilik IMB:</label>
+                                            <input type="text" class="form-control" id="nama" name="nama" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">Masalah:</label>
+                                            <input type="text" class="form-control" id="masalah" name="masalah"
+                                                required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">Jalan:</label>
+                                            <input type="text" class="form-control" id="jalan" name="jalan" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">Kelurahan:</label>
+                                            <input type="text" class="form-control" id="kelurahan" name="kelurahan"
+                                                required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">Kecamatan:</label>
+                                            <input type="text" class="form-control" id="kecamatan" name="kecamatan"
+                                                required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">No. Rak:</label>
+                                            <input type="text" class="form-control" id="no_rak" name="no_rak" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">No. Box:</label>
+                                            <input type="text" class="form-control" id="no_box" name="no_box" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">Kode Klas:</label>
+                                            <input type="text" class="form-control" id="kode_klas" name="kode_klas"
+                                                required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">No. Urut:</label>
+                                            <input type="text" class="form-control" id="no_urut" name="no_urut"
+                                                required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">NIPA:</label>
+                                            <input type="text" class="form-control" id="nipa" name="nipa" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">Tahun:</label>
+                                            <input type="text" class="form-control" id="tahun" name="tahun" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="judul">Keterangan:</label>
+                                            <input type="text" class="form-control" id="keterangan" name="keterangan"
+                                                required>
+                                        </div>
 
-    <!-- akhir container -->
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <a href="arsip.php" class="btn btn-danger">Cancel</a>
+                                    </form>
+                                </div>
 
-    </div>
-    <!-- End of Page Wrapper -->
+                                <!-- akhir container -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+                            </div>
+                            <!-- End of Page Wrapper -->
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Apakah Anda yakin ingin keluar?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="logout.php">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+                            <!-- Scroll to Top Button-->
+                            <a class="scroll-to-top rounded" href="#page-top">
+                                <i class="fas fa-angle-up"></i>
+                            </a>
+
+                            <!-- Logout Modal-->
+                            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Apakah Anda yakin ingin
+                                                keluar?</h5>
+                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" type="button"
+                                                data-dismiss="modal">Cancel</button>
+                                            <a class="btn btn-danger" href="logout.php">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
 </body>
+
 </html>
 
 <?php include './layout/footer.php';?>

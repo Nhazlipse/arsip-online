@@ -26,10 +26,10 @@ include './layout/header.php';
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
-            <div class="sidebar-brand-icon text-center">
-                <br><br><br><br><br><br>
-                <img src="../../assets/img/arsip.png" width = "77%">   
-            </div>
+                <div class="sidebar-brand-icon text-center">
+                    <br><br><br><br><br><br>
+                    <img src="../../assets/img/arsip.png" width="77%">
+                </div>
             </a>
 
             <!-- Nav Item - Dashboard -->
@@ -60,7 +60,6 @@ include './layout/header.php';
                         <h6 class="collapse-header">Pilih Menu:</h6>
                         <a class="collapse-item" href="../arsip/arsip.php">Arsip</a>
                         <a class="collapse-item" href="pinjaman.php">Pinjaman</a>
-                        <a class="collapse-item" href="../pengembalian/pengembalian.php">Pengembalian</a>
                     </div>
                 </div>
             </li>
@@ -113,7 +112,7 @@ include './layout/header.php';
                     <!-- Judul Menu -->
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-0 my-2 my-md-0 mw-100 navbar-search">
-                        <img src="../../assets/img/tulisan.png" width = "36%"> 
+                        <img src="../../assets/img/tulisan.png" width="36%">
                     </form>
 
                     <!-- Topbar Navbar -->
@@ -151,8 +150,7 @@ include './layout/header.php';
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrasi</span>
-                                <img class="img-profile rounded-circle"
-                                    src="../../assets/img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="../../assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -170,110 +168,126 @@ include './layout/header.php';
                 <!-- ENDING DARI ADMIN PANEL -->
 
 
-                
+
                 <!-- AWAL DARI ISI KONTEN -->
                 <div class="container-fluid">
 
 
-            <!-- Data Pengunjung -->
-            <div class="container">
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Data Pinjaman</h6>
-                    </div>
+                    <!-- Data Pengunjung -->
+                    <div class="container">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Data Pinjaman</h6>
+                            </div>
 
-            <!-- card body -->
-            <div class="card-body">
-            
-            <!-- Tombol Tambah Data -->
-            <div class="tambahdata">
-            <a href="tambah_data_pinjaman.php" class="btn btn-primary">Tambah Data</a><br><br>
+                            <!-- card body -->
+                            <div class="card-body">
 
-            <!-- buat kolom -->
-            <div class="table-responsive">
-                <table class="table table-bordered font-weight-normal" style='monospace; font-size:90%' id="dataTable" width="160%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th class="text-center">No</th>
-                            <th>Pemilik</th>
-                            <th>Masalah</th>
-                            <th>Peminjam</th>
-                            <th>No. Identitas</th>
-                            <th>Tanggal Pinjam</th>
-                            <th>Tanggal Dikembalikan</th>
-                            <th>Jumlah</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
+                                <!-- Tombol Tambah Data -->
+                                <div class="tambahdata">
+                                    <a href="tambah_data_pinjaman.php" class="btn btn-primary">Tambah Data</a><br><br>
 
-                    <!-- deklarasikan dan panggil koneksi database -->
-                    <tbody>
-                        <?php
+                                    <!-- buat kolom -->
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered font-weight-normal"
+                                            style='monospace; font-size:90%' id="dataTable" width="160%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">No</th>
+                                                    <th>Pemilik</th>
+                                                    <th>Masalah</th>
+                                                    <th>Peminjam</th>
+                                                    <th>No. Identitas</th>
+                                                    <th>Tanggal Pinjam</th>
+                                                    <th>Tanggal Dikembalikan</th>
+                                                    <th>Jumlah</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+
+                                            <!-- deklarasikan dan panggil koneksi database -->
+                                            <tbody>
+                                                <?php
                         $query = "SELECT * FROM tb_transaksi order by id_transaksi desc";
                         $tampil = $koneksi->query($query);
                         $no = 1;
                         while ($data = mysqli_fetch_array($tampil)) {
                             $status = $data['status'];
                         ?>
-                            <tr>
-                                <td class="text-center"><?= $no++ ?></td>
-                                <td><?= $data['nama_pemilik'] ?></td>
-                                <td><?= $data['keterangan_pinjam'] ?></td>
-                                <td><?= $data['peminjam'] ?></td>
-                                <td><?= $data['no_identitas'] ?></td>
-                                <td><?= $data['tanggal_pinjam'] ?></td>
-                                <td><?= $data['tanggal_dikembalikan'] ?></td>
-                                <td><?= $data['jumlah'] ?></td>
-                                <td>
-                               <?php if ($status == 'dipinjam') { ?>
-                                    <button type="button" class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-1" disabled>Dipinjam</button>
-                                <?php } else { ?>
-                                    <button type="button" class="btn btn-success btn-sm d-sm-inline-block mb-3 mb-sm-1" disabled>Tersedia</button>
-                                <?php } ?>
-                                <td>
+                                                <tr>
+                                                    <td class="text-center"><?= $no++ ?></td>
+                                                    <td><?= $data['nama_pemilik'] ?></td>
+                                                    <td><?= $data['keterangan_pinjam'] ?></td>
+                                                    <td><?= $data['peminjam'] ?></td>
+                                                    <td><?= $data['no_identitas'] ?></td>
+                                                    <td><?= $data['tanggal_pinjam'] ?></td>
+                                                    <td><?= $data['tanggal_dikembalikan'] ?></td>
+                                                    <td><?= $data['jumlah'] ?></td>
+                                                    <td>
+                                                        <?php if ($status == 'dipinjam') { ?>
+                                                        <button type="button"
+                                                            class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-1"
+                                                            disabled>Dipinjam</button>
+                                                        <?php } else { ?>
+                                                        <button type="button"
+                                                            class="btn btn-success btn-sm d-sm-inline-block mb-3 mb-sm-1"
+                                                            disabled>Tersedia</button>
+                                                        <?php } ?>
+                                                    <td>
 
-                            <!-- buat tombol edit hapus -->
-                            <?php if ($status == 'dipinjam') { ?>
-                            <a href="operasi_pengembalian_data.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-success btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-undo"></i>Kembalikan</a>
-                        <?php } else { ?>
-                            <a href="editdata_pinjam.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-edit"></i>Edit</a>
-                            <a href="hapusdata_pinjam.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-0" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i>Hapus</a>
-                        <?php } ?>
+                                                        <!-- buat tombol edit hapus -->
+                                                        <?php if ($status == 'dipinjam') { ?>
+                                                        <a href="operasi_pengembalian_data.php?id_transaksi=<?= $data['id_transaksi'] ?>"
+                                                            class="btn btn-success btn-sm d-sm-inline-block mb-3 mb-sm-1"><i
+                                                                class="fa fa-undo"></i>Kembalikan</a>
+                                                        <?php } else { ?>
+                                                        <a href="editdata_pinjam.php?id_transaksi=<?= $data['id_transaksi'] ?>"
+                                                            class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i
+                                                                class="fa fa-edit"></i>Edit</a>
+                                                        <a href="hapusdata_pinjam.php?id_transaksi=<?= $data['id_transaksi'] ?>"
+                                                            class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-0"
+                                                            onclick="return confirm('Yakin ingin menghapus data ini?')"><i
+                                                                class="fa fa-trash"></i>Hapus</a>
+                                                        <?php } ?>
 
-                                </td>
-                            </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+                                                    </td>
+                                                </tr>
+                                                <?php } ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+                            <!-- Scroll to Top Button-->
+                            <a class="scroll-to-top rounded" href="#page-top">
+                                <i class="fas fa-angle-up"></i>
+                            </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Apakah Anda yakin ingin keluar?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="logout.php">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+                            <!-- Logout Modal-->
+                            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Apakah Anda yakin ingin
+                                                keluar?</h5>
+                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" type="button"
+                                                data-dismiss="modal">Cancel</button>
+                                            <a class="btn btn-danger" href="logout.php">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
 </body>
 

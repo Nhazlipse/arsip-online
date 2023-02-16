@@ -1,4 +1,4 @@
-<?php include './layout/header.php'; ?> 
+<?php include './layout/header.php'; ?>
 
 
 <?php
@@ -24,14 +24,14 @@ include './layout/header.php';
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"style="background-color:#2b2b2b;">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color:#2b2b2b;">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
-            <div class="sidebar-brand-icon text-center">
-                <br><br><br><br><br><br>
-                <img src="../../assets/img/arsip.png" width = "77%">   
-            </div>
+                <div class="sidebar-brand-icon text-center">
+                    <br><br><br><br><br><br>
+                    <img src="../../assets/img/arsip.png" width="77%">
+                </div>
             </a>
 
             <!-- Nav Item - Dashboard -->
@@ -62,7 +62,6 @@ include './layout/header.php';
                         <h6 class="collapse-header">Pilih Menu:</h6>
                         <a class="collapse-item" href="arsip.php">Arsip</a>
                         <a class="collapse-item" href="../pinjaman/pinjaman.php">Pinjaman</a>
-                        <a class="collapse-item" href="../pengembalian/pengembalian.php">Pengembalian</a>
                     </div>
                 </div>
             </li>
@@ -112,10 +111,10 @@ include './layout/header.php';
                         <i class="fa fa-bars"></i>
                     </button>
 
-                   <!-- Judul Menu -->
-                   <form
+                    <!-- Judul Menu -->
+                    <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-0 my-2 my-md-0 mw-100 navbar-search">
-                        <img src="../../assets/img/tulisan.png" width = "36%"> 
+                        <img src="../../assets/img/tulisan.png" width="36%">
                     </form>
 
                     <!-- Topbar Navbar -->
@@ -153,8 +152,7 @@ include './layout/header.php';
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrasi</span>
-                                <img class="img-profile rounded-circle"
-                                    src="../../assets/img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="../../assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -174,112 +172,142 @@ include './layout/header.php';
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-    <?php
+                    <?php
     $id = $_GET['id_dataarsip'];
     $query = "SELECT * FROM tb_dataarsip WHERE id_dataarsip = '$id'";
     $result = $koneksi->query($query);
     $row = mysqli_fetch_assoc($result);
     ?>
 
-<!-- Data Pengunjung -->
-<div class="container">
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Edit Data Arsip</h6>
-        </div>
+                    <!-- Data Pengunjung -->
+                    <div class="container">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Edit Data Arsip</h6>
+                            </div>
 
-    <!-- form edit data pengunjung -->
-    <div class="container">
-    <div class="card-body">
-        <div class="row">
-            <div class="col-md-12">
-                
-                <form action="operasi_edit_data.php" method="POST">
-                <div class="form-group">
-                        <label for="id_dataarsip">ID</label>
-                        <input type="text" class="form-control" name="id_dataarsip" id="id_dataarsip" value="<?php echo $row['id_dataarsip']; ?>" readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="nama">Nama</label>
-                        <input type="text" class="form-control" name="nama" id="nama" required value="<?php echo $row['nama']; ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="masalah">Masalah</label>
-                        <input type="text" class="form-control" name="masalah" id="masalah" required value="<?php echo $row['masalah']; ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="jalan">Jalan</label>
-                        <input type="text" class="form-control" name="jalan" id="jalan" required value="<?php echo $row['jalan']; ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="kelurahan">Kelurahan</label>
-                        <input type="text" class="form-control" name="kelurahan" id="kelurahan" required value="<?php echo $row['kelurahan']; ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="kecamatan">Kecamatan</label>
-                        <input type="text" class="form-control" name="kecamatan" id="kecamatan" required value="<?php echo $row['kecamatan']; ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="no_rak">No. Rak</label>
-                        <input type="text" class="form-control" name="no_rak" id="no_rak" required value="<?php echo $row['no_rak']; ?>">
-                    </div><div class="form-group">
-                        <label for="no_box">No. Box</label>
-                        <input type="text" class="form-control" name="no_box" id="no_box" required value="<?php echo $row['no_box']; ?>">
-                    </div><div class="form-group">
-                        <label for="kode_klas">Kode KLAS</label>
-                        <input type="text" class="form-control" name="kode_klas" id="kode_klas" required value="<?php echo $row['kode_klas']; ?>">
-                    </div><div class="form-group">
-                        <label for="no_urut">No. Urut</label>
-                        <input type="text" class="form-control" name="no_urut" id="no_urut" required value="<?php echo $row['no_urut']; ?>">
-                    </div><div class="form-group">
-                        <label for="nipa">NIPA</label>
-                        <input type="text" class="form-control" name="nipa" id="nipa" required value="<?php echo $row['nipa']; ?>">
-                    </div><div class="form-group">
-                        <label for="tahun">Tahun</label>
-                        <input type="text" class="form-control" name="tahun" id="tahun" required value="<?php echo $row['tahun']; ?>">
-                    </div><div class="form-group">
-                        <label for="keterangan">Keterangan</label>
-                        <input type="text" class="form-control" name="keterangan" id="keterangan" required value="<?php echo $row['keterangan']; ?>">
-                    </div>
+                            <!-- form edit data pengunjung -->
+                            <div class="container">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
 
-                    <button type="submit" class="btn btn-primary" name="Update" value="Update Data">
-                        Submit
-                    </button>
-                    <button type="submit" action="arsip.php" class="btn btn-danger">
-                        Cancel
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-                
+                                            <form action="operasi_edit_data.php" method="POST">
+                                                <div class="form-group">
+                                                    <label for="id_dataarsip">ID</label>
+                                                    <input type="text" class="form-control" name="id_dataarsip"
+                                                        id="id_dataarsip" value="<?php echo $row['id_dataarsip']; ?>"
+                                                        readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="nama">Nama</label>
+                                                    <input type="text" class="form-control" name="nama" id="nama"
+                                                        required value="<?php echo $row['nama']; ?>">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="masalah">Masalah</label>
+                                                    <input type="text" class="form-control" name="masalah" id="masalah"
+                                                        required value="<?php echo $row['masalah']; ?>">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="jalan">Jalan</label>
+                                                    <input type="text" class="form-control" name="jalan" id="jalan"
+                                                        required value="<?php echo $row['jalan']; ?>">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="kelurahan">Kelurahan</label>
+                                                    <input type="text" class="form-control" name="kelurahan"
+                                                        id="kelurahan" required
+                                                        value="<?php echo $row['kelurahan']; ?>">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="kecamatan">Kecamatan</label>
+                                                    <input type="text" class="form-control" name="kecamatan"
+                                                        id="kecamatan" required
+                                                        value="<?php echo $row['kecamatan']; ?>">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="no_rak">No. Rak</label>
+                                                    <input type="text" class="form-control" name="no_rak" id="no_rak"
+                                                        required value="<?php echo $row['no_rak']; ?>">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="no_box">No. Box</label>
+                                                    <input type="text" class="form-control" name="no_box" id="no_box"
+                                                        required value="<?php echo $row['no_box']; ?>">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="kode_klas">Kode KLAS</label>
+                                                    <input type="text" class="form-control" name="kode_klas"
+                                                        id="kode_klas" required
+                                                        value="<?php echo $row['kode_klas']; ?>">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="no_urut">No. Urut</label>
+                                                    <input type="text" class="form-control" name="no_urut" id="no_urut"
+                                                        required value="<?php echo $row['no_urut']; ?>">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="nipa">NIPA</label>
+                                                    <input type="text" class="form-control" name="nipa" id="nipa"
+                                                        required value="<?php echo $row['nipa']; ?>">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="tahun">Tahun</label>
+                                                    <input type="text" class="form-control" name="tahun" id="tahun"
+                                                        required value="<?php echo $row['tahun']; ?>">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="keterangan">Keterangan</label>
+                                                    <input type="text" class="form-control" name="keterangan"
+                                                        id="keterangan" required
+                                                        value="<?php echo $row['keterangan']; ?>">
+                                                </div>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+                                                <button type="submit" class="btn btn-primary" name="Update"
+                                                    value="Update Data">
+                                                    Submit
+                                                </button>
+                                                <button type="submit" action="arsip.php" class="btn btn-danger">
+                                                    Cancel
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Apakah Anda yakin ingin keluar?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="logout.php">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+
+                                <!-- Scroll to Top Button-->
+                                <a class="scroll-to-top rounded" href="#page-top">
+                                    <i class="fas fa-angle-up"></i>
+                                </a>
+
+                                <!-- Logout Modal-->
+                                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Apakah Anda yakin ingin
+                                                    keluar?</h5>
+                                                <button class="close" type="button" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-secondary" type="button"
+                                                    data-dismiss="modal">Cancel</button>
+                                                <a class="btn btn-danger" href="logout.php">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 </body>
+
 </html>
 
 <?php include './layout/footer.php';?>
