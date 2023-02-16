@@ -221,7 +221,8 @@ include './layout/header.php';
         <input type="text" class="form-control" id="status" name="status" required>
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button><br><br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="pinjaman.php" class="btn btn-danger">Cancel</a>
 </form>
 </div>
 

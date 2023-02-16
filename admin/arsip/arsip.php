@@ -264,10 +264,10 @@ include './layout/header.php';
 
             <!-- buat kolom -->
             <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="120%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable" width="262%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>No. Urut</th>
+                            <th class="text-center">No. Urut</th>
                             <th>Nama Pemilik IMB</th>
                             <th>Uraian Masalah</th>
                             <th>Jalan</th>
@@ -293,7 +293,7 @@ include './layout/header.php';
                         while ($data = mysqli_fetch_array($tampil)) {
                         ?>
                             <tr>
-                                <td><?= $no++ ?></td>
+                                <td class="text-center"><?= $no++ ?></td>
                                 <td><?= $data['nama'] ?></td>
                                 <td><?= $data['masalah'] ?></td>
                                 <td><?= $data['jalan'] ?></td>
@@ -309,7 +309,7 @@ include './layout/header.php';
                                 <td>
 
                             <!-- buat tombol edit hapus -->
-                            <a href="editdata.php?id_dataarsip=<?= $data['id_dataarsip'] ?>" class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-edit"></i>Edit</a><br>
+                            <a href="editdata.php?id_dataarsip=<?= $data['id_dataarsip'] ?>" class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-edit"></i>Edit</a>
                             <a href="hapusdata.php?id_dataarsip=<?= $data['id_dataarsip'] ?>" class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-0" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i>Hapus</a>
 
                         </td>

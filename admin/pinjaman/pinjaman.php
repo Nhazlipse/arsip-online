@@ -194,7 +194,7 @@ include './layout/header.php';
                 <table class="table table-bordered font-weight-normal" style='monospace; font-size:90%' id="dataTable" width="160%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>No</th>
+                            <th class="text-center">No</th>
                             <th>Pemilik</th>
                             <th>Masalah</th>
                             <th>Peminjam</th>
@@ -217,7 +217,7 @@ include './layout/header.php';
                             $status = $data['status'];
                         ?>
                             <tr>
-                                <td><?= $no++ ?></td>
+                                <td class="text-center"><?= $no++ ?></td>
                                 <td><?= $data['nama_pemilik'] ?></td>
                                 <td><?= $data['keterangan_pinjam'] ?></td>
                                 <td><?= $data['peminjam'] ?></td>
@@ -232,7 +232,7 @@ include './layout/header.php';
                             <?php if ($status == 'dipinjam') { ?>
                             <a href="operasi_pengembalian_data.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-success btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-undo"></i>Kembalikan</a>
                         <?php } else { ?>
-                            <a href="editdata_pinjam.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-edit"></i>Edit</a><br>
+                            <a href="editdata_pinjam.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-edit"></i>Edit</a>
                             <a href="hapusdata_pinjam.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-0" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i>Hapus</a>
                         <?php } ?>
 
