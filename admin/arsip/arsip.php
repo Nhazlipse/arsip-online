@@ -21,15 +21,15 @@ include './layout/header.php';
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"style="background-color:#2b2b2b;">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color:#2b2b2b;">
 
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../pinjaman/dashboard.php">
-            <div class="sidebar-brand-icon text-center">
-                <br><br><br><br><br><br>
-                <img src="../../assets/img/arsip.png" width = "77%">   
-            </div>
+                <div class="sidebar-brand-icon text-center">
+                    <br><br><br><br><br><br>
+                    <img src="../../assets/img/arsip.png" width="77%">
+                </div>
             </a>
 
             <!-- Nav Item - Dashboard -->
@@ -61,7 +61,6 @@ include './layout/header.php';
                         <h6 class="collapse-header">Pilih Menu:</h6>
                         <a class="collapse-item" href="arsip.php">Arsip</a>
                         <a class="collapse-item" href="../pinjaman/pinjaman.php">Pinjaman</a>
-                        <a class="collapse-item" href="../pengembalian/pengembalian.php">Pengembalian</a>
                     </div>
                 </div>
             </li>
@@ -114,7 +113,7 @@ include './layout/header.php';
                     <!-- Judul Menu -->
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-0 my-2 my-md-0 mw-100 navbar-search">
-                        <img src="../../assets/img/tulisan.png" width = "36%"> 
+                        <img src="../../assets/img/tulisan.png" width="36%">
                     </form>
 
                     <!-- Topbar Navbar -->
@@ -152,8 +151,7 @@ include './layout/header.php';
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrasi</span>
-                                <img class="img-profile rounded-circle"
-                                    src="../../assets/img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="../../assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -171,180 +169,206 @@ include './layout/header.php';
                 <!-- End of Topbar -->
 
 
-                
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
 
-<!-- Data Pengunjung -->
-<div class="container">
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Data Arsip</h6>
-        </div>
+                    <!-- Data Pengunjung -->
+                    <div class="container">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Data Arsip</h6>
+                            </div>
 
-        <!-- card body -->
-        <div class="card-body">
-            
-<!-- Tombol Tambah Data -->
-<div class="tambahdata">
-<a href="tambah_data.php" class="btn btn-primary">Tambah Data</a><br><br>
+                            <!-- card body -->
+                            <div class="card-body">
 
-    <!-- Tambah Data Arsip Modal-->
-    <div class="container">
- <div class="modal fade" id="tambahDataArsipModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data Arsip</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
+                                <!-- Tombol Tambah Data -->
+                                <div class="tambahdata">
+                                    <a href="tambah_data.php" class="btn btn-primary">Tambah Data</a><br><br>
 
-                <div class="modal-body">
-                    <form action="proses_tambah_data.php" method="post">
-                        <div class="form-group">
-                            <label for="namaPemilikIMB">Nama Pemilik IMB</label>
-                            <input type="text" class="form-control" id="nama" name="nama" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="uraianMasalah">Uraian Masalah</label>
-                            <input type="text" class="form-control" id="masalah" name="masalah" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="jalan">Jalan</label>
-                            <input type="text" class="form-control" id="jalan" name="jalan" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="kelurahan">Kelurahan</label>
-                            <input type="text" class="form-control" id="kelurahan" name="kelurahan" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="kecamatan">Kecamatan</label>
-                            <input type="text" class="form-control" id="kecamatan" name="kecamatan" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="no_rak">No. Rak</label>
-                            <input type="text" class="form-control" id="no_rak" name="no_rak" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="no_box">No. Box</label>
-                            <input type="text" class="form-control" id="no_box" name="no_box" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="no_klas">No. Klas</label>
-                            <input type="text" class="form-control" id="no_klas" name="no_klas" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="no_urut">No. Urut</label>
-                            <input type="text" class="form-control" id="no_urut" name="no_urut" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="nipa">NIPA</label>
-                            <input type="text" class="form-control" id="nipa" name="nipa" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="tahun">Tahun</label>
-                            <input type="text" class="form-control" id="tahun" name="tahun" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="keterangan">Keterangan</label>
-                            <input type="text" class="form-control" id="keterangan" name="keterangan" required>
-                        </div>
-                        <div class="modal-footer">
-                           <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                          <button class="btn btn-primary" type="submit" form="form-tambah-data-arsip">Simpan</button>
-                      </div>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
+                                    <!-- Tambah Data Arsip Modal-->
+                                    <div class="container">
+                                        <div class="modal fade" id="tambahDataArsipModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Tambah Data Arsip
+                                                        </h5>
+                                                        <button class="close" type="button" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">×</span>
+                                                        </button>
+                                                    </div>
 
-            <!-- buat kolom -->
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="262%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th class="text-center">No. Urut</th>
-                            <th>Nama Pemilik IMB</th>
-                            <th>Uraian Masalah</th>
-                            <th>Jalan</th>
-                            <th>Kelurahan</th>
-                            <th>Kecamatan</th>
-                            <th>No. Rak</th>
-                            <th>No. Box</th>
-                            <th>Kode Klas</th>
-                            <th>No. Urut</th>
-                            <th>NIPA</th>
-                            <th>Tahun</th>
-                            <th>Keterangan</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
+                                                    <div class="modal-body">
+                                                        <form action="proses_tambah_data.php" method="post">
+                                                            <div class="form-group">
+                                                                <label for="namaPemilikIMB">Nama Pemilik IMB</label>
+                                                                <input type="text" class="form-control" id="nama"
+                                                                    name="nama" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="uraianMasalah">Uraian Masalah</label>
+                                                                <input type="text" class="form-control" id="masalah"
+                                                                    name="masalah" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="jalan">Jalan</label>
+                                                                <input type="text" class="form-control" id="jalan"
+                                                                    name="jalan" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="kelurahan">Kelurahan</label>
+                                                                <input type="text" class="form-control" id="kelurahan"
+                                                                    name="kelurahan" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="kecamatan">Kecamatan</label>
+                                                                <input type="text" class="form-control" id="kecamatan"
+                                                                    name="kecamatan" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="no_rak">No. Rak</label>
+                                                                <input type="text" class="form-control" id="no_rak"
+                                                                    name="no_rak" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="no_box">No. Box</label>
+                                                                <input type="text" class="form-control" id="no_box"
+                                                                    name="no_box" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="no_klas">No. Klas</label>
+                                                                <input type="text" class="form-control" id="no_klas"
+                                                                    name="no_klas" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="no_urut">No. Urut</label>
+                                                                <input type="text" class="form-control" id="no_urut"
+                                                                    name="no_urut" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="nipa">NIPA</label>
+                                                                <input type="text" class="form-control" id="nipa"
+                                                                    name="nipa" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="tahun">Tahun</label>
+                                                                <input type="text" class="form-control" id="tahun"
+                                                                    name="tahun" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="keterangan">Keterangan</label>
+                                                                <input type="text" class="form-control" id="keterangan"
+                                                                    name="keterangan" required>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button class="btn btn-secondary" type="button"
+                                                                    data-dismiss="modal">Batal</button>
+                                                                <button class="btn btn-primary" type="submit"
+                                                                    form="form-tambah-data-arsip">Simpan</button>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                    <!-- deklarasikan dan panggil koneksi database -->
-                    <tbody>
-                        <?php
+                                        <!-- buat kolom -->
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="dataTable" width="262%"
+                                                cellspacing="0">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">No. Urut</th>
+                                                        <th>Nama Pemilik IMB</th>
+                                                        <th>Uraian Masalah</th>
+                                                        <th>Jalan</th>
+                                                        <th>Kelurahan</th>
+                                                        <th>Kecamatan</th>
+                                                        <th>No. Rak</th>
+                                                        <th>No. Box</th>
+                                                        <th>Kode Klas</th>
+                                                        <th>No. Urut</th>
+                                                        <th>NIPA</th>
+                                                        <th>Tahun</th>
+                                                        <th>Keterangan</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <!-- deklarasikan dan panggil koneksi database -->
+                                                <tbody>
+                                                    <?php
                         $query = "SELECT * FROM tb_dataarsip order by id_dataarsip desc";
                         $tampil = $koneksi->query($query);
                         $no = 1;
                         while ($data = mysqli_fetch_array($tampil)) {
                         ?>
-                            <tr>
-                                <td class="text-center"><?= $no++ ?></td>
-                                <td><?= $data['nama'] ?></td>
-                                <td><?= $data['masalah'] ?></td>
-                                <td><?= $data['jalan'] ?></td>
-                                <td><?= $data['kelurahan'] ?></td>
-                                <td><?= $data['kecamatan'] ?></td>
-                                <td><?= $data['no_rak'] ?></td>
-                                <td><?= $data['no_box'] ?></td>
-                                <td><?= $data['kode_klas'] ?></td>
-                                <td><?= $data['no_urut'] ?></td>
-                                <td><?= $data['nipa'] ?></td>
-                                <td><?= $data['tahun'] ?></td>
-                                <td><?= $data['keterangan'] ?></td>
-                                <td>
+                                                    <tr>
+                                                        <td class="text-center"><?= $no++ ?></td>
+                                                        <td><?= $data['nama'] ?></td>
+                                                        <td><?= $data['masalah'] ?></td>
+                                                        <td><?= $data['jalan'] ?></td>
+                                                        <td><?= $data['kelurahan'] ?></td>
+                                                        <td><?= $data['kecamatan'] ?></td>
+                                                        <td><?= $data['no_rak'] ?></td>
+                                                        <td><?= $data['no_box'] ?></td>
+                                                        <td><?= $data['kode_klas'] ?></td>
+                                                        <td><?= $data['no_urut'] ?></td>
+                                                        <td><?= $data['nipa'] ?></td>
+                                                        <td><?= $data['tahun'] ?></td>
+                                                        <td><?= $data['keterangan'] ?></td>
+                                                        <td>
 
-                            <!-- buat tombol edit hapus -->
-                            <a href="editdata.php?id_dataarsip=<?= $data['id_dataarsip'] ?>" class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-edit"></i>Edit</a>
-                            <a href="hapusdata.php?id_dataarsip=<?= $data['id_dataarsip'] ?>" class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-0" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i>Hapus</a>
+                                                            <!-- buat tombol edit hapus -->
+                                                            <a href="editdata.php?id_dataarsip=<?= $data['id_dataarsip'] ?>"
+                                                                class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i
+                                                                    class="fa fa-edit"></i>Edit</a>
+                                                            <a href="hapusdata.php?id_dataarsip=<?= $data['id_dataarsip'] ?>"
+                                                                class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-0"
+                                                                onclick="return confirm('Yakin ingin menghapus data ini?')"><i
+                                                                    class="fa fa-trash"></i>Hapus</a>
 
-                        </td>
-                            </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+                                                        </td>
+                                                    </tr>
+                                                    <?php } ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+                                <!-- Scroll to Top Button-->
+                                <a class="scroll-to-top rounded" href="#page-top">
+                                    <i class="fas fa-angle-up"></i>
+                                </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Apakah Anda yakin ingin keluar?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="logout.php">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+                                <!-- Logout Modal-->
+                                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Apakah Anda yakin ingin
+                                                    keluar?</h5>
+                                                <button class="close" type="button" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">Pilih "Logout" Jika kamu ingin keluar dari session.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-secondary" type="button"
+                                                    data-dismiss="modal">Cancel</button>
+                                                <a class="btn btn-danger" href="logout.php">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 </body>
 
