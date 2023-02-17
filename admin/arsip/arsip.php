@@ -177,8 +177,8 @@ include './layout/header.php';
                     <!-- Data Pengunjung -->
                     <div class="container">
                         <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Data Arsip</h6>
+                            <div class="card-header py-3 text-center">
+                                <img src="../../assets/img/dataarsip.png"style="width:16%;">
                             </div>
 
                             <!-- card body -->

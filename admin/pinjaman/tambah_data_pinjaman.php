@@ -179,8 +179,8 @@ include './layout/header.php';
                     <!-- Data Pengunjung -->
                     <div class="container">
                         <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Tambah Data Pinjaman</h6>
+                            <div class="card-header py-3 text-center">
+                            <img src="../../assets/img/tambahpinjam.png"style="width:30%;">
                             </div>
 
                             <!-- card body -->

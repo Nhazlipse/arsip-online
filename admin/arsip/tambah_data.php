@@ -178,14 +178,13 @@ include './layout/header.php';
                     <!-- Data Pengunjung -->
                     <div class="container">
                         <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Tambah Data Arsip</h6>
+                            <div class="card-header py-3 text-center">
+                            <img src="../../assets/img/tambaharsip.png"style="width:27%;">
                             </div>
 
                             <!-- card body -->
                             <div class="card-body">
 
-<<<<<<< HEAD
     <div class="form-group">
         <label for="judul">Nama Pemilik IMB:</label>
         <input type="text" class="form-control" id="nama" name="nama" required>
@@ -234,11 +233,6 @@ include './layout/header.php';
         <label for="judul">Keterangan:</label>
         <input type="text" class="form-control" id="keterangan" name="keterangan" required>
     </div>
-=======
-                                <!-- Tambah Data Arsip Form -->
-                                <div class="container">
-                                    <form action="proses_tambah_data.php" method="post">
->>>>>>> 6458c3eb1b421d383224ac96950fdbea14dfed79
 
                                         <div class="form-group">
                                             <label for="judul">Nama Pemilik IMB:</label>
