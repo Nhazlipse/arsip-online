@@ -281,7 +281,7 @@ include './layout/header.php';
                                         </div>
                                         <div class="form-group">
                                             <label for="judul">Tahun:</label>
-                                            <input type="text" class="form-control" id="tahun" name="tahun" required>
+                                            <input type="date" class="form-control" id="tahun" name="tahun" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="judul">Keterangan:</label>
