@@ -12,6 +12,7 @@ use database\koneksi;
  $jalan = $_POST['jalan'];
  $kelurahan = $_POST['kelurahan'];
  $kecamatan = $_POST['kecamatan'];
+ $unit_pengolah = $_POST['unit_pengolah'];
  $no_rak = $_POST['no_rak'];
  $no_box = $_POST['no_box'];
  $kode_klas = $_POST['kode_klas'];
@@ -20,7 +21,7 @@ use database\koneksi;
  $tahun = $_POST['tahun'];
  $keterangan = $_POST['keterangan'];
 
-$query = "UPDATE tb_dataarsip SET nama='$nama', masalah='$masalah', jalan='$jalan', kelurahan='$kelurahan', no_rak='$no_rak', no_box='$no_box', kode_klas='$kode_klas', no_urut='$no_urut', nipa='$nipa', tahun='$tahun', keterangan='$keterangan' WHERE id_dataarsip='$id'";
+$query = "UPDATE tb_dataarsip SET nama='$nama', masalah='$masalah', jalan='$jalan', kelurahan='$kelurahan', kecamatan='$kecamatan', unit_pengolah='$unit_pengolah', no_rak='$no_rak', no_box='$no_box', kode_klas='$kode_klas', no_urut='$no_urut', nipa='$nipa', tahun='$tahun', keterangan='$keterangan' WHERE id_dataarsip='$id'";
 $koneksi = new koneksi();
 $koneksi->query($query);
 

@@ -227,6 +227,12 @@ include './layout/header.php';
                                                         value="<?php echo $row['kecamatan']; ?>">
                                                 </div>
                                                 <div class="form-group">
+                                                    <label for="Unit Pengolah">Unit Pengolah</label>
+                                                    <input type="text" class="form-control" name="unit_pengolah"
+                                                        id="unit_pengolah" required
+                                                        value="<?php echo $row['unit_pengolah']; ?>">
+                                                </div>
+                                                <div class="form-group">
                                                     <label for="no_rak">No. Rak</label>
                                                     <input type="text" class="form-control" name="no_rak" id="no_rak"
                                                         required value="<?php echo $row['no_rak']; ?>">
@@ -252,11 +258,24 @@ include './layout/header.php';
                                                     <input type="text" class="form-control" name="nipa" id="nipa"
                                                         required value="<?php echo $row['nipa']; ?>">
                                                 </div>
+
                                                 <div class="form-group">
-                                                    <label for="tahun">Tahun</label>
-                                                    <input type="text" class="form-control" name="tahun" id="tahun"
-                                                        required value="<?php echo $row['tahun']; ?>">
+                                                <label for="tahun">Tahun</label>
+                                                <select class="form-control" name="tahun" id="tahun">
+                                                <?php
+                                                $start_year = 1999; // Tahun awal
+                                                $end_year = 2023; // Tahun akhir
+                                                $selected_year = $row['tahun']; // Tahun yang dipilih sebelumnya
+                                                for ($year = $end_year; $year >= $start_year; $year--) {
+                                                    $selected = ($year == $selected_year) ? 'selected' : '';
+                                                    echo '<option ' . $selected . ' value="' . $year . '">' . $year . '</option>';
+                                                }
+                                                ?>
+
+                                                </select>
                                                 </div>
+
+
                                                 <div class="form-group">
                                                     <label for="keterangan">Keterangan</label>
                                                     <input type="text" class="form-control" name="keterangan"

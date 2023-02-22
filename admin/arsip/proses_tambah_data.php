@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $jalan = $_POST['jalan'];
     $kelurahan = $_POST['kelurahan'];
     $kecamatan = $_POST['kecamatan'];
+    $unit_pengolah = $_POST['unit_pengolah'];
     $no_rak = $_POST['no_rak'];
     $no_box = $_POST['no_box'];
     $kode_klas = $_POST['kode_klas'];
@@ -30,8 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Prepare SQL query
-    $query = "INSERT INTO tb_dataarsip (nama, masalah, jalan, kelurahan, kecamatan, no_rak, no_box, kode_klas, no_urut, nipa, tahun, keterangan) 
-            VALUES ('$nama', '$masalah', '$jalan', '$kelurahan', '$kecamatan', '$no_rak', '$no_box', '$kode_klas', '$no_urut', '$nipa', '$tahun', '$keterangan')";
+    $query = "INSERT INTO tb_dataarsip (nama, masalah, jalan, kelurahan, kecamatan, unit_pengolah, no_rak, no_box, kode_klas, no_urut, nipa, tahun, keterangan) 
+            VALUES ('$nama', '$masalah', '$jalan', '$kelurahan', '$kecamatan', '$unit_pengolah', '$no_rak', '$no_box', '$kode_klas', '$no_urut', '$nipa', '$tahun', '$keterangan')";
     $koneksi->query($query);
 
     // return a success message

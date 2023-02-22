@@ -192,51 +192,112 @@ include './layout/header.php';
             <label for="judul">Nama Pemilik:</label>
             <input type="text" class="form-control" id="nama" name="nama" required>
         </div>
+
         <div class="form-group">
             <label for="judul">Masalah:</label>
             <input type="text" class="form-control" id="masalah" name="masalah"
                 required>
         </div>
+
         <div class="form-group">
             <label for="judul">Jalan:</label>
             <input type="text" class="form-control" id="jalan" name="jalan" required>
         </div>
+
         <div class="form-group">
             <label for="judul">Kelurahan:</label>
-            <input type="text" class="form-control" id="kelurahan" name="kelurahan"
-                required>
+            <select class="form-control" name="kelurahan" placeholder="Kelurahan" id="kelurahan">
+              <option>Tamanan</option>
+              <option>Sukorame</option>
+              <option>Pojok</option>
+              <option>Ngampel</option>
+              <option>Mrican</option>
+              <option>Mojoroto</option>
+              <option>Lirboyo</option>
+              <option>Gayam</option>
+              <option>Dermo</option>
+              <option>Campurejo</option>
+              <option>Bujel</option>
+              <option>Banjar Mlati</option>
+              <option>Bandar Lor</option>
+              <option>Bandar Kidul</option>
+            </select>
         </div>
+
         <div class="form-group">
             <label for="judul">Kecamatan:</label>
-            <input type="text" class="form-control" id="kecamatan" name="kecamatan"
+            <select class="form-control" name="kecamatan" placeholder="Kecamatan" id="kecamatan">
+                <option>Kota</option>
+                <option>Mojoroto</option>
+                <option>Pesantren</option>
+                <option>Campuran</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Unit Pengolah">Unit Pengolah:</label>
+            <input type="text" class="form-control" id="unit_pengolah" name="unit_pengolah"
                 required>
         </div>
+
         <div class="form-group">
             <label for="judul">No. Rak:</label>
             <input type="text" class="form-control" id="no_rak" name="no_rak" required>
         </div>
+
         <div class="form-group">
             <label for="judul">No. Box:</label>
             <input type="text" class="form-control" id="no_box" name="no_box" required>
         </div>
+
         <div class="form-group">
             <label for="judul">Kode Klas:</label>
             <input type="text" class="form-control" id="kode_klas" name="kode_klas"
                 required>
         </div>
+
         <div class="form-group">
             <label for="judul">No. Urut:</label>
             <input type="text" class="form-control" id="no_urut" name="no_urut"
                 required>
         </div>
+
         <div class="form-group">
             <label for="judul">NIPA:</label>
             <input type="text" class="form-control" id="nipa" name="nipa" required>
         </div>
+
         <div class="form-group">
             <label for="judul">Tahun:</label>
-            <input type="date" class="form-control" id="tahun" name="tahun" required>
+            <select class="form-control" name="tahun" placeholder="Tahun" id="nipa">
+              <option>2023</option>
+              <option>2022</option>
+              <option>2021</option>
+              <option>2020</option>
+              <option>2019</option>
+              <option>2018</option>
+              <option>2017</option>
+              <option>2016</option>
+              <option>2015</option>
+              <option>2014</option>
+              <option>2013</option>
+              <option>2012</option>
+              <option>2011</option>
+              <option>2010</option>
+              <option>2009</option>
+              <option>2008</option>
+              <option>2007</option>
+              <option>2006</option>
+              <option>2005</option>
+              <option>2004</option>
+              <option>2003</option>
+              <option>2002</option>
+              <option>2001</option>
+              <option>2000</option>
+              <option>1999</option>
+            </select>
         </div>
+
         <div class="form-group">
             <label for="judul">Keterangan:</label>
             <input type="text" class="form-control" id="keterangan" name="keterangan"

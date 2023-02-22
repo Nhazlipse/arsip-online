@@ -200,6 +200,7 @@ data-parent="#accordionSidebar">
                                     <th>Jalan</th>
                                     <th>Kelurahan</th>
                                     <th>Kecamatan</th>
+                                    <th>Unit Pengolah</th>
                                     <th>No. Rak</th>
                                     <th>No. Box</th>
                                     <th>Kode Klas</th>
@@ -226,6 +227,7 @@ data-parent="#accordionSidebar">
                                     <td><?= $data['jalan'] ?></td>
                                     <td><?= $data['kelurahan'] ?></td>
                                     <td><?= $data['kecamatan'] ?></td>
+                                    <td><?= $data['unit_pengolah'] ?></td>
                                     <td><?= $data['no_rak'] ?></td>
                                     <td><?= $data['no_box'] ?></td>
                                     <td><?= $data['kode_klas'] ?></td>
@@ -240,7 +242,7 @@ data-parent="#accordionSidebar">
                                             class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i
                                                 class="fa fa-edit"></i>Edit</a>
                                         <a href="hapusdata.php?id_dataarsip=<?= $data['id_dataarsip'] ?>"
-                                            class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-0"
+                                            class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-1"
                                             onclick="return confirm('Yakin ingin menghapus data ini?')"><i
                                                 class="fa fa-trash"></i>Hapus</a>
 
