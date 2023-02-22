@@ -23,7 +23,6 @@ if ($data) {
     $_SESSION['id_admin'] = $data['id_admin'];
     $_SESSION['username'] = $data['username'];
     $_SESSION['password'] = $data['password'];
-    $_SESSION['nama_admin'] = $data['nama_admin'];
     header("location: dashboard.php");
 } else {
     echo "<script>alert('Login Gagal, Akun tidak ditemukan..!');document.location='../index.php';</script>";
