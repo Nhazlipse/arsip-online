@@ -182,119 +182,73 @@ include './layout/header.php';
                             <img src="../../assets/img/tambaharsip.png"style="width:27%;">
                             </div>
 
-                            <!-- card body -->
-                            <div class="card-body">
+    <!-- card body -->
+    <div class="card-body">
 
-    <div class="form-group">
-        <label for="judul">Nama Pemilik IMB:</label>
-        <input type="text" class="form-control" id="nama" name="nama" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Masalah:</label>
-        <input type="text" class="form-control" id="masalah" name="masalah" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Jalan:</label>
-        <input type="text" class="form-control" id="jalan" name="jalan" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Kelurahan:</label>
-        <input type="text" class="form-control" id="kelurahan" name="kelurahan" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Kecamatan:</label>
-        <input type="text" class="form-control" id="kecamatan" name="kecamatan" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">No. Rak:</label>
-        <input type="text" class="form-control" id="no_rak" name="no_rak" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">No. Box:</label>
-        <input type="text" class="form-control" id="no_box" name="no_box" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Kode Klas:</label>
-        <input type="text" class="form-control" id="kode_klas" name="kode_klas" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">No. Urut:</label>
-        <input type="text" class="form-control" id="no_urut" name="no_urut" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">NIPA:</label>
-        <input type="text" class="form-control" id="nipa" name="nipa" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Tahun:</label>
-        <input type="date" class="form-control" id="tahun" name="tahun" required>
-    </div>
-    <div class="form-group">
-        <label for="judul">Keterangan:</label>
-        <input type="text" class="form-control" id="keterangan" name="keterangan" required>
-    </div>
+    <div class="container">
+    <form action="proses_tambah_data.php" method="post">
 
-                                        <div class="form-group">
-                                            <label for="judul">Nama Pemilik IMB:</label>
-                                            <input type="text" class="form-control" id="nama" name="nama" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="judul">Masalah:</label>
-                                            <input type="text" class="form-control" id="masalah" name="masalah"
-                                                required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="judul">Jalan:</label>
-                                            <input type="text" class="form-control" id="jalan" name="jalan" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="judul">Kelurahan:</label>
-                                            <input type="text" class="form-control" id="kelurahan" name="kelurahan"
-                                                required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="judul">Kecamatan:</label>
-                                            <input type="text" class="form-control" id="kecamatan" name="kecamatan"
-                                                required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="judul">No. Rak:</label>
-                                            <input type="text" class="form-control" id="no_rak" name="no_rak" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="judul">No. Box:</label>
-                                            <input type="text" class="form-control" id="no_box" name="no_box" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="judul">Kode Klas:</label>
-                                            <input type="text" class="form-control" id="kode_klas" name="kode_klas"
-                                                required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="judul">No. Urut:</label>
-                                            <input type="text" class="form-control" id="no_urut" name="no_urut"
-                                                required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="judul">NIPA:</label>
-                                            <input type="text" class="form-control" id="nipa" name="nipa" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="judul">Tahun:</label>
-                                            <input type="date" class="form-control" id="tahun" name="tahun" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="judul">Keterangan:</label>
-                                            <input type="text" class="form-control" id="keterangan" name="keterangan"
-                                                required>
-                                        </div>
+        <div class="form-group">
+            <label for="judul">Nama Pemilik:</label>
+            <input type="text" class="form-control" id="nama" name="nama" required>
+        </div>
+        <div class="form-group">
+            <label for="judul">Masalah:</label>
+            <input type="text" class="form-control" id="masalah" name="masalah"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="judul">Jalan:</label>
+            <input type="text" class="form-control" id="jalan" name="jalan" required>
+        </div>
+        <div class="form-group">
+            <label for="judul">Kelurahan:</label>
+            <input type="text" class="form-control" id="kelurahan" name="kelurahan"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="judul">Kecamatan:</label>
+            <input type="text" class="form-control" id="kecamatan" name="kecamatan"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="judul">No. Rak:</label>
+            <input type="text" class="form-control" id="no_rak" name="no_rak" required>
+        </div>
+        <div class="form-group">
+            <label for="judul">No. Box:</label>
+            <input type="text" class="form-control" id="no_box" name="no_box" required>
+        </div>
+        <div class="form-group">
+            <label for="judul">Kode Klas:</label>
+            <input type="text" class="form-control" id="kode_klas" name="kode_klas"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="judul">No. Urut:</label>
+            <input type="text" class="form-control" id="no_urut" name="no_urut"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="judul">NIPA:</label>
+            <input type="text" class="form-control" id="nipa" name="nipa" required>
+        </div>
+        <div class="form-group">
+            <label for="judul">Tahun:</label>
+            <input type="date" class="form-control" id="tahun" name="tahun" required>
+        </div>
+        <div class="form-group">
+            <label for="judul">Keterangan:</label>
+            <input type="text" class="form-control" id="keterangan" name="keterangan"
+                required>
+        </div>
 
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                        <a href="arsip.php" class="btn btn-danger">Cancel</a>
-                                    </form>
-                                </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="arsip.php" class="btn btn-danger">Cancel</a>
+    </form>
+</div>
 
-                                <!-- akhir container -->
+<!-- akhir container -->
 
                             </div>
                             <!-- End of Page Wrapper -->

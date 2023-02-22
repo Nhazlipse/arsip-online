@@ -184,82 +184,9 @@ data-parent="#accordionSidebar">
         <!-- card body -->
         <div class="card-body">
 
-            <!-- Tombol Tambah Data -->
-            <div class="tambahdata">
-                <a href="tambah_data.php" class="btn btn-primary">Tambah Data</a><br><br>
-
-                                <div class="modal-body">
-                                    <form action="proses_tambah_data.php" method="post">
-                                        <div class="form-group">
-                                            <label for="namaPemilikIMB">Nama Pemilik IMB</label>
-                                            <input type="text" class="form-control" id="nama"
-                                                name="nama" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="uraianMasalah">Uraian Masalah</label>
-                                            <input type="text" class="form-control" id="masalah"
-                                                name="masalah" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="jalan">Jalan</label>
-                                            <input type="text" class="form-control" id="jalan"
-                                                name="jalan" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="kelurahan">Kelurahan</label>
-                                            <input type="text" class="form-control" id="kelurahan"
-                                                name="kelurahan" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="kecamatan">Kecamatan</label>
-                                            <input type="text" class="form-control" id="kecamatan"
-                                                name="kecamatan" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="no_rak">No. Rak</label>
-                                            <input type="text" class="form-control" id="no_rak"
-                                                name="no_rak" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="no_box">No. Box</label>
-                                            <input type="text" class="form-control" id="no_box"
-                                                name="no_box" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="no_klas">No. Klas</label>
-                                            <input type="text" class="form-control" id="no_klas"
-                                                name="no_klas" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="no_urut">No. Urut</label>
-                                            <input type="text" class="form-control" id="no_urut"
-                                                name="no_urut" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="nipa">NIPA</label>
-                                            <input type="text" class="form-control" id="nipa"
-                                                name="nipa" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="tahun">Tahun</label>
-                                            <input type="text" class="form-control" id="tahun"
-                                                name="tahun" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="keterangan">Keterangan</label>
-                                            <input type="text" class="form-control" id="keterangan"
-                                                name="keterangan" required>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button class="btn btn-secondary" type="button"
-                                                data-dismiss="modal">Batal</button>
-                                            <button class="btn btn-primary" type="submit"
-                                                form="form-tambah-data-arsip">Simpan</button>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<!-- Tombol Tambah Data -->
+<div class="tambahdata">
+<a href="tambah_data.php" class="btn btn-primary">Tambah Data</a><br><br>
 
                     <!-- buat kolom -->
                     <div class="table-responsive">
