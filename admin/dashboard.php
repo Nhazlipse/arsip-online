@@ -7,11 +7,6 @@ $koneksi = new koneksi();
 
 include './layout/header.php';
 
-session_start();
-if (!isset($_SESSION['username'])) {
-    header("location:../index.php");
-}
-
 ?>
 
 <head>
