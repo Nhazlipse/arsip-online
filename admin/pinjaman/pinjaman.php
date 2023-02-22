@@ -168,6 +168,66 @@ include './layout/header.php';
                 <!-- ENDING DARI ADMIN PANEL -->
 
 
+                <!-- JAVASCIRPT BUAT CARI DATA -->
+                <script>
+                function searchTable() {
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("searchInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("dataTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[1]; // index kolom kedua, yaitu kolom nama
+                    if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                    }
+                }
+                }
+
+                function searchTable() {
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("searchInput2");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("dataTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2]; // index kolom kedua, yaitu kolom nama
+                    if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                    }
+                }
+                }
+
+                function searchTable() {
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("searchInput3");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("dataTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[3]; // index kolom kedua, yaitu kolom nama
+                    if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                    }
+                }
+                }
+                </script>
+                <!-- END JAVASCRIPT -->
 
                 <!-- AWAL DARI ISI KONTEN -->
                 <div class="container-fluid">
@@ -195,14 +255,14 @@ include './layout/header.php';
                                             <thead>
                                                 <tr>
                                                     <th class="text-center">No</th>
-                                                    <th>Pemilik</th>
-                                                    <th>Masalah</th>
-                                                    <th>Peminjam</th>
-                                                    <th>No. Identitas</th>
-                                                    <th>Tanggal Pinjam</th>
-                                                    <th>Tanggal Dikembalikan</th>
-                                                    <th>Jumlah</th>
-                                                    <th>Status</th>
+                                                    <th>Pemilik<br><input type="text" id="searchInput" onkeyup="searchTable()"></th>
+                                                    <th>Masalah<br><input type="text" id="searchInput2" onkeyup="searchTable()"></th>
+                                                    <th>Peminjam<br><input type="text" id="searchInput3" onkeyup="searchTable()"></th>
+                                                    <th>No. Identitas<br><input type="text" id="searchInput" onkeyup="searchTable()"></th>
+                                                    <th>Tanggal Pinjam<br><input type="text" id="searchInput" onkeyup="searchTable()"></th>
+                                                    <th>Tanggal Dikembalikan<br><input type="text" id="searchInput" onkeyup="searchTable()"></th>
+                                                    <th>Jumlah<br><input type="text" id="searchInput" onkeyup="searchTable()"></th>
+                                                    <th>Status<br><input type="text" id="searchInput" onkeyup="searchTable()"></th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>

@@ -205,34 +205,45 @@ include './layout/header.php';
         </div>
 
         <div class="form-group">
-            <label for="judul">Kelurahan:</label>
-            <select class="form-control" name="kelurahan" placeholder="Kelurahan" id="kelurahan">
-              <option>Tamanan</option>
-              <option>Sukorame</option>
-              <option>Pojok</option>
-              <option>Ngampel</option>
-              <option>Mrican</option>
-              <option>Mojoroto</option>
-              <option>Lirboyo</option>
-              <option>Gayam</option>
-              <option>Dermo</option>
-              <option>Campurejo</option>
-              <option>Bujel</option>
-              <option>Banjar Mlati</option>
-              <option>Bandar Lor</option>
-              <option>Bandar Kidul</option>
-            </select>
-        </div>
+    <label for="kelurahan">Kelurahan:</label>
+    <select class="form-control" name="kelurahan" id="kelurahan">
+        <?php
+            $kelurahanOptions = array(
+                'Tamanan', 
+                'Sukorame', 
+                'Pojok', 
+                'Ngampel', 
+                'Mrican', 
+                'Mojoroto', 
+                'Lirboyo', 
+                'Gayam', 
+                'Dermo', 
+                'Campurejo', 
+                'Bujel', 
+                'Banjar Mlati', 
+                'Bandar Lor', 
+                'Bandar Kidul'
+            );
+            
+            foreach ($kelurahanOptions as $option) {
+                $selected = ($row['kelurahan'] == $option) ? 'selected' : '';
+                echo '<option ' . $selected . '>' . $option . '</option>';
+            }
+        ?>
+    </select>
+</div>
 
-        <div class="form-group">
-            <label for="judul">Kecamatan:</label>
-            <select class="form-control" name="kecamatan" placeholder="Kecamatan" id="kecamatan">
-                <option>Kota</option>
-                <option>Mojoroto</option>
-                <option>Pesantren</option>
-                <option>Campuran</option>
-            </select>
-        </div>
+
+<div class="form-group">
+    <label for="kecamatan">Kecamatan:</label>
+    <select class="form-control" name="kecamatan" id="kecamatan">
+        <option value="Kota">Kota</option>
+        <option value="Mojoroto">Mojoroto</option>
+        <option value="Pesantren">Pesantren</option>
+        <option value="Campuran">Campuran</option>
+    </select>
+</div>
+
 
         <div class="form-group">
             <label for="Unit Pengolah">Unit Pengolah:</label>
@@ -268,35 +279,16 @@ include './layout/header.php';
         </div>
 
         <div class="form-group">
-            <label for="judul">Tahun:</label>
-            <select class="form-control" name="tahun" placeholder="Tahun" id="nipa">
-              <option>2023</option>
-              <option>2022</option>
-              <option>2021</option>
-              <option>2020</option>
-              <option>2019</option>
-              <option>2018</option>
-              <option>2017</option>
-              <option>2016</option>
-              <option>2015</option>
-              <option>2014</option>
-              <option>2013</option>
-              <option>2012</option>
-              <option>2011</option>
-              <option>2010</option>
-              <option>2009</option>
-              <option>2008</option>
-              <option>2007</option>
-              <option>2006</option>
-              <option>2005</option>
-              <option>2004</option>
-              <option>2003</option>
-              <option>2002</option>
-              <option>2001</option>
-              <option>2000</option>
-              <option>1999</option>
-            </select>
-        </div>
+    <label for="tahun">Tahun:</label>
+    <select class="form-control" name="tahun" id="tahun">
+        <?php
+        $current_year = date('Y');
+        for ($i = $current_year; $i >= 1999; $i--) {
+            echo '<option value="' . $i . '">' . $i . '</option>';
+        }
+        ?>
+    </select>
+</div>
 
         <div class="form-group">
             <label for="judul">Keterangan:</label>
