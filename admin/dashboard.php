@@ -12,17 +12,7 @@ include './layout/header.php';
 
     <title>Arsip Online - Kediri</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-    .container-fluid {
-        background-image: url("../assets/img/bg_arsip.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 587px;
-        width: 1280px;
 
-    }
-    </style>
 </head>
 
 <body id="page-top">
@@ -180,7 +170,7 @@ include './layout/header.php';
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container-fluid"style="background-image: url(../assets/img/bg_arsip.png); background-position: center;  background-repeat: no-repeat;  background-size: cover;  height: 587px;  width: 1280px;">
 
                     <!-- Content Row -->
                     <div class="row">
