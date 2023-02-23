@@ -185,6 +185,39 @@ data-parent="#accordionSidebar">
             <div class="tambahdata">
                 <a href="tambah_data_pinjaman.php" class="btn btn-primary">Tambah Data</a><br><br>
 
+        
+
+<!-- // tentukan jumlah data per halaman
+$data_per_halaman = 10;
+    
+// tentukan jumlah halaman
+$jumlah_halaman = ceil($jumlah_data / $data_per_halaman);
+
+// cek halaman aktif
+$halaman_aktif = (isset($_GET['halaman'])) ? $_GET['halaman'] : 1;
+
+// tentukan batas data
+$batas_data = ($halaman_aktif - 1) * $data_per_halaman;
+
+// query untuk menampilkan data dengan batas data dan jumlah data per halaman
+$query_limit = "SELECT * FROM tb_transaksi ORDER BY id_transaksi DESC LIMIT $batas_data, $data_per_halaman";
+$koneksi->query($query_limit);
+
+// nomor awal pada setiap halaman
+$nomor_awal = ($halaman_aktif - 1) * $data_per_halaman + 1; -->
+
+
+<!-- tampilkan tombol pindah halaman -->
+<!-- <div class="d-flex justify-content-center">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <?php for ($i=1; $i<=$jumlah_halaman; $i++) { ?>
+            <li class="page-item <?php if ($i==$halaman_aktif) { echo 'active'; } ?>"><a class="page-link"
+                    href="index.php?halaman=<?= $i; ?>"><?= $i; ?></a></li>
+            <?php } ?>
+        </ul>
+    </nav> -->
+
                 <!-- buat kolom -->
                 <div class="table-responsive">
                     <table class="table table-bordered font-weight-normal"
