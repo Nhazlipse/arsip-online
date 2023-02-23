@@ -25,16 +25,14 @@ include './layout/header.php';
 
 
 <!-- Sidebar - Brand -->
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php"style="margin-top:68px;">
 <div class="sidebar-brand-icon text-center">
-<br><br><br><br><br><br>
 <img src="../../assets/img/arsip.png" width="77%">
 </div>
 </a>
 
 <!-- Nav Item - Dashboard -->
-<br><br><br><br><br><br>
-<li class="nav-item active">
+<li class="nav-item active"style="margin-top:68px;">
 <a class="nav-link" href="../dashboard.php">
 <i class="fas fa-fw fa-tachometer-alt"></i>
 <span>Dashboard</span></a>
@@ -172,7 +170,7 @@ data-parent="#accordionSidebar">
 
 
 <!-- Data Pengunjung -->
-<div class="container">
+<div class="container"style="padding-left:0px; padding-right:0px;">
     <div class="card shadow mb-4">
         <div class="card-header py-3 text-center">
             <img src="../../assets/img/datapinjam.png"style="width:23%;">
