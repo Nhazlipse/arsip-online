@@ -25,17 +25,15 @@ include './layout/header.php';
 
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php"style="margin-top:68px;">
                 <div class="sidebar-brand-icon text-center">
-                    <br><br><br><br><br><br>
                     <img src="../../assets/img/arsip.png" width="77%">
                 </div>
             </a>
 
             <!-- Nav Item - Dashboard -->
-            <br><br><br><br><br><br>
             <li class="nav-item active">
-                <a class="nav-link" href="../dashboard.php">
+                <a class="nav-link" href="../dashboard.php"style="margin-top:68px;">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
