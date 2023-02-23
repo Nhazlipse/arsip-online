@@ -27,17 +27,15 @@ include './layout/header.php';
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color:#2b2b2b;">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php"style="margin-top:68px;">
                 <div class="sidebar-brand-icon text-center">
-                    <br><br><br><br><br><br>
                     <img src="../../assets/img/arsip.png" width="77%">
                 </div>
             </a>
 
 
             <!-- Nav Item - Dashboard -->
-            <br><br><br><br><br><br>
-            <li class="nav-item active">
+            <li class="nav-item active"style="margin-top:68px;">
                 <a class="nav-link" href="../dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -180,7 +178,7 @@ include './layout/header.php';
                     <div class="container">
                         <div class="card shadow mb-4">
                             <div class="card-header py-3 text-center">
-                            <img src="../../assets/img/tambahpinjam.png"style="width:30%;">
+                            <img src="../../assets/img/tambahpinjam.png"style="width:35%;">
                             </div>
 
                             <!-- card body -->

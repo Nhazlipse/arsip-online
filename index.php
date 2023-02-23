@@ -12,7 +12,7 @@ include './database/koneksi.php';
 
 </head>
 
-<body class="bg-color-warning" style="background-image: url('./assets/img/bg_login.png'); background-repeat: no-repeat; background-position: center; background-size: cover ; width =">
+<body class="bg-color-warning" style="background-image: url('./assets/img/background.png'); background-repeat: no-repeat; background-position: center; background-size: cover ; width =">
     <div class="container">
 
         <!-- Outer Row -->
@@ -35,9 +35,9 @@ include './database/koneksi.php';
 
                             </div>
                                     <div class="text-center"><br>
-                                        <h1 class="h2 text-gray-900 mb-4" style="font-size:36px; font-family: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Selamat Datang</h1><br>
+                                        <h1 class="h2 text-gray-900 mb-4" style="font-size:38px; font-family: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Selamat Datang</h1>
                                     </div>
-                                    <form class="user" action="./admin/login.php" method="POST">
+                                    <form class="user" action="./admin/login.php" method="POST"style="margin-top:30px;">
                                     <div class="form-group">
                                             <input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Username" required>
                                         </div>
@@ -49,7 +49,7 @@ include './database/koneksi.php';
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
                                             </div>
                                         </div>
-                                        <button class="btn btn-warning btn-user btn-block" style="height:1,5cm;width:4cm;position:absolute;top:62%;left: 31%;font-size:18px;font-family:bold;">Login</button>
+                                        <button class="btn btn-primary btn-user btn-block" style="height:1,5cm;width:4cm;position:absolute;top:60%;left: 31%;font-size:19px;font-family:bold;">Login</button>
                                         </a>
                                         <br>
                                     </form>
