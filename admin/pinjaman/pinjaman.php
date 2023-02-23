@@ -170,62 +170,32 @@ include './layout/header.php';
 
                 <!-- JAVASCIRPT BUAT CARI DATA -->
                 <script>
-                function searchTable() {
-                var input, filter, table, tr, td, i, txtValue;
-                input = document.getElementById("searchInput");
-                filter = input.value.toUpperCase();
-                table = document.getElementById("dataTable");
-                tr = table.getElementsByTagName("tr");
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[1]; // index kolom kedua, yaitu kolom nama
-                    if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                    }
-                }
-                }
-
-                function searchTable() {
-                var input, filter, table, tr, td, i, txtValue;
-                input = document.getElementById("searchInput2");
-                filter = input.value.toUpperCase();
-                table = document.getElementById("dataTable");
-                tr = table.getElementsByTagName("tr");
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2]; // index kolom kedua, yaitu kolom nama
-                    if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                    }
-                }
-                }
-
-                function searchTable() {
-                var input, filter, table, tr, td, i, txtValue;
-                input = document.getElementById("searchInput3");
-                filter = input.value.toUpperCase();
-                table = document.getElementById("dataTable");
-                tr = table.getElementsByTagName("tr");
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[3]; // index kolom kedua, yaitu kolom nama
-                    if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                    }
-                }
-                }
+function searchTable() {
+    var input1, input2, input3, filter1, filter2, filter3, table, tr, td1, td2, td3, i, txtValue1, txtValue2, txtValue3;
+    input1 = document.getElementById("searchInput1");
+    input2 = document.getElementById("searchInput2");
+    input3 = document.getElementById("searchInput3");
+    filter1 = input1.value.toUpperCase();
+    filter2 = input2.value.toUpperCase();
+    filter3 = input3.value.toUpperCase();
+    table = document.getElementById("dataTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td1 = tr[i].getElementsByTagName("td")[1]; // index kolom kedua, yaitu kolom nama
+        td2 = tr[i].getElementsByTagName("td")[2]; // index kolom ketiga, yaitu kolom masalah
+        td3 = tr[i].getElementsByTagName("td")[3]; // index kolom keempat, yaitu kolom peminjam
+        if (td1 || td2 || td3) {
+            txtValue1 = td1.textContent || td1.innerText;
+            txtValue2 = td2.textContent || td2.innerText;
+            txtValue3 = td3.textContent || td3.innerText;
+            if (txtValue1.toUpperCase().indexOf(filter1) > -1 && txtValue2.toUpperCase().indexOf(filter2) > -1 && txtValue3.toUpperCase().indexOf(filter3) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
                 </script>
                 <!-- END JAVASCRIPT -->
 
@@ -255,14 +225,14 @@ include './layout/header.php';
                                             <thead>
                                                 <tr>
                                                     <th class="text-center">No</th>
-                                                    <th>Pemilik<br><input type="text" id="searchInput" onkeyup="searchTable()"></th>
+                                                    <th>Pemilik<br><input type="text" id="searchInput1" onkeyup="searchTable()"></th>
                                                     <th>Masalah<br><input type="text" id="searchInput2" onkeyup="searchTable()"></th>
                                                     <th>Peminjam<br><input type="text" id="searchInput3" onkeyup="searchTable()"></th>
-                                                    <th>No. Identitas<br><input type="text" id="searchInput" onkeyup="searchTable()"></th>
-                                                    <th>Tanggal Pinjam<br><input type="text" id="searchInput" onkeyup="searchTable()"></th>
-                                                    <th>Tanggal Dikembalikan<br><input type="text" id="searchInput" onkeyup="searchTable()"></th>
-                                                    <th>Jumlah<br><input type="text" id="searchInput" onkeyup="searchTable()"></th>
-                                                    <th>Status<br><input type="text" id="searchInput" onkeyup="searchTable()"></th>
+                                                    <th>No. Identitas<br><input type="text" id="searchInput4" onkeyup="searchTable()"></th>
+                                                    <th>Tanggal Pinjam<br><input type="text" id="searchInput5" onkeyup="searchTable()"></th>
+                                                    <th>Tanggal Dikembalikan<br><input type="text" id="searchInput6" onkeyup="searchTable()"></th>
+                                                    <th>Jumlah<br><input type="text" id="searchInput7" onkeyup="searchTable()"></th>
+                                                    <th>Status<br><input type="text" id="searchInput8" onkeyup="searchTable()"></th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
