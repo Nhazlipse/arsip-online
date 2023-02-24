@@ -15,7 +15,18 @@ include './layout/header.php';
 <head>
 
     <title>Arsip Online - Kediri</title>
+<style>
+    label{
+    color: black;
+    font-weight: bold;
+}
+.form-control{
+    border-color: black;
+}
 
+
+</style>
+    
 </head>
 
 <body id="page-top">
@@ -215,7 +226,7 @@ include './layout/header.php';
                                         </div>
                                         <div class="form-group">
                                             <label for="judul">Jumlah:</label>
-                                            <input type="text" class="form-control" id="jumlah" name="jumlah" required>
+                                            <input type="number" class="form-control" id="jumlah" name="jumlah" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="judul">Status:</label>
