@@ -259,8 +259,8 @@ include './layout/header.php';
                         <select class="form-control" name="tahun" id="tahun">
                             
                         <?php
-                        $start_year = 1999; // Tahun awal
-                        $end_year = 2023; // Tahun akhir
+                        $start_year = 1945; // Tahun awal
+                        $end_year = 2030; // Tahun akhir
                         $selected_year = $row['tahun']; // Tahun yang dipilih sebelumnya
                         for ($year = $end_year; $year >= $start_year; $year--) {
                             $selected = ($year == $selected_year) ? 'selected' : '';

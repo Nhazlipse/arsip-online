@@ -16,6 +16,18 @@ include './layout/header.php';
 
     <title>Arsip Online - Kediri</title>
 
+<style>
+label{
+    color: black;
+    font-weight: bold;
+}
+.form-control{
+    border-color: black;
+}
+
+</style>
+
+
 </head>
 
 <body id="page-top">
@@ -183,11 +195,14 @@ include './layout/header.php';
     <!-- card body -->
     <div class="card-body">
 
+
+
+
     <div class="container">
     <form action="proses_tambah_data.php" method="post">
 
         <div class="form-group">
-            <label for="judul">Nama Pemilik:</label>
+            <label for="judul">Nama Pemilik:</Nama></label>
             <input type="text" class="form-control" id="nama" name="nama" required>
         </div>
 

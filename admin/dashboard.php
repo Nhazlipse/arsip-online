@@ -60,9 +60,9 @@ include './layout/header.php';
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Pilih Menu:</h6>
-                        <a class="collapse-item" href="./arsip/arsip.php">Arsip</a>
-                        <a class="collapse-item" href="./pinjaman/pinjaman.php">Pinjaman</a>
+                        <h6 class="collapse-header"><b>Pilih Menu:</b></h6>
+                        <a class="collapse-item" href="./arsip/arsip.php"><b>Arsip</b></a>
+                        <a class="collapse-item" href="./pinjaman/pinjaman.php"><b>Pinjaman</b></a>
                     </div>
                 </div>
             </li>
