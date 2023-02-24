@@ -24,7 +24,9 @@ label{
 .form-control{
     border-color: black;
 }
-
+.container{
+    text-align: center;
+}
 
 </style>
 

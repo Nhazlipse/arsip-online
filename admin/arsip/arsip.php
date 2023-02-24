@@ -13,7 +13,11 @@ include './layout/header.php';
 
 <title>Arsip Online - Kediri</title>
 
-
+<style>
+    .text-center{
+        
+    }
+</style>
 </head>
 
 <body id="page-top">
