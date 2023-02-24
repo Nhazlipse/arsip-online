@@ -56,7 +56,7 @@ aria-expanded="true" aria-controls="collapseTwo">
 </a>
 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
 <div class="bg-white py-2 collapse-inner rounded">
-    <h6 class="collapse-header"><b>Pilih Menu:/b></h6>
+    <h6 class="collapse-header"><b>Pilih Menu:</b></h6>
     <a class="collapse-item" href="arsip.php"><b>Arsip</b></a>
     <a class="collapse-item" href="../pinjaman/pinjaman.php"><b>Pinjaman</b></a>
 </div>
@@ -72,7 +72,7 @@ aria-expanded="true" aria-controls="collapseUtilities">
 </a>
 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
 data-parent="#accordionSidebar">
-<div class="bg-white py-2 collapse-inner rounded">
+<div class="bg-white py-2 collapse-inner rounded text-center">
     <h6 class="collapse-header">Custom Utilities:</h6>
     <a class="collapse-item" href="utilities-color.html">Colors</a>
     <a class="collapse-item" href="utilities-border.html">Borders</a>
