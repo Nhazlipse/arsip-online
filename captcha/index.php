@@ -4,9 +4,6 @@
 <?php 
 include './layout/header.php'; 
 include '../database/koneksi.php';
-include 'captcha.php'; 
-include 'captcha.js'; 
-include 'captcha-validasi.php'; 
 
 ?>
 
@@ -14,6 +11,13 @@ include 'captcha-validasi.php';
 
     <title>Arsip Kita - Kediri</title>
 
+    <script 
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+    </script>
+ 
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdLk7EUAAAAAEWHuB2tabMmlxQ2-RRTLPHEGe9Y"></script>
 </head>
 
 <body class="bg-color-warning" style="background-image: url('../assets/img/background.png'); background-repeat: no-repeat; background-position: center; background-size: cover ; width =">
@@ -42,7 +46,7 @@ include 'captcha-validasi.php';
                                         <h1 class="h2 text-gray-900 mb-4" style="font-size:38px; font-family: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Selamat Datang</h1>
                                     </div>
 
-                                    <form class="user" action="../admin/login.php" method="POST"style="margin-top:30px;">
+                                    <form id="newsletterForm" class="user" action="../admin/login.php" method="POST"style="margin-top:30px;">
                                     <div class="form-group">
                                             <input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Username" required>
                                         </div>
@@ -66,6 +70,20 @@ include 'captcha-validasi.php';
                                         <br>
                                     </form>
                                     </br>
+                                    <script>
+                                    $('#newsletterForm').submit(function(event) {
+                                        event.preventDefault();
+                                        var email = $('#email').val();
+                                
+                                        grecaptcha.ready(function() {
+                                            grecaptcha.execute('6Lf8hLEkAAAAAEL_8TFu4kg_pAW7uHsSPvBWVr_c', {action: 'subscribe_newsletter'}).then(function(token) {
+                                                $('#newsletterForm').prepend('<input type="hidden" name="token" value="' + token + '">');
+                                                $('#newsletterForm').prepend('<input type="hidden" name="action" value="subscribe_newsletter">');
+                                                $('#newsletterForm').unbind('submit').submit();
+                                            });;
+                                        });
+                                });
+                                    </script>
                                 </div>
                             </div>
                         </div>

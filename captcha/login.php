@@ -1,40 +1,71 @@
 <?php
-session_start();
-
+// panggil koneksi
 require_once '../database/koneksi.php';
+
 use database\koneksi;
+
 $koneksi = new koneksi();
 
-// Check if CAPTCHA is valid
-if(isset($_POST['submit'])) {
-    require_once 'recaptcha/autoload.php';
+// periksa apakah username valid
+if (isset($_POST['username']) && $_POST['username']) {
+    $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+} else {
+    // set error message and redirect back to form... 
+    header('location: ../index.php');
+    exit;
+}
 
-    $secret_key = "YOUR_SECRET_KEY";
-    $response = $_POST['g-recaptcha-response'];
+// verifikasi reCAPTCHA
+$token = $_POST['token'];
+$action = $_POST['action'];
 
-    $recaptcha = new \ReCaptcha\ReCaptcha($secret_key);
-    $resp = $recaptcha->verify($response, $_SERVER['REMOTE_ADDR']);
+// call curl to POST request 
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL,"https://www.google.com/recaptcha/api/siteverify");
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array('6Lf8hLEkAAAAAIXJq86DhMDo12ENFEnsa5jScb20', 'response' => $token)));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+curl_close($ch);
+$arrResponse = json_decode($response, true);
 
-    if ($resp->isSuccess()) {
-        // CAPTCHA is valid, continue with login process
-        $password = md5($_POST['password']);
-        $username = $_POST['username'];
+// verify the response 
+if ($arrResponse["success"] != '1' || $arrResponse["action"] != $action || $arrResponse["score"] < 0.5) {
+    // tampilkan pesan error jika reCAPTCHA tidak valid
+    echo "<script>alert('reCAPTCHA tidak valid!');document.location='../index.php';</script>";
+    exit;
+}
 
-        $query = "SELECT * FROM tb_admin WHERE username='$username' and password = '$password'";
-        $login = $koneksi->query($query);
-        $data = mysqli_fetch_array($login);
+// deklarasikan user dan pass
+$username = $_POST['username'];
+$password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
-        if ($data) {
-            $_SESSION['id_admin'] = $data['id_admin'];
-            $_SESSION['username'] = $data['username'];
-            $_SESSION['password'] = $data['password'];
-            header("location: dashboard.php");
-        } else {
-            echo "<script>alert('Login Gagal, Akun tidak ditemukan..!');document.location='../index.php';</script>";
-        }
-    } else {
-        // CAPTCHA is not valid, show error message
-        echo "<script>alert('Captcha tidak valid..!');document.location='../index.php';</script>";
+// hindari SQL injection dengan parameter binding
+$query = "SELECT * FROM tb_admin WHERE username=?";
+$stmt = $koneksi->prepare($query);
+$stmt->bind_param('s', $username);
+$stmt->execute();
+$result = $stmt->get_result();
+
+// periksa apakah username dan password valid
+if ($result->num_rows === 1) {
+    $row = $result->fetch_assoc();
+    $hash = $row['password'];
+
+    // periksa apakah password cocok dengan hash
+    if (password_verify($password, $hash)) {
+        // start session
+        session_start();
+        $_SESSION['id_admin'] = $row['id_admin'];
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['password'] = $row['password'];
+
+        // redirect ke halaman dashboard
+        header("location: dashboard.php");
+        exit;
     }
 }
-?>
+
+// tampilkan pesan error jika login gagal
+echo "<script>alert('Login Gagal, Akun tidak ditemukan..!');document.location='../index.php';</script>";
+exit;
