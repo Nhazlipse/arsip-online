@@ -1,29 +1,40 @@
 <?php
-//panggil koneksi
+session_start();
+
 require_once '../database/koneksi.php';
-
 use database\koneksi;
-
 $koneksi = new koneksi();
 
+// Check if CAPTCHA is valid
+if(isset($_POST['submit'])) {
+    require_once 'recaptcha/autoload.php';
 
-//deklarasikan user dan pass
-$password = md5($_POST['password']);
-$username = $_POST['username'];
+    $secret_key = "YOUR_SECRET_KEY";
+    $response = $_POST['g-recaptcha-response'];
 
+    $recaptcha = new \ReCaptcha\ReCaptcha($secret_key);
+    $resp = $recaptcha->verify($response, $_SERVER['REMOTE_ADDR']);
 
-$query = "SELECT * FROM tb_admin WHERE username='$username' and  password = '$password'";
-$login = $koneksi->query($query);
-$data = mysqli_fetch_array($login);
+    if ($resp->isSuccess()) {
+        // CAPTCHA is valid, continue with login process
+        $password = md5($_POST['password']);
+        $username = $_POST['username'];
 
+        $query = "SELECT * FROM tb_admin WHERE username='$username' and password = '$password'";
+        $login = $koneksi->query($query);
+        $data = mysqli_fetch_array($login);
 
-// jika tidak di temukan user/pass tuser
-if ($data) {
-    session_start();
-    $_SESSION['id_admin'] = $data['id_admin'];
-    $_SESSION['username'] = $data['username'];
-    $_SESSION['password'] = $data['password'];
-    header("location: dashboard.php");
-} else {
-    echo "<script>alert('Login Gagal, Akun tidak ditemukan..!');document.location='../index.php';</script>";
+        if ($data) {
+            $_SESSION['id_admin'] = $data['id_admin'];
+            $_SESSION['username'] = $data['username'];
+            $_SESSION['password'] = $data['password'];
+            header("location: dashboard.php");
+        } else {
+            echo "<script>alert('Login Gagal, Akun tidak ditemukan..!');document.location='../index.php';</script>";
+        }
+    } else {
+        // CAPTCHA is not valid, show error message
+        echo "<script>alert('Captcha tidak valid..!');document.location='../index.php';</script>";
+    }
 }
+?>
