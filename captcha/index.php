@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<?php 
-include './layout/header.php'; 
+<?php
+include './layout/header.php';
 include '../database/koneksi.php';
-
 ?>
 
-<head>
+<!-- ... HTML code ... -->
 
+<head>
     <title>Arsip Kita - Kediri</title>
 
-    <script 
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     </script>
- 
-    <script src="https://www.google.com/recaptcha/api.js?render=6LdLk7EUAAAAAEWHuB2tabMmlxQ2-RRTLPHEGe9Y"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeKH7IkAAAAAHehEYcO9Gr3KwbdZDgo28q6Rv3S"></script>
 </head>
 
-<body class="bg-color-warning" style="background-image: url('../assets/img/background.png'); background-repeat: no-repeat; background-position: center; background-size: cover ; width =">
+<body class="bg-color-warning" style="background-image: url('../assets/img/background.png'); background-repeat: no-repeat; background-position: center; background-size: cover ;">
     <div class="container">
-
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
@@ -33,72 +28,40 @@ include '../database/koneksi.php';
 
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                        <div class="col-lg-6 d-lg-block bg-white p-6 text-center"><br>
-                                <img src="../assets/img/arsip.png" width = "90%"><br><br><br>
-                                <img src="../assets/img/tulisan.png"  width = "55%">
+                            <div class="col-lg-6 d-lg-block bg-white p-6 text-center"><br>
+                                <img src="../assets/img/arsip.png" width="90%"><br><br><br>
+                                <img src="../assets/img/tulisan.png" width="55%">
                             </div>
 
                             <div class="col-lg-5">
                                 <div class="p-4">
 
-                            </div>
-                                    <div class="text-center"><br>
-                                        <h1 class="h2 text-gray-900 mb-4" style="font-size:38px; font-family: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Selamat Datang</h1>
-                                    </div>
-
-                                    <form id="newsletterForm" class="user" action="../admin/login.php" method="POST"style="margin-top:30px;">
-                                    <div class="form-group">
-                                            <input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Username" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" required>
-                                        </div>
-
-                                        <label for="captcha">Captcha:</label>
-                                            <input type="text" name="captcha" id="captcha"><br>
-                                            <img src="captcha.php" alt="Captcha Image" id="captcha-image">
-                                            <button type="button" id="reload-captcha">Reload Captcha</button><br><br>
-
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                            </div>
-                                        </div>
-
-                                        <button class="btn btn-primary btn-user btn-block" type="submit" style="height:1,5cm;width:4cm;position:absolute;top:90%;left: 31%;font-size:19px;font-family:bold;">Login</button>
-                                        </a>
-                                        <br>
-                                    </form>
-                                    </br>
-                                    <script>
-                                    $('#newsletterForm').submit(function(event) {
-                                        event.preventDefault();
-                                        var email = $('#email').val();
-                                
-                                        grecaptcha.ready(function() {
-                                            grecaptcha.execute('6Lf8hLEkAAAAAEL_8TFu4kg_pAW7uHsSPvBWVr_c', {action: 'subscribe_newsletter'}).then(function(token) {
-                                                $('#newsletterForm').prepend('<input type="hidden" name="token" value="' + token + '">');
-                                                $('#newsletterForm').prepend('<input type="hidden" name="action" value="subscribe_newsletter">');
-                                                $('#newsletterForm').unbind('submit').submit();
-                                            });;
-                                        });
-                                });
-                                    </script>
                                 </div>
+                                <div class="text-center"><br>
+                                    <h1 class="h2 text-gray-900 mb-4" style="font-size:38px; font-family: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Selamat Datang</h1>
+                                </div>
+
+                                <form id="loginForm" class="user" action="../admin/login.php" method="POST" style="margin-top:30px;">
+                                    <div class="form-group">
+                                        <input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" required>
+                                    </div>
+                                    <div class="g-recaptcha" data-sitekey="6LfHIrIkAAAAAPf_-i9ZdxJeTH5yakwM1Wn9quZB"></div>
+
+                                    <button class="btn btn-primary btn-user btn-block" type="submit" style="height:1,5cm;width:4cm;position:absolute;top:90%;left: 31%;font-size:19px;font-family:bold;">Login</button>
+                                    <br>
+                                </form>
+                                </br>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
-    
-</body>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </html>
-
 <?php include './layout/footer.php'; ?>
