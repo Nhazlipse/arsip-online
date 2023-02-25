@@ -41,7 +41,7 @@ include '../database/koneksi.php';
                                     <h1 class="h2 text-gray-900 mb-4" style="font-size:38px; font-family: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Selamat Datang</h1>
                                 </div>
 
-                                <form id="loginForm" class="user" action="../admin/login.php" method="POST" style="margin-top:30px;">
+                                <form id="loginForm" class="user" action="login.php" method="POST" style="margin-top:30px;">
                                     <div class="form-group">
                                         <input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Username" required>
                                     </div>
