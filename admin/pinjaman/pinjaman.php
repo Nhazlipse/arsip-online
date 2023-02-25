@@ -13,6 +13,75 @@ include './layout/header.php';
 
 <title>Arsip Online - Kediri</title>
 
+<style>
+.card {
+  width: 100%;
+  max-width: 100%;
+}
+
+.card-body {
+  max-width: 80%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .table-responsive {
+    overflow-x: auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .table-responsive {
+    width: 100%;
+    overflow-x: 100%;
+  }
+  /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Table Responsive */
+@media (max-width: 767px) {
+  .table-responsive {
+    overflow-x: auto;
+  }
+}
+}
+</style>
+
 </head>
 
 <body id="page-top">
@@ -182,39 +251,6 @@ data-parent="#accordionSidebar">
             <!-- Tombol Tambah Data -->
             <div class="tambahdata">
                 <a href="tambah_data_pinjaman.php" class="btn btn-primary">Tambah Data</a><br><br>
-
-        
-
-<!-- // tentukan jumlah data per halaman
-$data_per_halaman = 10;
-    
-// tentukan jumlah halaman
-$jumlah_halaman = ceil($jumlah_data / $data_per_halaman);
-
-// cek halaman aktif
-$halaman_aktif = (isset($_GET['halaman'])) ? $_GET['halaman'] : 1;
-
-// tentukan batas data
-$batas_data = ($halaman_aktif - 1) * $data_per_halaman;
-
-// query untuk menampilkan data dengan batas data dan jumlah data per halaman
-$query_limit = "SELECT * FROM tb_transaksi ORDER BY id_transaksi DESC LIMIT $batas_data, $data_per_halaman";
-$koneksi->query($query_limit);
-
-// nomor awal pada setiap halaman
-$nomor_awal = ($halaman_aktif - 1) * $data_per_halaman + 1; -->
-
-
-<!-- tampilkan tombol pindah halaman -->
-<!-- <div class="d-flex justify-content-center">
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-            <?php for ($i=1; $i<=$jumlah_halaman; $i++) { ?>
-            <li class="page-item <?php if ($i==$halaman_aktif) { echo 'active'; } ?>"><a class="page-link"
-                    href="index.php?halaman=<?= $i; ?>"><?= $i; ?></a></li>
-            <?php } ?>
-        </ul>
-    </nav> -->
 
                 <!-- buat kolom -->
                 <div class="table-responsive">
