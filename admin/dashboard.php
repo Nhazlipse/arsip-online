@@ -177,12 +177,20 @@ include './layout/header.php';
                                                 <?php echo $total_data; ?></div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-500"></i>
+                                            <i class="fa fa-id-card fa-2x text-gray-500"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <?php
+                        $query = "SELECT COUNT(*) as total_data2 FROM tb_transaksi";
+                        $koneksi = new koneksi();
+                        $result = $koneksi->query($query);
+                        $row = mysqli_fetch_assoc($result);
+                        $total_data2 = $row['total_data2'];
+                        ?>
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -194,10 +202,11 @@ include './layout/header.php';
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1 text-center"
                                                 style="font-size:16px" ;>
                                                 Arsip Dipinjam </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-900 text-center" ;>3</div>
-                                        </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-900 text-center">
+                                            <?php echo $total_data; ?></div>
+                                            </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-stopwatch fa-2x text-gray-500"></i>
+                                        <i class="fa fa-address-book fa-2x text-gray-500"></i>
                                         </div>
                                     </div>
                                 </div>
