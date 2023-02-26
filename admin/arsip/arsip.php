@@ -184,34 +184,43 @@ data-parent="#accordionSidebar">
 
 <!-- buat kolom -->
 <div class="table-responsive">
-<table class="table table-bordered" id="dataTable" width="262%"
+<table class="table table-bordered" id="dataTable1" width="262%"
 cellspacing="0">
 <thead>
     <tr>
         <th class="text-center">No. Urut</th>
-        <th>Nama Pemilik<br><input type="text" id="searchInput1" onkeyup="searchTable()"></th>
-        <th>Uraian Masalah<br><input type="text" id="searchInput2" onkeyup="searchTable()"></th>
-        <th>Jalan<br><input type="text" id="searchInput3" onkeyup="searchTable()"></th>
-        <th>Kelurahan<br><input type="text" id="searchInput4" onkeyup="searchTable()"></th>
-        <th>Kecamatan<br><input type="text" id="searchInput5" onkeyup="searchTable()"></th>
-        <th>Unit Pengolah<br><input type="text" id="searchInput6" onkeyup="searchTable()"></th>
-        <th>No. Rak<br><input type="text" id="searchInput7" onkeyup="searchTable()"></th>
-        <th>No. Box<br><input type="text" id="searchInput8" onkeyup="searchTable()"></th>
-        <th>Kode Klas<br><input type="text" id="searchInput9" onkeyup="searchTable()"></th>
-        <th>No. Urut<br><input type="text" id="searchInput10" onkeyup="searchTable()"></th>
-        <th>NIPA<br><input type="text" id="searchInput11" onkeyup="searchTable()"></th>
-        <th>Tahun<br><input type="text" id="searchInput12" onkeyup="searchTable()"></th>
-        <th>Keterangan<br><input type="text" id="searchInput13" onkeyup="searchTable()"></th>
-        <th>Action</th>
+        <th>Nama Pemilik<br><input type="text" class="searchinput" id="searchInput1" onkeyup="searchTable()"></th>
+        <th>Uraian Masalah<br><input type="text" class="searchinput" id="searchInput2" onkeyup="searchTable()"></th>
+        <th>Jalan<br><input type="text" class="searchinput" id="searchInput3" onkeyup="searchTable()"></th>
+        <th>Kelurahan<br><input type="text" class="searchinput" id="searchInput4" onkeyup="searchTable()"></th>
+        <th>Kecamatan<br><input type="text" class="searchinput" id="searchInput5" onkeyup="searchTable()"></th>
+        <th>Unit Pengolah<br><input type="text" class="searchinput" id="searchInput6" onkeyup="searchTable()"></th>
+        <th>No. Rak<br><input type="text" class="searchinput" id="searchInput7" onkeyup="searchTable()"></th>
+        <th>No. Box<br><input type="text" class="searchinput" id="searchInput8" onkeyup="searchTable()"></th>
+        <th>Kode Klas<br><input type="text" class="searchinput" id="searchInput9" onkeyup="searchTable()"></th>
+        <th>No. Urut<br><input type="text" class="searchinput" id="searchInput10" onkeyup="searchTable()"></th>
+        <th>NIPA<br><input type="text" class="searchinput" id="searchInput11" onkeyup="searchTable()"></th>
+        <th>Tahun<br><input type="text" class="searchinput" id="searchInput12" onkeyup="searchTable()"></th>
+        <th>Keterangan<br><input type="text" class="searchinput" id="searchInput13" onkeyup="searchTable()"></th>
+        <th style="text-align: center; height: 50px; width: 150px;">᲼᲼᲼᲼᲼᲼᲼Action᲼᲼᲼᲼᲼᲼᲼<br><br></th>
+
+
     </tr>
 </thead>
 
 <!-- deklarasikan dan panggil koneksi database -->
 <tbody>
 <?php
-$query = "SELECT * FROM tb_dataarsip order by id_dataarsip desc";
-$tampil = $koneksi->query($query);
-$no = 1;
+ $record_per_page = 10;
+ if(isset($_GET["page"])) {
+   $page = $_GET["page"];
+ } else {
+   $page = 1;
+ }
+ $start_from = ($page-1) * $record_per_page;
+ $query = "SELECT * FROM tb_dataarsip ORDER BY id_dataarsip DESC LIMIT $start_from, $record_per_page";
+ $tampil = $koneksi->query($query);
+ $no = $start_from + 1;
 while ($data = mysqli_fetch_array($tampil)) {
 ?>
     <tr>
@@ -247,7 +256,64 @@ while ($data = mysqli_fetch_array($tampil)) {
 </table>
 </div>
 </div>
+
+<!-- INI BUAT NEXT PAGE -->
+<style>
+  .pagination-wrap1 {
+    width: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .searchinput {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 120px; /* panjang box 300px */
+}
+</style>
+<br>
+<div class="pagination-wrap1" >
+  <?php
+  $query = "SELECT * FROM tb_dataarsip";
+  $result = $koneksi->query($query);
+  $total_records = mysqli_num_rows($result);
+  $total_pages = ceil($total_records / $record_per_page);
+  ?>
+  <nav>
+    <ul class="pagination">
+      <?php if($page > 1) { ?>
+      <li class="page-item">
+        <a class="page-link" href="?page=<?= $page - 1 ?>">
+          <i class="fa fa-angle-left"></i>
+        </a>
+      </li>
+      <?php } ?>
+      <?php for($i=1; $i<=$total_pages; $i++) { ?>
+      <li class="page-item <?php if($page == $i) {echo "active";} ?>">
+        <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+      </li>
+      <?php } ?>
+      <?php if($page < $total_pages) { ?>
+      <li class="page-item">
+        <a class="page-link" href="?page=<?= $page + 1 ?>">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </li>
+      <?php } ?>
+    </ul>
+  </nav>
 </div>
+</div>
+      </div>
+
+
 
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">

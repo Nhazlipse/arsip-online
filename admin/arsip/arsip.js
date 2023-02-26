@@ -30,7 +30,7 @@ function searchTable() {
     filter12 = input12.value.toUpperCase();
     filter13 = input13.value.toUpperCase();
 
-    table = document.getElementById("dataTable");
+    table = document.getElementById("dataTable1");
     tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
         td1 = tr[i].getElementsByTagName("td")[1]; // index kolom kedua, yaitu kolom nama
