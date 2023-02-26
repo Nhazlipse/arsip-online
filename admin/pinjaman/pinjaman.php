@@ -131,25 +131,6 @@ aria-expanded="true" aria-controls="collapseTwo">
 </div>
 </li>
 
-<!-- Nav Item - Utilities Collapse Menu -->
-<li class="nav-item">
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-aria-expanded="true" aria-controls="collapseUtilities">
-<i class="fas fa-fw fa-wrench"></i>
-<span>Utilities</span>
-</a>
-<div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-data-parent="#accordionSidebar">
-<div class="bg-white py-2 collapse-inner rounded">
-    <h6 class="collapse-header">Custom Utilities:</h6>
-    <a class="collapse-item" href="utilities-color.html">Colors</a>
-    <a class="collapse-item" href="utilities-border.html">Borders</a>
-    <a class="collapse-item" href="utilities-animation.html">Animations</a>
-    <a class="collapse-item" href="utilities-other.html">Other</a>
-</div>
-</div>
-</li>
-
 <!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">
 
@@ -251,7 +232,7 @@ data-parent="#accordionSidebar">
             <!-- Tombol Tambah Data -->
             <div class="tambahdata">
                 <a href="tambah_data_pinjaman.php" class="btn btn-primary">Tambah Data</a><br><br>
-                
+</div>
                 <!-- buat kolom -->
                 <div class="table-responsive">
                     <table class="table table-bordered font-weight-normal"
@@ -319,9 +300,10 @@ data-parent="#accordionSidebar">
 </tbody>
 </table>
 </div>
-</div>
+
 
 <!-- INI BUAT NEXT PAGE -->
+<br>
 <style>
   .pagination-wrap1 {
     width: 100%;
