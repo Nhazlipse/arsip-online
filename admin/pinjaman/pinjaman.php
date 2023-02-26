@@ -260,15 +260,15 @@ data-parent="#accordionSidebar">
                         <thead>
                             <tr>
                                 <th class="text-center">No</th>
-                                <th>Pemilik</th>
-                                <th>Masalah</th>
-                                <th>Peminjam</th>
-                                <th>No. Identitas</th>
-                                <th>Tanggal Pinjam</th>
-                                <th>Tanggal Dikembalikan</th>
-                                <th>Jumlah</th>
-                                <th>Status</th>
-                                <th>Action</th>
+                                <th class="text-center">Pemilik</th>
+                                <th class="text-center">Masalah</th>
+                                <th class="text-center">Peminjam</th>
+                                <th class="text-center">No. Identitas</th>
+                                <th class="text-center">Tanggal᲼Pinjam</th>
+                                <th class="text-center">Tanggal Dikembalikan</th>
+                                <th class="text-center">Jumlah</th>
+                                <th class="text-center">Status</th>
+                                <th style="text-align: center;">᲼᲼᲼᲼᲼᲼᲼᲼Action᲼᲼᲼᲼᲼᲼᲼᲼</th>
                             </tr>
                         </thead>
 

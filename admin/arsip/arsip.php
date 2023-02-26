@@ -23,7 +23,7 @@ include './layout/header.php';
 
 
 <!-- Sidebar - Brand -->
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="../pinjaman/dashboard.php"style="margin-top:68px;">
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php"style="margin-top:68px;">
 <div class="sidebar-brand-icon text-center">
 <img src="../../assets/img/arsip.png" width="77%">
 </div>
@@ -57,25 +57,6 @@ aria-expanded="true" aria-controls="collapseTwo">
     <h6 class="collapse-header"><b>Pilih Menu:</b></h6>
     <a class="collapse-item" href="arsip.php"><b>Arsip</b></a>
     <a class="collapse-item" href="../pinjaman/pinjaman.php"><b>Pinjaman</b></a>
-</div>
-</div>
-</li>
-
-<!-- Nav Item - Utilities Collapse Menu -->
-<li class="nav-item">
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-aria-expanded="true" aria-controls="collapseUtilities">
-<i class="fas fa-fw fa-wrench"></i>
-<span>Utilities</span>
-</a>
-<div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-data-parent="#accordionSidebar">
-<div class="bg-white py-2 collapse-inner rounded text-center">
-    <h6 class="collapse-header">Custom Utilities:</h6>
-    <a class="collapse-item" href="utilities-color.html">Colors</a>
-    <a class="collapse-item" href="utilities-border.html">Borders</a>
-    <a class="collapse-item" href="utilities-animation.html">Animations</a>
-    <a class="collapse-item" href="utilities-other.html">Other</a>
 </div>
 </div>
 </li>
@@ -188,20 +169,20 @@ data-parent="#accordionSidebar">
 cellspacing="0">
 <thead>
     <tr>
-        <th class="text-center">No. Urut</th>
-        <th>Nama Pemilik<br><input type="text" class="searchinput" id="searchInput1" onkeyup="searchTable()"></th>
-        <th>Uraian Masalah<br><input type="text" class="searchinput" id="searchInput2" onkeyup="searchTable()"></th>
-        <th>Jalan<br><input type="text" class="searchinput" id="searchInput3" onkeyup="searchTable()"></th>
-        <th>Kelurahan<br><input type="text" class="searchinput" id="searchInput4" onkeyup="searchTable()"></th>
-        <th>Kecamatan<br><input type="text" class="searchinput" id="searchInput5" onkeyup="searchTable()"></th>
-        <th>Unit Pengolah<br><input type="text" class="searchinput" id="searchInput6" onkeyup="searchTable()"></th>
-        <th>No. Rak<br><input type="text" class="searchinput" id="searchInput7" onkeyup="searchTable()"></th>
-        <th>No. Box<br><input type="text" class="searchinput" id="searchInput8" onkeyup="searchTable()"></th>
-        <th>Kode Klas<br><input type="text" class="searchinput" id="searchInput9" onkeyup="searchTable()"></th>
-        <th>No. Urut<br><input type="text" class="searchinput" id="searchInput10" onkeyup="searchTable()"></th>
-        <th>NIPA<br><input type="text" class="searchinput" id="searchInput11" onkeyup="searchTable()"></th>
-        <th>Tahun<br><input type="text" class="searchinput" id="searchInput12" onkeyup="searchTable()"></th>
-        <th>Keterangan<br><input type="text" class="searchinput" id="searchInput13" onkeyup="searchTable()"></th>
+        <th class="text-center">No.᲼Urut<br><br></th>
+        <th class="text-center">Nama Pemilik<br><input type="text" class="searchinput" id="searchInput1" onkeyup="searchTable()"></th>
+        <th class="text-center">Uraian Masalah<br><input type="text" class="searchinput" id="searchInput2" onkeyup="searchTable()"></th>
+        <th class="text-center">Jalan<br><input type="text" class="searchinput" id="searchInput3" onkeyup="searchTable()"></th>
+        <th class="text-center">Kelurahan<br><input type="text" class="searchinput" id="searchInput4" onkeyup="searchTable()"></th>
+        <th class="text-center">Kecamatan<br><input type="text" class="searchinput" id="searchInput5" onkeyup="searchTable()"></th>
+        <th class="text-center">Unit Pengolah<br><input type="text" class="searchinput" id="searchInput6" onkeyup="searchTable()"></th>
+        <th class="text-center">No. Rak<br><input type="text" class="searchinput" id="searchInput7" onkeyup="searchTable()"></th>
+        <th class="text-center">No. Box<br><input type="text" class="searchinput" id="searchInput8" onkeyup="searchTable()"></th>
+        <th class="text-center">Kode Klas<br><input type="text" class="searchinput" id="searchInput9" onkeyup="searchTable()"></th>
+        <th class="text-center">No. Urut<br><input type="text" class="searchinput" id="searchInput10" onkeyup="searchTable()"></th>
+        <th class="text-center">NIPA<br><input type="text" class="searchinput" id="searchInput11" onkeyup="searchTable()"></th>
+        <th class="text-center">Tahun<br><input type="text" class="searchinput" id="searchInput12" onkeyup="searchTable()"></th>
+        <th class="text-center">Keterangan<br><input type="text" class="searchinput" id="searchInput13" onkeyup="searchTable()"></th>
         <th style="text-align: center; height: 50px; width: 150px;">᲼᲼᲼᲼᲼᲼᲼Action᲼᲼᲼᲼᲼᲼᲼<br><br></th>
 
 
@@ -276,6 +257,9 @@ while ($data = mysqli_fetch_array($tampil)) {
   margin-top: 5px;
   margin-bottom: 5px;
   width: 120px; /* panjang box 300px */
+}
+.text-center {
+  text-align: center;
 }
 </style>
 <br>
