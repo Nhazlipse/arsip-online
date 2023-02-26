@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php 
-include 'header.php'; 
+include './layout/header.php'; 
 include './database/koneksi.php';
 ?>
 
@@ -71,4 +71,4 @@ include './database/koneksi.php';
 
 </html>
 
-<?php include 'footer.php'; ?>
+<?php include './layout/footer.php'; ?>
