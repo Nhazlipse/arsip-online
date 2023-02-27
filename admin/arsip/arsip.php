@@ -183,7 +183,7 @@ cellspacing="0">
         <th class="text-center">NIPA<br><input type="text" class="searchinput" id="searchInput11" onkeyup="searchTable()"></th>
         <th class="text-center">Tahun<br><input type="text" class="searchinput" id="searchInput12" onkeyup="searchTable()"></th>
         <th class="text-center">Keterangan<br><input type="text" class="searchinput" id="searchInput13" onkeyup="searchTable()"></th>
-        <th style="text-align: center; height: 50px; width: 300px;padding: 10px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Action<br><br></th>
+        <th style="text-align: center; height: 50px; padding-top: 20px; padding-right: 73px; padding-bottom: 30px; padding-left: 73px;">Action</th>
 
 
     </tr>

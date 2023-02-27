@@ -10,6 +10,8 @@ include './layout/header.php';
 
     <title>Arsip Online - Kediri</title>
     <link rel="stylesheet" href="style.css"/>
+    
+</head>
 
 </head>
 
@@ -206,7 +208,7 @@ include './layout/header.php';
                                             <?php echo $total_data; ?></div>
                                             </div>
                                         <div class="col-auto">
-                                        <i class="fa fa-address-book fa-2x text-gray-500"></i>
+                                        <i class="fa fa-folder fa-2x text-gray-500"></i>
                                         </div>
                                     </div>
                                 </div>
