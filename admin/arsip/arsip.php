@@ -169,7 +169,7 @@ aria-expanded="true" aria-controls="collapseTwo">
 cellspacing="0">
 <thead>
     <tr>
-        <th class="text-center">No.᲼Urut<br><br></th>
+        <th class="text-center">No<br><br></th>
         <th class="text-center">Nama Pemilik<br><input type="text" class="searchinput" id="searchInput1" onkeyup="searchTable()"></th>
         <th class="text-center">Uraian Masalah<br><input type="text" class="searchinput" id="searchInput2" onkeyup="searchTable()"></th>
         <th class="text-center">Jalan<br><input type="text" class="searchinput" id="searchInput3" onkeyup="searchTable()"></th>
@@ -183,7 +183,7 @@ cellspacing="0">
         <th class="text-center">NIPA<br><input type="text" class="searchinput" id="searchInput11" onkeyup="searchTable()"></th>
         <th class="text-center">Tahun<br><input type="text" class="searchinput" id="searchInput12" onkeyup="searchTable()"></th>
         <th class="text-center">Keterangan<br><input type="text" class="searchinput" id="searchInput13" onkeyup="searchTable()"></th>
-        <th style="text-align: center; height: 50px; width: 150px;">᲼᲼᲼᲼᲼᲼᲼Action᲼᲼᲼᲼᲼᲼᲼<br><br></th>
+        <th style="text-align: center; height: 50px; width: 300px;padding: 10px;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Action<br><br></th>
 
 
     </tr>

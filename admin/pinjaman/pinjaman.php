@@ -245,11 +245,11 @@ aria-expanded="true" aria-controls="collapseTwo">
                                 <th class="text-center">Masalah</th>
                                 <th class="text-center">Peminjam</th>
                                 <th class="text-center">No. Identitas</th>
-                                <th class="text-center">Tanggal᲼Pinjam</th>
+                                <th class="text-center">Tanggal Pinjam</th>
                                 <th class="text-center">Tanggal Dikembalikan</th>
                                 <th class="text-center">Jumlah</th>
                                 <th class="text-center">Status</th>
-                                <th style="text-align: center;">᲼᲼᲼᲼᲼᲼᲼᲼Action᲼᲼᲼᲼᲼᲼᲼᲼</th>
+                                <th style="text-align: center;padding-top: 20px; padding-right: 73px; padding-bottom: 20px; padding-left: 73px;">Action</th>
                             </tr>
                         </thead>
 
