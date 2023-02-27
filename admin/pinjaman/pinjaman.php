@@ -13,74 +13,7 @@ include './layout/header.php';
 
 <title>Arsip Online - Kediri</title>
 
-<style>
-.card {
-  width: 100%;
-  max-width: 100%;
-}
-
-.card-body {
-  max-width: 100%;
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  .table-responsive {
-    overflow-x: auto;
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .table-responsive {
-    width: 100%;
-    overflow-x: auto;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .table-responsive {
-    width: 100%;
-    overflow-x: 100%;
-  }
-  /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-/* Table Responsive */
-@media (max-width: 767px) {
-  .table-responsive {
-    overflow-x: auto;
-  }
-}
-}
-</style>
+<script><?php include 'style.css'; ?></script>
 
 </head>
 
@@ -253,97 +186,12 @@ aria-expanded="true" aria-controls="collapseTwo">
                             </tr>
                         </thead>
 
-                        <!-- deklarasikan dan panggil koneksi database -->
-  <?php
-  $record_per_page = 10;
-  if(isset($_GET["page"])) {
-    $page = $_GET["page"];
-  } else {
-    $page = 1;
-  }
-  $start_from = ($page-1) * $record_per_page;
-  $query = "SELECT * FROM tb_transaksi ORDER BY id_transaksi DESC LIMIT $start_from, $record_per_page";
-  $tampil = $koneksi->query($query);
-  $no = $start_from + 1;
-  while ($data = mysqli_fetch_array($tampil)) {
-    $status = $data['status'];
-  ?>
-  <tr>
-    <td class="text-center"><?= $no++ ?></td>
-    <td><?= $data['nama_pemilik'] ?></td>
-    <td><?= $data['keterangan_pinjam'] ?></td>
-    <td><?= $data['peminjam'] ?></td>
-    <td><?= $data['no_identitas'] ?></td>
-    <td><?= $data['tanggal_pinjam'] ?></td>
-    <td><?= $data['tanggal_dikembalikan'] ?></td>
-    <td><?= $data['jumlah'] ?></td>
-    <td>
-      <?php if ($status == 'dipinjam') { ?>
-      <button type="button" class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-1" disabled>Dipinjam</button>
-      <?php } else { ?>
-      <button type="button" class="btn btn-success btn-sm d-sm-inline-block mb-3 mb-sm-1" disabled>Tersedia</button>
-      <?php } ?>
-    <td>
-
-      <!-- buat tombol edit hapus kembalikan -->
-      <?php if ($status == 'dipinjam') { ?>
-      <a href="operasi_pengembalian_data.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-success btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-undo"></i>Kembalikan</a>
-      <?php } else { ?>
-
-      <a href="editdata_pinjam.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-warning btn-sm d-sm-inline-block mb-3 mb-sm-1"><i class="fa fa-edit"></i>Edit</a>
-
-      <a href="hapusdata_pinjam.php?id_transaksi=<?= $data['id_transaksi'] ?>" class="btn btn-danger btn-sm d-sm-inline-block mb-3 mb-sm-1" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i>Hapus</a>
-<?php } ?>
-</td>
-</tr>
-  <?php } ?>
-</tbody>
-</table>
-</div>
-
-
-<!-- INI BUAT NEXT PAGE -->
-<br>
-<style>
-  .pagination-wrap1 {
-    width: 100%;
-    text-align: right;
-    display: flex;
-    justify-content: flex-end;
-  }
-</style>
-<div class="pagination-wrap1" >
-  <?php
-  $query = "SELECT * FROM tb_transaksi";
-  $result = $koneksi->query($query);
-  $total_records = mysqli_num_rows($result);
-  $total_pages = ceil($total_records / $record_per_page);
-  ?>
-  <nav>
-    <ul class="pagination">
-      <?php if($page > 1) { ?>
-      <li class="page-item">
-        <a class="page-link" href="?page=<?= $page - 1 ?>">
-          <i class="fa fa-angle-left"></i>
-        </a>
-      </li>
-      <?php } ?>
-      <?php for($i=1; $i<=$total_pages; $i++) { ?>
-      <li class="page-item <?php if($page == $i) {echo "active";} ?>">
-        <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
-      </li>
-      <?php } ?>
-      <?php if($page < $total_pages) { ?>
-      <li class="page-item">
-        <a class="page-link" href="?page=<?= $page + 1 ?>">
-          <i class="fa fa-angle-right"></i>
-        </a>
-      </li>
-      <?php } ?>
-    </ul>
-  </nav>
-</div>
-</div>
+<?php require 'panggil-datapinjaman.php';?>
+        </tbody>
+      </table>
+    </div>
+<?php require 'next-page.php';?>
+  </div>
 </div>
 
         <!-- Scroll to Top Button-->

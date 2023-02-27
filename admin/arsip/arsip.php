@@ -192,10 +192,9 @@ cellspacing="0">
 </table>
 </div>
 </div>
-
 <?php require 'next-page.php';?>
 </div>
-      </div>
+</div>
 
 
 
