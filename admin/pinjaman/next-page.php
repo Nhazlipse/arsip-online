@@ -1,5 +1,3 @@
-<!-- INI BUAT NEXT PAGE -->
-<br>
 <style>
   .pagination-wrap1 {
     width: 100%;
@@ -25,9 +23,17 @@
       </li>
       <?php } ?>
       <?php for($i=1; $i<=$total_pages; $i++) { ?>
+      <?php if($i <= 2 || $i == $page || $i == $total_pages) { ?>
       <li class="page-item <?php if($page == $i) {echo "active";} ?>">
         <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
       </li>
+      <?php } elseif($i == 3) { ?>
+      <li class="page-item disabled">
+        <a class="page-link" href="#">
+          ...
+        </a>
+      </li>
+      <?php } ?>
       <?php } ?>
       <?php if($page < $total_pages) { ?>
       <li class="page-item">
