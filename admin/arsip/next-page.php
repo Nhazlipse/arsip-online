@@ -1,4 +1,3 @@
-<!-- INI BUAT NEXT PAGE -->
 <style>
   .pagination-wrap1 {
     width: 100%;
@@ -6,27 +5,10 @@
     display: flex;
     justify-content: flex-end;
   }
-  .searchinput {
-  background-color: transparent;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 8px;
-  box-sizing: border-box;
-  font-size: 14px;
-  width: 100%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  width: 120px; /* panjang box 300px */
-}
-.text-center {
-  text-align: center;
-}
-</style><br>
-
-<!--  -->
+</style>
 <div class="pagination-wrap1" >
   <?php
-  $query = "SELECT * FROM tb_dataarsip";
+  $query = "SELECT * FROM tb_transaksi";
   $result = $koneksi->query($query);
   $total_records = mysqli_num_rows($result);
   $total_pages = ceil($total_records / $record_per_page);
@@ -39,13 +21,19 @@
           <i class="fa fa-angle-left"></i>
         </a>
       </li>
-
-      <!-- membuat perulangan agar data yang di tampilkan tidak melebihi dari 10 data jika data melebihi kuota pada page maka akan di pindah ke kepage selanjutkanya -->
       <?php } ?>
       <?php for($i=1; $i<=$total_pages; $i++) { ?>
+      <?php if($i <= 2 || $i == $page || $i == $total_pages) { ?>
       <li class="page-item <?php if($page == $i) {echo "active";} ?>">
         <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
       </li>
+      <?php } elseif($i == 3) { ?>
+      <li class="page-item disabled">
+        <a class="page-link" href="#">
+          ...
+        </a>
+      </li>
+      <?php } ?>
       <?php } ?>
       <?php if($page < $total_pages) { ?>
       <li class="page-item">
