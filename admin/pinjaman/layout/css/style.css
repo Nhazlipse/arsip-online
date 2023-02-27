@@ -64,4 +64,11 @@
     overflow-x: auto;
   }
 }
+label{
+  color: black;
+  font-weight: bold;
+}
+.form-control{
+  border-color: black;
+}
 }

@@ -125,6 +125,7 @@ include './layout/header.php';
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
+<!-- UNTUK MEMANGGIL DATA DARI DATABASE DAN DI TAMPILKAN DI EDIT FORM -->
     <?php
 $id = $_GET['id_dataarsip'];
 $query = "SELECT * FROM tb_dataarsip WHERE id_dataarsip = '$id'";
