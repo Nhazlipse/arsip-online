@@ -1,10 +1,5 @@
       <!-- deklarasikan dan panggil koneksi database -->
       <?php
-// Validasi Login agar file tidak dapat diakses sebelum melakukan Login Terlebih dahulu
-session_start();
-if (!isset($_SESSION['username'])) {
-    header("location:../../index.php");
-}
 
         $record_per_page = 10;
         if(isset($_GET["page"])) {

@@ -1,11 +1,7 @@
 <!-- deklarasikan dan panggil koneksi database untuk memanggil data dari tb_dataarsip-->
 <tbody>
 <?php
-// Validasi Login agar file tidak dapat diakses sebelum melakukan Login Terlebih dahulu
-session_start();
-if (!isset($_SESSION['username'])) {
-    header("location:../../index.php");
-}
+
 // untuk menampilkan data yang di tampilkan pada setiap pagenya adalah 10 data menggunakan fungsi sql (DESC LIMIT)
  $record_per_page = 10;
  if(isset($_GET["page"])) {

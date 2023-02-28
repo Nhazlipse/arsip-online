@@ -1,10 +1,3 @@
-<?php 
-// Validasi Login agar file tidak dapat diakses sebelum melakukan Login Terlebih dahulu
-session_start();
-if (!isset($_SESSION['username'])) {
-    header("location:../../index.php");
-}
-?>
 
 <style>
   .pagination-wrap1 {
@@ -12,6 +5,8 @@ if (!isset($_SESSION['username'])) {
     text-align: right;
     display: flex;
     justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 10px;
   }
 </style>
 <div class="pagination-wrap1" >
