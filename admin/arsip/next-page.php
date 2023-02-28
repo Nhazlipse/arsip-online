@@ -10,7 +10,7 @@
 </style>
 <div class="pagination-wrap1" >
   <?php
-  $query = "SELECT * FROM tb_transaksi";
+  $query = "SELECT * FROM tb_dataarsip";
   $result = $koneksi->query($query);
   $total_records = mysqli_num_rows($result);
   $total_pages = ceil($total_records / $record_per_page);
@@ -25,11 +25,11 @@
       </li>
       <?php } ?>
       <?php for($i=1; $i<=$total_pages; $i++) { ?>
-      <?php if($i <= 2 || $i == $page || $i == $total_pages) { ?>
+      <?php if($i <= 4 || $i == $page || $i == $total_pages) { ?>
       <li class="page-item <?php if($page == $i) {echo "active";} ?>">
         <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
       </li>
-      <?php } elseif($i == 3) { ?>
+      <?php } elseif($i == 5) { ?>
       <li class="page-item disabled">
         <a class="page-link" href="#">
           ...

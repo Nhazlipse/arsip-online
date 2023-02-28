@@ -210,7 +210,7 @@ include './layout/header.php';
                                                 style="font-size:16px" ;>
                                                 Arsip Dipinjam </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-900 text-center">
-                                            <?php echo $total_data; ?></div>
+                                            <?php echo $total_data2; ?></div>
                                             </div>
                                         <div class="col-auto">
                                         <i class="fa fa-folder fa-2x text-gray-500"></i>
