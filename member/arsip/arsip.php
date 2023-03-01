@@ -2,10 +2,9 @@
 // Validasi Login agar file tidak dapat diakses sebelum melakukan Login Terlebih dahulu
 session_start();
 if (!isset($_SESSION['username'])) {
-    header("location:../../index.php");
+    header("location:../index.php");
 }
 require_once '../../database/koneksi.php';
-include 'proses_tambah_data.php';
 
 use database\koneksi;
 
@@ -170,7 +169,7 @@ aria-expanded="true" aria-controls="collapseTwo">
     <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrasi</span>
+            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang !! Member</span>
             <img class="img-profile rounded-circle" src="../../assets/img/undraw_profile.svg">
         </a>
         <!-- Dropdown - User Information -->
@@ -196,10 +195,6 @@ aria-expanded="true" aria-controls="collapseTwo">
 
         <img src="../../assets/img/dataarsip.png" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; height: 50px;"><br><br>
 
-<!-- Tombol Tambah Data -->
-<div class="tambahdata">
-<a href="tambah_data.php" class="btn btn-primary">Tambah Data</a><br><br>
-
 <!-- buat kolom -->
 <div class="table-responsive">
 <table id="dataTable1" class="table table-striped table-bordered" style="width:100%">
@@ -219,7 +214,6 @@ aria-expanded="true" aria-controls="collapseTwo">
         <th class="text-center">NIPA</th>
         <th class="text-center">Tahun</th>
         <th class="text-center">Keterangan</th>
-        <th class="text-center1">Action</th>
     </tr>
 </thead>
 <?php require 'panggil-dataarsip.php';?>

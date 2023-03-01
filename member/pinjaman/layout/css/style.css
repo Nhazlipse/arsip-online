@@ -1,0 +1,74 @@
+
+.card {
+  width: 100%;
+  max-width: 100%;
+}
+
+.card-body {
+  max-width: 100%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .table-responsive {
+    overflow-x: auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .table-responsive {
+    width: 100%;
+    overflow-x: 100%;
+  }
+  /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Table Responsive */
+@media (max-width: 767px) {
+  .table-responsive {
+    overflow-x: auto;
+  }
+}
+label{
+  color: black;
+  font-weight: bold;
+}
+.form-control{
+  border-color: black;
+}
+}
