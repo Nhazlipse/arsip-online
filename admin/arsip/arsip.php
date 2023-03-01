@@ -16,9 +16,15 @@ include './layout/header.php';
 <head>
 <title>Arsip Online - Kediri</title>
 <link style=stylesheet type=text>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.2.3/css/fixedHeader.dataTables.min.css">
 </head>
+
+<style>
+    thead input {
+        width: 100%;
+    }
+    </style>
 
 <body id="page-top">
 
@@ -165,58 +171,76 @@ aria-expanded="true" aria-controls="collapseTwo">
         <th class="text-center">Keterangan</th>
         <th style="text-align: center; height: 50px; padding-top: 20px; padding-right: 73px; padding-bottom: 30px; padding-left: 73px;">Action</th>
     </tr>
-    <tfoot>
-            <tr>
-            <th class="text-center">No<br><br></th>
-        <th class="text-center">Nama Pemilik</th>
-        <th class="text-center">Uraian Masalah</th>
-        <th class="text-center">Jalan</th>
-        <th class="text-center">Kelurahan</th>
-        <th class="text-center">Kecamatan</th>
-        <th class="text-center">Unit Pengolah</th>
-        <th class="text-center">No. Rak</th>
-        <th class="text-center">No. Box</th>
-        <th class="text-center">Kode Klas</th>
-        <th class="text-center">No. Urut</th>
-        <th class="text-center">NIPA</th>
-        <th class="text-center">Tahun</th>
-        <th class="text-center">Keterangan</th>
-            </tr>
-        </tfoot>
 </thead>
 <?php require 'panggil-dataarsip.php';?>
 </table>
 </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-	<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.2.3/js/dataTables.fixedHeader.min.js"></script>
     <script>
 
-$('#datatable thead th').each( function () {
-        var title = $('#datatable thead th').eq( $(this).index() ).text();
-        if(title!=""){
-            $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
-      }
-    } );
+$(document).ready(function () {
+    // Setup - add a text input to each footer cell
+    $('#datatable thead tr')
+        .clone(true)
+        .addClass('filters')
+        .appendTo('#datatable thead');
  
-    // DataTable
     var table = $('#datatable').DataTable({
-    "columnDefs": [
-        { "searchable": false, "targets": [0] }
-    ],
-    });
+        orderCellsTop: true,
+        fixedHeader: true,
+        initComplete: function () {
+            var api = this.api();
  
-    // Apply the search
-    table.columns().eq( 0 ).each( function ( colIdx ) {
-        if( !table.settings()[0].aoColumns[colIdx].bSearchable ){
-        table.column( colIdx ).header().innerHTML=table.column( colIdx ).footer().innerHTML;
-    }
-        $( 'input', table.column( colIdx ).header() ).on( 'keyup change', function () {
-            table
-                .column( colIdx )
-                .search( this.value )
-                .draw();
-        } );
-    } );
+            // For each column
+            api
+                .columns()
+                .eq(0)
+                .each(function (colIdx) {
+                    // Set the header cell to contain the input element
+                    var cell = $('.filters th').eq(
+                        $(api.column(colIdx).header()).index()
+                    );
+                    var title = $(cell).text();
+                    $(cell).html('<input type="text" placeholder="' + title + '" />');
+ 
+                    // On every keypress in this input
+                    $(
+                        'input',
+                        $('.filters th').eq($(api.column(colIdx).header()).index())
+                    )
+                        .off('keyup change')
+                        .on('change', function (e) {
+                            // Get the search value
+                            $(this).attr('title', $(this).val());
+                            var regexr = '({search})'; //$(this).parents('th').find('select').val();
+ 
+                            var cursorPosition = this.selectionStart;
+                            // Search the column for that value
+                            api
+                                .column(colIdx)
+                                .search(
+                                    this.value != ''
+                                        ? regexr.replace('{search}', '(((' + this.value + ')))')
+                                        : '',
+                                    this.value != '',
+                                    this.value == ''
+                                )
+                                .draw();
+                        })
+                        .on('keyup', function (e) {
+                            e.stopPropagation();
+ 
+                            $(this).trigger('change');
+                            $(this)
+                                .focus()[0]
+                                .setSelectionRange(cursorPosition, cursorPosition);
+                        });
+                });
+        },
+    });
+});
     </script>
 
 </div>
