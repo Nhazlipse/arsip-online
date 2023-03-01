@@ -24,6 +24,48 @@ include './layout/header.php';
     thead input {
         width: 100%;
     }
+    input[type="text"] {
+  font-size: 16px; /* ukuran font */
+  padding: 10px; /* jarak antara teks dengan batas input */
+  border: 2px solid #ccc; /* warna dan ukuran border */
+  border-radius: 5px; /* radius sudut border */
+}
+
+input[type="text"]::placeholder {
+  color: #999; /* warna placeholder */
+  font-style: italic; /* gaya font placeholder */
+}
+.text-center {
+  text-align: center;
+  width: 120px; /* atur lebar kolom sesuai kebutuhan */
+}
+.text-center1 {
+  text-align: center;
+  width: 120px; /* atur lebar kolom sesuai kebutuhan */
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+table td {
+  padding: 10px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f2f2f2;
+}
+
+.table-bordered,
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+}
     </style>
 
 <body id="page-top">
@@ -152,7 +194,7 @@ aria-expanded="true" aria-controls="collapseTwo">
 
 <!-- buat kolom -->
 <div class="table-responsive">
-<table id="datatable" class="table table-striped table-bordered" style="width:100%">
+<table id="dataTable1" class="table table-striped table-bordered" style="width:100%">
 <thead>
 <tr>
         <th class="text-center">No<br><br></th>
@@ -169,7 +211,7 @@ aria-expanded="true" aria-controls="collapseTwo">
         <th class="text-center">NIPA</th>
         <th class="text-center">Tahun</th>
         <th class="text-center">Keterangan</th>
-        <th style="text-align: center; height: 50px; padding-top: 20px; padding-right: 73px; padding-bottom: 30px; padding-left: 73px;">Action</th>
+        <th class="text-center1">Action</th>
     </tr>
 </thead>
 <?php require 'panggil-dataarsip.php';?>
@@ -182,12 +224,12 @@ aria-expanded="true" aria-controls="collapseTwo">
 
 $(document).ready(function () {
     // Setup - add a text input to each footer cell
-    $('#datatable thead tr')
+    $('#dataTable1 thead tr')
         .clone(true)
         .addClass('filters')
-        .appendTo('#datatable thead');
+        .appendTo('#dataTable1 thead');
  
-    var table = $('#datatable').DataTable({
+    var table = $('#dataTable1').DataTable({
         orderCellsTop: true,
         fixedHeader: true,
         initComplete: function () {
