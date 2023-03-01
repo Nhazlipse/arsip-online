@@ -73,7 +73,7 @@ label{
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pilih Menu:</h6>
-                        <a class="collapse-item" href="arsip.php">Arsip</a>
+                        <a class="collapse-item" href="arsip.php">Arsip<b></a>
                         <a class="collapse-item" href="../pinjaman/pinjaman.php">Pinjaman</a>
                     </div>
                 </div>

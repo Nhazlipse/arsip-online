@@ -27,7 +27,7 @@ div.dataTables_wrapper div.dataTables_length label {
   white-space: nowrap;
 }
 div.dataTables_wrapper div.dataTables_length select {
-  width: auto;
+  width: 60px;
   display: inline-block;
 }
 div.dataTables_wrapper div.dataTables_filter {

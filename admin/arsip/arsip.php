@@ -18,7 +18,6 @@ include './layout/header.php';
 <link style=stylesheet type=text>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.2.3/css/fixedHeader.dataTables.min.css">
-</head>
 
 <style>
     thead input {
@@ -67,15 +66,22 @@ table td {
   border: 1px solid #dee2e6;
 }
 
-img {
+
+div.dataTables_wrapper div.dataTables_length select {
+  width: 50px;
+  display: inline-block;
+}
+/* img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
   height: auto;
-}
+} */
 
     </style>
+</head>
+
 
 <body id="page-top">
 
