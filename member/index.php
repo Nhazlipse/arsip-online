@@ -53,8 +53,8 @@ include '../database/koneksi.php';
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
                                             </div>
                                         </div>
-                                        <button class="btn btn-primary btn-user btn-block" style="height:1,5cm;width:6cm;position:absolute;top:60%;left: 20%;font-size:19px;font-family:bold;">Login</button>
-                                        <a href="../index.php" class="btn btn-danger btn-user btn-block" style="height:1,5cm;width:6cm;position:absolute;top:70%;left: 20%;font-size:19px;font-family:bold;">Login sebagai Admin</a>
+                                        <button class="btn btn-primary btn-user btn-block" style="height:1,5cm;width:6cm;position:absolute;top:58%;left: 20%;font-size:19px;font-family:bold;">Login</button>
+                                        <a href="../index.php" class="btn btn-info btn-user btn-block" style="height:1,5cm;width:6cm;position:absolute;top:68%;left: 20%;font-size:19px;font-family:bold;">Login sebagai Admin</a>
                                         </a>
                                         <br>
                                     </form>

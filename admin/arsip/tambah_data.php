@@ -1,5 +1,3 @@
-<?php include './layout/header.php'; ?>
-
 <?php
 // Validasi Login agar file tidak dapat diakses sebelum melakukan Login Terlebih dahulu
 session_start();
@@ -19,6 +17,7 @@ include './layout/header.php';
 <head>
 
     <title>Arsip Online - Kediri</title>
+</head>
 
 <style>
 label{
@@ -29,9 +28,6 @@ label{
     border-color: black;
 }
 </style>
-
-
-</head>
 
 <body id="page-top">
 
@@ -152,8 +148,11 @@ label{
 
             <!-- card body -->
             <div class="card-body">
-                <div class="container">
-                <form action="proses_tambah_data.php" method="post">
+
+            <!-- Tambah Data Arsip Form -->
+            <div class="container">
+            <form action="proses_tambah_data.php" method="post">
+                
                 <div class="form-group">
                 <label for="judul">Nama Pemilik:</Nama></label>
                 <input type="text" class="form-control" id="nama" name="nama" >

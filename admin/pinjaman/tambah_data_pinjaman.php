@@ -1,4 +1,3 @@
-<?php include './layout/header.php'; ?>
 <?php
 // Validasi Login agar file tidak dapat diakses sebelum melakukan Login Terlebih dahulu
 session_start();
