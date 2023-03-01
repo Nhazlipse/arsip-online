@@ -3,16 +3,9 @@
 <?php
 
 // untuk menampilkan data yang di tampilkan pada setiap pagenya adalah 10 data menggunakan fungsi sql (DESC LIMIT)
- $record_per_page = 10;
- if(isset($_GET["page"])) {
-   $page = $_GET["page"];
- } else {
-   $page = 1;
- }
- $start_from = ($page-1) * $record_per_page;
- $query = "SELECT * FROM tb_dataarsip ORDER BY id_dataarsip DESC LIMIT $start_from, $record_per_page";
+ $query = "SELECT * FROM tb_dataarsip ORDER BY id_dataarsip";
  $tampil = $koneksi->query($query);
- $no = $start_from + 1;
+ $no = 1;
 while ($data = mysqli_fetch_array($tampil)) {
 ?>
 

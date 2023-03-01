@@ -16,6 +16,8 @@ include './layout/header.php';
 <head>
 <title>Arsip Online - Kediri</title>
 <link style=stylesheet type=text>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
 </head>
 
 <body id="page-top">
@@ -144,34 +146,80 @@ aria-expanded="true" aria-controls="collapseTwo">
 
 <!-- buat kolom -->
 <div class="table-responsive">
-<table class="table table-bordered" id="dataTable1" width="262%"
-cellspacing="0">
+<table id="datatable" class="table table-striped table-bordered" style="width:100%">
 <thead>
-    <tr>
+<tr>
         <th class="text-center">No<br><br></th>
-        <th class="text-center">Nama Pemilik<br><input type="text" class="searchinput" id="searchInput1" onkeyup="searchTable()"></th>
-        <th class="text-center">Uraian Masalah<br><input type="text" class="searchinput" id="searchInput2" onkeyup="searchTable()"></th>
-        <th class="text-center">Jalan<br><input type="text" class="searchinput" id="searchInput3" onkeyup="searchTable()"></th>
-        <th class="text-center">Kelurahan<br><input type="text" class="searchinput" id="searchInput4" onkeyup="searchTable()"></th>
-        <th class="text-center">Kecamatan<br><input type="text" class="searchinput" id="searchInput5" onkeyup="searchTable()"></th>
-        <th class="text-center">Unit Pengolah<br><input type="text" class="searchinput" id="searchInput6" onkeyup="searchTable()"></th>
-        <th class="text-center">No. Rak<br><input type="text" class="searchinput" id="searchInput7" onkeyup="searchTable()"></th>
-        <th class="text-center">No. Box<br><input type="text" class="searchinput" id="searchInput8" onkeyup="searchTable()"></th>
-        <th class="text-center">Kode Klas<br><input type="text" class="searchinput" id="searchInput9" onkeyup="searchTable()"></th>
-        <th class="text-center">No. Urut<br><input type="text" class="searchinput" id="searchInput10" onkeyup="searchTable()"></th>
-        <th class="text-center">NIPA<br><input type="text" class="searchinput" id="searchInput11" onkeyup="searchTable()"></th>
-        <th class="text-center">Tahun<br><input type="text" class="searchinput" id="searchInput12" onkeyup="searchTable()"></th>
-        <th class="text-center">Keterangan<br><input type="text" class="searchinput" id="searchInput13" onkeyup="searchTable()"></th>
+        <th class="text-center">Nama Pemilik</th>
+        <th class="text-center">Uraian Masalah</th>
+        <th class="text-center">Jalan</th>
+        <th class="text-center">Kelurahan</th>
+        <th class="text-center">Kecamatan</th>
+        <th class="text-center">Unit Pengolah</th>
+        <th class="text-center">No. Rak</th>
+        <th class="text-center">No. Box</th>
+        <th class="text-center">Kode Klas</th>
+        <th class="text-center">No. Urut</th>
+        <th class="text-center">NIPA</th>
+        <th class="text-center">Tahun</th>
+        <th class="text-center">Keterangan</th>
         <th style="text-align: center; height: 50px; padding-top: 20px; padding-right: 73px; padding-bottom: 30px; padding-left: 73px;">Action</th>
-
-
     </tr>
+    <tfoot>
+            <tr>
+            <th class="text-center">No<br><br></th>
+        <th class="text-center">Nama Pemilik</th>
+        <th class="text-center">Uraian Masalah</th>
+        <th class="text-center">Jalan</th>
+        <th class="text-center">Kelurahan</th>
+        <th class="text-center">Kecamatan</th>
+        <th class="text-center">Unit Pengolah</th>
+        <th class="text-center">No. Rak</th>
+        <th class="text-center">No. Box</th>
+        <th class="text-center">Kode Klas</th>
+        <th class="text-center">No. Urut</th>
+        <th class="text-center">NIPA</th>
+        <th class="text-center">Tahun</th>
+        <th class="text-center">Keterangan</th>
+            </tr>
+        </tfoot>
 </thead>
 <?php require 'panggil-dataarsip.php';?>
 </table>
 </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+    <script>
+
+$('#datatable thead th').each( function () {
+        var title = $('#datatable thead th').eq( $(this).index() ).text();
+        if(title!=""){
+            $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+      }
+    } );
+ 
+    // DataTable
+    var table = $('#datatable').DataTable({
+    "columnDefs": [
+        { "searchable": false, "targets": [0] }
+    ],
+    });
+ 
+    // Apply the search
+    table.columns().eq( 0 ).each( function ( colIdx ) {
+        if( !table.settings()[0].aoColumns[colIdx].bSearchable ){
+        table.column( colIdx ).header().innerHTML=table.column( colIdx ).footer().innerHTML;
+    }
+        $( 'input', table.column( colIdx ).header() ).on( 'keyup change', function () {
+            table
+                .column( colIdx )
+                .search( this.value )
+                .draw();
+        } );
+    } );
+    </script>
+
 </div>
-<?php require 'next-page.php';?>
 </div>
 </div>
 
@@ -209,5 +257,4 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 </body>
 
 </html>
-<script><?php require_once 'js/arsip.js'?></script>;
 <?php include './layout/footer.php';?>
