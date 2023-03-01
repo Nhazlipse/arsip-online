@@ -50,7 +50,7 @@ include '../database/koneksi.php';
                                     </div>
                                     <div class="g-recaptcha" data-sitekey="6LfHIrIkAAAAAPf_-i9ZdxJeTH5yakwM1Wn9quZB"></div>
 
-                                    <button class="btn btn-primary btn-user btn-block" type="submit" style="height:1,5cm;width:6cm;position:absolute;top:78%;left: 17%;font-size:19px;font-family:bold;">Login</button>
+                                    <button class="btn btn-primary btn-user btn-block" type="submit" style="height:1,5cm;width:6cm;position:absolute;top:78%;left: 18%;font-size:19px;font-family:bold;">Login</button>
                                     <br>
                                 </form>
                                 </br>
