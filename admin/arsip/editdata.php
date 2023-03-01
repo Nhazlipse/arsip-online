@@ -161,22 +161,22 @@ $row = mysqli_fetch_assoc($result);
                 <div class="form-group">
                     <label for="nama">Nama</label>
                     <input type="text" class="form-control" name="nama" id="nama"
-                        required value="<?php echo $row['nama']; ?>">
+                         value="<?php echo $row['nama']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="masalah">Masalah</label>
                     <input type="text" class="form-control" name="masalah" id="masalah"
-                        required value="<?php echo $row['masalah']; ?>">
+                         value="<?php echo $row['masalah']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="jalan">Jalan</label>
                     <input type="text" class="form-control" name="jalan" id="jalan"
-                        required value="<?php echo $row['jalan']; ?>">
+                         value="<?php echo $row['jalan']; ?>">
                 </div>
 
                 <div class="form-group">
                 <label for="kelurahan">Kelurahan</label>
-                <select class="form-control" name="kelurahan" id="kelurahan" required>
+                <select class="form-control" name="kelurahan" id="kelurahan" >
                     <option value="">Pilih kelurahan</option>
                     <option value="Tamanan" <?php if ($row['kelurahan'] == 'Tamanan') { echo 'selected'; } ?>>Tamanan</option>
                     <option value="Sukorame" <?php if ($row['kelurahan'] == 'Sukorame') { echo 'selected'; } ?>>Sukorame</option>
@@ -198,7 +198,7 @@ $row = mysqli_fetch_assoc($result);
                 
                 <div class="form-group">
                 <label for="kecamatan">Kecamatan</label>
-                <select class="form-control" name="kecamatan" id="kecamatan" required>
+                <select class="form-control" name="kecamatan" id="kecamatan" >
                     <option value="">Pilih kecamatan</option>
                     <option value="Kota" <?php if ($row['kecamatan'] == 'Kota') { echo 'selected'; } ?>>Kota</option>
                     <option value="Mojoroto" <?php if ($row['kecamatan'] == 'Mojoroto') { echo 'selected'; } ?>>Mojoroto</option>
@@ -211,34 +211,34 @@ $row = mysqli_fetch_assoc($result);
                 <div class="form-group">
                     <label for="Unit Pengolah">Unit Pengolah</label>
                     <input type="text" class="form-control" name="unit_pengolah"
-                        id="unit_pengolah" required
+                        id="unit_pengolah" 
                         value="<?php echo $row['unit_pengolah']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="no_rak">No. Rak</label>
                     <input type="text" class="form-control" name="no_rak" id="no_rak"
-                        required value="<?php echo $row['no_rak']; ?>">
+                         value="<?php echo $row['no_rak']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="no_box">No. Box</label>
                     <input type="text" class="form-control" name="no_box" id="no_box"
-                        required value="<?php echo $row['no_box']; ?>">
+                         value="<?php echo $row['no_box']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="kode_klas">Kode KLAS</label>
                     <input type="text" class="form-control" name="kode_klas"
-                        id="kode_klas" required
+                        id="kode_klas" 
                         value="<?php echo $row['kode_klas']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="no_urut">No. Urut</label>
                     <input type="text" class="form-control" name="no_urut" id="no_urut"
-                        required value="<?php echo $row['no_urut']; ?>">
+                         value="<?php echo $row['no_urut']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="nipa">NIPA</label>
                     <input type="text" class="form-control" name="nipa" id="nipa"
-                        required value="<?php echo $row['nipa']; ?>">
+                         value="<?php echo $row['nipa']; ?>">
                 </div>
 
                 <div class="form-group">
@@ -262,7 +262,7 @@ $row = mysqli_fetch_assoc($result);
                 <div class="form-group">
                     <label for="keterangan">Keterangan</label>
                     <input type="text" class="form-control" name="keterangan"
-                        id="keterangan" required
+                        id="keterangan" 
                         value="<?php echo $row['keterangan']; ?>">
                 </div>
 

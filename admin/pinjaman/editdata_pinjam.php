@@ -158,36 +158,36 @@ include './layout/header.php';
                                                 <div class="form-group">
                                                     <label for="nama_pemilik">Pemilik</label>
                                                     <input type="text" class="form-control" name="nama_pemilik"
-                                                        id="nama_pemilik" required
+                                                        id="nama_pemilik" 
                                                         value="<?php echo $row['nama_pemilik']; ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="keterangan_pinjam">Masalah</label>
                                                     <input type="text" class="form-control" name="keterangan_pinjam"
-                                                        id="keterangan_pinjam" required
+                                                        id="keterangan_pinjam" 
                                                         value="<?php echo $row['keterangan_pinjam']; ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="jalan">Peminjam</label>
                                                     <input type="text" class="form-control" name="peminjam"
-                                                        id="peminjam" required value="<?php echo $row['peminjam']; ?>">
+                                                        id="peminjam"  value="<?php echo $row['peminjam']; ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="no_identitas">No. Identitas</label>
                                                     <input type="number" class="form-control" name="no_identitas"
-                                                        id="no_identitas" required
+                                                        id="no_identitas" 
                                                         value="<?php echo $row['no_identitas']; ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="tanggal_pinjam">Tanggal Pinjam</label>
                                                     <input type="date" class="form-control" name="tanggal_pinjam"
-                                                        id="tanggal_pinjam" required
+                                                        id="tanggal_pinjam" 
                                                         value="<?php echo $row['tanggal_pinjam']; ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="jumlah">Jumlah</label>
                                                     <input type="number" class="form-control" name="jumlah" id="jumlah"
-                                                        required value="<?php echo $row['jumlah']; ?>">
+                                                         value="<?php echo $row['jumlah']; ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="status">Status</label>

@@ -151,31 +151,31 @@ include './layout/header.php';
                                         <div class="form-group">
                                             <label for="judul">Nama Pemilik:</label>
                                             <input type="text" class="form-control" id="nama_pemilik"
-                                                name="nama_pemilik" required>
+                                                name="nama_pemilik" >
                                         </div>
                                         <div class="form-group">
                                             <label for="judul">Masalah:</label>
                                             <input type="text" class="form-control" id="keterangan_pinjam"
-                                                name="keterangan_pinjam" required>
+                                                name="keterangan_pinjam" >
                                         </div>
                                         <div class="form-group">
                                             <label for="judul">Peminjam:</label>
                                             <input type="text" class="form-control" id="peminjam" name="peminjam"
-                                                required>
+                                                >
                                         </div>
                                         <div class="form-group">
                                             <label for="judul">No. Identitas:</label>
                                             <input type="number" class="form-control" id="no_identitas"
-                                                name="no_identitas" required>
+                                                name="no_identitas" >
                                         </div>
                                         <div class="form-group">
                                             <label for="judul">Tanggal Pinjam:</label>
                                             <input type="date" class="form-control" id="tanggal_pinjam"
-                                                name="tanggal_pinjam" required>
+                                                name="tanggal_pinjam" >
                                         </div>
                                         <div class="form-group">
                                             <label for="judul">Jumlah:</label>
-                                            <input type="number" class="form-control" id="jumlah" name="jumlah" required>
+                                            <input type="number" class="form-control" id="jumlah" name="jumlah" >
                                         </div>
                                         <div class="form-group">
                                             <label for="judul">Status:</label>
