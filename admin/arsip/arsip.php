@@ -66,6 +66,15 @@ table td {
 .table-bordered td {
   border: 1px solid #dee2e6;
 }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+
     </style>
 
 <body id="page-top">
@@ -177,16 +186,10 @@ aria-expanded="true" aria-controls="collapseTwo">
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
-
-<!-- Data Pengunjung -->
-<div class="container"style="padding-left:0px; padding-right:0px;">
-    <div class="card shadow mb-4">
-        <div class="card-header py-3 text-center">
-            <img src="../../assets/img/dataarsip.png"style="width:16%;">
-        </div>
-
         <!-- card body -->
         <div class="card-body">
+
+        <img src="../../assets/img/dataarsip.png"><br><br>
 
 <!-- Tombol Tambah Data -->
 <div class="tambahdata">
