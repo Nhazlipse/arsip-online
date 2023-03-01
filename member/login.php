@@ -1,9 +1,4 @@
 <?php
-// Validasi Login agar file tidak dapat diakses sebelum melakukan Login Terlebih dahulu
-session_start();
-if (!isset($_SESSION['username'])) {
-    header("location:index.php");
-}
 //panggil koneksi
 require_once '../database/koneksi.php';
 
@@ -30,5 +25,5 @@ if ($data) {
     $_SESSION['password'] = $data['password'];
     header("location: dashboard.php");
 } else {
-    echo "<script>alert('Login Gagal, Akun tidak ditemukan..!');document.location='/index.php';</script>";
+    echo "<script>window.alert('Login Gagal, Akun tidak ditemukan..!');window.location.href='index.php';</script>";
 }
