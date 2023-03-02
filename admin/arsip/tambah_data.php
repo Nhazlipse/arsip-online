@@ -156,18 +156,19 @@ label{
                 <form action="proses_tambah_data.php" method="post">
                 <div class="form-group">
                 <label for="judul">Nama Pemilik:</Nama></label>
-                <input type="text" class="form-control" id="nama" name="nama" required>
+                <input type="text" class="form-control" id="nama" name="nama" >
                 </div>
 
                 <div class="form-group">
                 <label for="judul">Masalah:</label>
                 <input type="text" class="form-control" id="masalah" name="masalah"
-                required>
+                >
                 </div>
 
                 <div class="form-group">
                  <label for="judul">Jalan:</label>
-                    <input type="text" class="form-control" id="jalan" name="jalan" required>
+                    <input type="text" class="form-control" id="jalan" name="jalan" 
+                    >
                  </div>
 
                     <div class="form-group">
@@ -216,34 +217,34 @@ label{
         <div class="form-group">
             <label for="Unit Pengolah">Unit Pengolah:</label>
             <input type="text" class="form-control" id="unit_pengolah" name="unit_pengolah"
-                required>
+                >
         </div>
 
         <div class="form-group">
             <label for="judul">No. Rak:</label>
-            <input type="text" class="form-control" id="no_rak" name="no_rak" required>
+            <input type="text" class="form-control" id="no_rak" name="no_rak" >
         </div>
 
         <div class="form-group">
             <label for="judul">No. Box:</label>
-            <input type="text" class="form-control" id="no_box" name="no_box" required>
+            <input type="text" class="form-control" id="no_box" name="no_box" >
         </div>
 
         <div class="form-group">
             <label for="judul">Kode Klas:</label>
             <input type="text" class="form-control" id="kode_klas" name="kode_klas"
-                required>
+                >
         </div>
 
         <div class="form-group">
             <label for="judul">No. Urut:</label>
             <input type="text" class="form-control" id="no_urut" name="no_urut"
-                required>
+                >
         </div>
 
         <div class="form-group">
             <label for="judul">NIPA:</label>
-            <input type="text" class="form-control" id="nipa" name="nipa" required>
+            <input type="text" class="form-control" id="nipa" name="nipa" >
         </div>
 
         <div class="form-group">
@@ -261,7 +262,7 @@ label{
         <div class="form-group">
             <label for="judul">Keterangan:</label>
             <input type="text" class="form-control" id="keterangan" name="keterangan"
-                required>
+                >
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
