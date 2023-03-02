@@ -137,7 +137,7 @@ include './layout/header.php';
                     <div class="container">
                         <div class="card shadow mb-4">
                             <div class="card-header py-3 text-center">
-                            <img src="../../assets/img/tambahpinjam.png"style="width:35%;">
+                            <img src="../../assets/img/tambahdatapinjam.png"style="width:35%;">
                             </div>
 
                             <!-- card body -->

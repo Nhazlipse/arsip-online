@@ -135,7 +135,7 @@ aria-expanded="true" aria-controls="collapseTwo">
 <div class="container"style="padding-left:0px; padding-right:0px;">
     <div class="card shadow mb-4">
         <div class="card-header py-3 text-center">
-            <img src="../../assets/img/datapinjam.png"style="width:23%;">
+            <img src="../../assets/img/datpin.png"style="width:23%;">
         </div>
 
         <!-- CARD BODY -->

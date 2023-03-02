@@ -24,19 +24,20 @@ include './layout/header.php';
         width: 100%;
     }
     input[type="text"] {
-  font-size: 16px; /* ukuran font */
-  padding: 10px; /* jarak antara teks dengan batas input */
-  border: 2px solid #ccc; /* warna dan ukuran border */
-  border-radius: 5px; /* radius sudut border */
+  font-size: 16px; 
+  padding: 10px; 
+  border: 2px solid #ccc; 
+  border-radius: 5px; 
 }
 
 input[type="text"]::placeholder {
-  color: #999; /* warna placeholder */
-  font-style: italic; /* gaya font placeholder */
+  color: #999; 
+  font-style: italic; 
 }
-.text-center {
+.text-center.sorting {
   text-align: center;
-  width: 120px; /* atur lebar kolom sesuai kebutuhan */
+  width: 120px; 
+  
 }
 .text-center1 {
   text-align: center;
@@ -71,13 +72,8 @@ div.dataTables_wrapper div.dataTables_length select {
   width: 50px;
   display: inline-block;
 }
-/* img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: 50px;
-} */
+
+
     </style>
 </head>
 
@@ -194,7 +190,7 @@ aria-expanded="true" aria-controls="collapseTwo">
         <!-- card body -->
         <div class="card-body">
 
-        <img src="../../assets/img/dataarsip.png" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; height: 50px;"><br><br>
+        <img src="../../assets/img/datar.png" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; height: 30px;"><br><br>
 
 <!-- Tombol Tambah Data -->
 <div class="tambahdata">

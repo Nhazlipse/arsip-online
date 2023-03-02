@@ -147,7 +147,7 @@ label{
     <div class="container">
         <div class="card shadow mb-4">
             <div class="card-header py-3 text-center">
-            <img src="../../assets/img/tambaharsip.png"style="width:27%;">
+            <img src="../../assets/img/harsip.png"style="width:27%;">
             </div>
 
             <!-- card body -->
